@@ -1,0 +1,60 @@
+{
+  "name": "atob-umd",
+  "version": "0.1.0",
+  "homepage": "https://github.com/T1st3/atob-umd",
+  "description": "A UMD module for atob()",
+  "keywords": [
+    "amd",
+    "umd",
+    "atob",
+    "module",
+    "base64"
+  ],
+  "license": "MIT",
+  "main": "dist/atob-umd.js",
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/T1st3/atob-umd.git"
+  },
+  "author": "t1st3 <contact@tiste.org> (http://tiste.org/)",
+  "bugs": {
+    "url": "https://github.com/T1st3/atob-umd/issues"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "dependencies": {
+    "request": ">= 2.34.x",
+    "lodash": ">= 2.4.x",
+    "xmldom": ">= 0.1.x"
+  },
+  "devDependencies": {
+    "grunt": ">= 0.4.x",
+    "load-grunt-tasks": ">= 0.3.x",
+    "time-grunt": ">= 0.2.x",
+    "grunt-contrib-copy": ">= 0.5.x",
+    "grunt-contrib-concat": ">= 0.4.x",
+    "grunt-contrib-clean": ">= 0.5.x",
+    "grunt-contrib-compress": ">= 0.8.x",
+    "grunt-contrib-watch": ">= 0.5.x",
+    "grunt-contrib-connect": ">= 0.6.x",
+    "grunt-open": ">= 0.2.x",
+    "connect-livereload": ">= 0.3.x",
+    "grunt-contrib-jshint": ">= 0.8.x",
+    "jshint-stylish": ">= 0.1.x",
+    "grunt-jscs-checker": ">= 0.3.x",
+    "grunt-contrib-uglify": ">= 0.3.x",
+    "grunt-version": ">= 0.3.x",
+    "grunt-mocha-test": ">= 0.9.x",
+    "chai": ">= 1.9.x",
+    "blanket": ">= 1.1.x",
+    "grunt-bower-task": ">= 0.3.x",
+    "grunt-jsdoc": ">= 0.5.x",
+    "grunt-jekyll": ">= 0.4.x",
+    "grunt-template": ">= 0.2.x",
+    "grunt-matter": ">= 0.1.x"
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "name": "atob-umd",
+  "version": "0.1.0",
+  "homepage": "https://github.com/T1st3/atob-umd",
+  "description": "A UMD module for atob()",
+  "keywords": [
+    "amd",
+    "umd",
+    "atob",
+    "module",
+    "base64"
+  ],
+  "license": "MIT",
+  "authors": [
+    "T1st3"
+  ],
+  "main": "dist/atob-umd.js",
+  "ignore": [
+    "node_modules",
+    "bower_components",
+    "gh-pages",
+    "docs",
+    "src",
+    "test",
+    "node_test.js",
+    ".git",
+    ".travis.yml",
+    ".bowerrc",
+    ".gitignore",
+    ".gitattributes",
+    ".editorconfig",
+    ".jshintrc",
+    ".jscs.json",
+    "Gruntfile.js",
+    "package.json",
+    "README.md"
+  ],
+  "dependencies": {
+    "requirejs": "*"
+  },
+  "devDependencies": {
+    "jquery": "*",
+    "mocha": "*",
+    "chai": "*",
+    "chai-jquery": "*",
+    "t1st3-assets": "*",
+    "codemirror": "*"
+  }
+}

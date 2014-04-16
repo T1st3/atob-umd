@@ -28,7 +28,7 @@ Installing depends on the context:
 **Node.js**
 
 `atob-umd` is available on [NPM](https://www.npmjs.org/package/atob-umd)
-[![NPM](assets/img/vendor/npm-16x16.png)](https://www.npmjs.org/package/atob-umd).
+[![NPM](http://t1st3.github.io/atob-umd/assets/img/vendor/npm-16x16.png)](https://www.npmjs.org/package/atob-umd).
 You can install it with the following command:
 
     npm install atob-umd
@@ -38,7 +38,7 @@ You can install it with the following command:
 
 
 `atob-umd` is available on [Bower](http://bower.io/)
-[![Bower](assets/img/vendor/bower-16x16.png)](http://bower.io/). 
+[![Bower](http://t1st3.github.io/atob-umd/assets/img/vendor/bower-16x16.png)](http://bower.io/). 
 To install it from Bower, just run 
 
     bower install atob-umd
@@ -237,5 +237,5 @@ You can also view it in a re-formatted fashion: [MIT / BSD / GPL licenses](http:
 Author
 ---
 [T1st3](https://github.com/T1st3/) 
-[![T1st3](assets/img/gravatar-16x16.png)](https://github.com/T1st3/)
+[![T1st3](http://t1st3.github.io/atob-umd/assets/img/gravatar-16x16.png)](https://github.com/T1st3/)
 

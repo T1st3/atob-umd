@@ -4,7 +4,7 @@ atob-umd
 
 [![NPM version](https://badge.fury.io/js/atob-umd.svg)](http://badge.fury.io/js/atob-umd)
 [![Dependency Status](https://david-dm.org/t1st3/atob-umd.svg?theme=shields.io)](https://david-dm.org/t1st3/atob-umd)
-[![Build Status](https://travis-ci.org/T1st3/atob-umd.png?branch=master)](https://travis-ci.org/T1st3/atob-umd)
+[![Build Status](https://travis-ci.org/T1st3/atob-umd.svg?branch=master)](https://travis-ci.org/T1st3/atob-umd)
 
 
 

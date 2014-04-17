@@ -283,6 +283,7 @@ module.exports = function (grunt) {
   ]);
 
   grunt.registerTask('doc', [
+    'init',
     'clean:docs',
     'copy:docs',
     'jsdoc:dist',

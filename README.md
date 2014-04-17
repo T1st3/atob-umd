@@ -37,8 +37,8 @@ You can install it with the following command:
 **Browser globals and AMD**
 
 
-`atob-umd` is available on [Bower](http://bower.io/)
-[![Bower](http://t1st3.github.io/atob-umd/assets/img/vendor/bower-16x16.png)](http://bower.io/). 
+`atob-umd` is available on [Bower](http://bower.io/search/?q=atob-umd)
+[![Bower](http://t1st3.github.io/atob-umd/assets/img/vendor/bower-16x16.png)](http://bower.io/search/?q=atob-umd). 
 To install it from Bower, just run 
 
     bower install atob-umd
@@ -180,9 +180,8 @@ Note that, even if you keep the `gh-pages` folder in the project, this folder:
 * [will not be included in NPM releases](https://github.com/T1st3/atob-umd/blob/master/.npmignore)
 
 
-Building the docs will rebuild the `gh-pages`, and compile them to the `docs` folder, using the following Grunt tasks:
+Building the docs will rebuild the `gh-pages`, and compile them to the `docs` folder, using the following Grunt task:
 
-    grunt init
     grunt doc
 
 And since you transparently have the `gh-pages` branch being updated by those tasks right in your project folder, 

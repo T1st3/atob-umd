@@ -45,7 +45,7 @@ To install it from Bower, just run
 
 Published versions on both NPM and Bower should stay in sync:
 [![NPM version](https://badge.fury.io/js/atob-umd.svg)](http://badge.fury.io/js/atob-umd)
-[![NPM version](https://badge.fury.io/bo/atob-umd.svg)](http://badge.fury.io/js/atob-umd)
+[![Bower version](https://badge.fury.io/bo/atob-umd.svg)](http://badge.fury.io/js/atob-umd)
 
 
 
@@ -73,7 +73,7 @@ You can find fully functional examples, tests and documentation in the [JSDoc](h
 You can also browse these examples and tests online:
 
 - [Demo (AMD)](http://t1st3.github.io/atob-umd/)
-- [Tests (AMD)](http://t1st3.github.io/atob-umd/tests.html)
+- [Tests (AMD & global)](http://t1st3.github.io/atob-umd/coverage.html)
 - [this README](http://t1st3.github.io/atob-umd/readme.html)
 - [JSDoc](http://t1st3.github.io/atob-umd/jsdoc.html)
 

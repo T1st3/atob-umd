@@ -3,7 +3,7 @@
 * 
 * @link https://github.com/T1st3/atob-umd
 * @author T1st3
-* @version 0.1.2
+* @version 0.1.3
 * @license https://github.com/T1st3/atob-umd/blob/master/LICENSE
 * 
 */
@@ -36,6 +36,7 @@
   
   /**
   * @constructor
+  * @param {string} a
   * @since 0.1.0
   */
   var Atob = function (a) {

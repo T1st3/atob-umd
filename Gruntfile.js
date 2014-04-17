@@ -81,7 +81,7 @@ module.exports = function (grunt) {
           {expand: true, flatten: false, cwd: 'bower_components/t1st3-assets/dist/assets/img/', src: ['**/*'], dest: 'gh-pages/assets/img/'},
           {src: ['bower_components/t1st3-assets/dist/assets/css/t1st3.css'], dest: 'gh-pages/assets/css/t1st3.min.css'},
           {src: ['bower_components/t1st3-assets/dist/assets/css/404.css'], dest: 'gh-pages/assets/css/404.min.css'},
-          {src: ['bower_components/t1st3-assets/dist/sitemap.xml'], dest: 'gh-pages/umd_sitemap.xml'},
+          {src: ['bower_components/t1st3-assets/dist/umd_sitemap.xml'], dest: 'gh-pages/sitemap.xml'},
           {expand: true, flatten: false, cwd: 'bower_components/t1st3-assets/dist/_layouts/', src: ['**/umd_*'], dest: 'gh-pages/_layouts/'},
           {src: ['bower_components/t1st3-assets/dist/_includes/umd_bottom-menu.html'], dest: 'gh-pages/_includes/umd_bottom-menu.html'},
           {src: ['bower_components/t1st3-assets/dist/_includes/umd_head.html'], dest: 'gh-pages/_includes/umd_head.html'},
@@ -238,6 +238,26 @@ module.exports = function (grunt) {
         },
         src: ['test/unittests.js']
       }
+    },
+    compress: {
+      sitemap: {
+        options: {
+          mode: 'gzip'
+        },
+        expand: true,
+        cwd: 'docs/',
+        src: ['**/*sitemap.xml'],
+        dest: 'docs/'
+      },
+      sitemapgh: {
+        options: {
+          mode: 'gzip'
+        },
+        expand: true,
+        cwd: 'docs/',
+        src: ['**/*sitemap.xml'],
+        dest: 'gh-pages/'
+      }
     }
   });
 
@@ -270,6 +290,8 @@ module.exports = function (grunt) {
     'mochaTest:coverage',
     'jekyll:docsamd',
     'copy:readme',
+    'compress:sitemap',
+    'compress:sitemapgh',
     'matter'
   ]);
   

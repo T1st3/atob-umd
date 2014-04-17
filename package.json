@@ -24,10 +24,10 @@
     "url": "https://github.com/T1st3/atob-umd/issues"
   },
   "scripts": {
-    "test": "grunt test"
+    "test": "grunt test",
+    "posttest": "grunt ci"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "grunt": ">= 0.4.x",
     "load-grunt-tasks": ">= 0.3.x",
@@ -46,8 +46,11 @@
     "grunt-contrib-uglify": ">= 0.3.x",
     "grunt-version": ">= 0.3.x",
     "grunt-mocha-test": ">= 0.9.x",
+    "mocha-lcov-reporter": ">= 0.0.x",
+    "travis-cov": ">= 0.2.x",
     "chai": ">= 1.9.x",
     "blanket": ">= 1.1.x",
+    "grunt-coveralls": ">= 0.3.x",
     "grunt-bower-task": ">= 0.3.x",
     "grunt-jsdoc": ">= 0.5.x",
     "grunt-jekyll": ">= 0.4.x",

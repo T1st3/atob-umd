@@ -14,7 +14,7 @@ module.exports = function (grunt) {
     config: 'package.json',
     pattern: ['grunt-*']
   });
-  
+
   require('time-grunt')(grunt);
   
   grunt.initConfig({
@@ -83,6 +83,7 @@ module.exports = function (grunt) {
           {src: ['bower_components/t1st3-assets/dist/assets/css/404.css'], dest: 'gh-pages/assets/css/404.min.css'},
           {src: ['bower_components/t1st3-assets/dist/umd_sitemap.xml'], dest: 'gh-pages/sitemap.xml'},
           {expand: true, flatten: false, cwd: 'bower_components/t1st3-assets/dist/_layouts/', src: ['**/umd_*'], dest: 'gh-pages/_layouts/'},
+          {src: ['bower_components/t1st3-assets/dist/_includes/umd_test_section.html'], dest: 'gh-pages/_includes/umd_test_section.html'},
           {src: ['bower_components/t1st3-assets/dist/_includes/umd_bottom-menu.html'], dest: 'gh-pages/_includes/umd_bottom-menu.html'},
           {src: ['bower_components/t1st3-assets/dist/_includes/umd_head.html'], dest: 'gh-pages/_includes/umd_head.html'},
           {src: ['bower_components/t1st3-assets/dist/_includes/umd_header.html'], dest: 'gh-pages/_includes/umd_header.html'},
@@ -222,7 +223,7 @@ module.exports = function (grunt) {
       }
     },
     mochaTest: {
-      test: {
+      'spec': {
         options: {
           reporter: 'spec',
           timeout: 30000,
@@ -230,13 +231,35 @@ module.exports = function (grunt) {
         },
         src: ['test/unittests.js', 'test/functests.js']
       },
-      coverage: {
+      'html-cov': {
         options: {
           reporter: 'html-cov',
           quiet: true,
           captureFile: 'gh-pages/coverage/index.html'
         },
-        src: ['test/unittests.js']
+        src: ['test/unittests.js', 'test/functests.js']
+      },
+      'mocha-lcov-reporter': {
+        options: {
+          reporter: 'mocha-lcov-reporter',
+          quiet: true,
+          captureFile: 'gh-pages/coverage/lcov.info'
+        },
+        src: ['test/unittests.js', 'test/functests.js']
+      },
+      'travis-cov': {
+        options: {
+          reporter: 'travis-cov'
+        },
+        src: ['test/unittests.js', 'test/functests.js']
+      }
+    },
+    coveralls: {
+      options: {
+        force: true
+      },
+      all: {
+        src: 'gh-pages/coverage/lcov.info'
       }
     },
     compress: {
@@ -287,8 +310,8 @@ module.exports = function (grunt) {
     'clean:docs',
     'copy:docs',
     'jsdoc:dist',
-    'mochaTest:test',
-    'mochaTest:coverage',
+    'mochaTest:spec',
+    'mochaTest:html-cov',
     'jekyll:docsamd',
     'copy:readme',
     'compress:sitemap',
@@ -299,6 +322,11 @@ module.exports = function (grunt) {
   grunt.registerTask('test', [
     'jshint',
     'jscs',
-    'mochaTest:test'
+    'mochaTest:spec'
+  ]);
+  
+  grunt.registerTask('ci', [
+    'mochaTest',
+    'coveralls'
   ]);
 };

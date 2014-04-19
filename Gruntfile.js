@@ -57,50 +57,44 @@ module.exports = function (grunt) {
       },
       docs: {
         files: [
-          {src: ['dist/atob-umd.js'], dest: 'gh-pages/lib/atob-umd.js'}
+          {src: ['dist/atob-umd.js'], dest: 'gh-pages/assets/js/lib/atob-umd.js'}
         ]
       },
       init: {
         files: [
-          {src: ['bower_components/jquery/dist/jquery.js'], dest: 'gh-pages/lib/jquery.js'},
+          {src: ['bower_components/jquery/dist/jquery.min.js'], dest: 'gh-pages/assets/js/lib/jquery.min.js'},
+          {src: ['bower_components/jquery/dist/jquery.min.map'], dest: 'gh-pages/assets/js/lib/jquery.min.map'},
           {src: ['bower_components/requirejs/require.js'], dest: 'gh-pages/require.js'},
-          {src: ['bower_components/mocha/mocha.js'], dest: 'gh-pages/lib/mocha.js'},
+          {src: ['bower_components/mocha/mocha.js'], dest: 'gh-pages/assets/js/lib/mocha.js'},
           {src: ['bower_components/mocha/mocha.css'], dest: 'gh-pages/assets/css/mocha.css'},
-          {src: ['bower_components/chai/chai.js'], dest: 'gh-pages/lib/chai.js'},
-          {src: ['bower_components/chai-jquery/chai-jquery.js'], dest: 'gh-pages/lib/chai-jquery.js'},
-          {src: ['bower_components/modernizr/modernizr.js'], dest: 'gh-pages/lib/modernizr.js'},
-          {src: ['bower_components/bootstrap/dist/js/bootstrap.min.js'], dest: 'gh-pages/lib/bootstrap.min.js'},
+          {src: ['bower_components/chai/chai.js'], dest: 'gh-pages/assets/js/lib/chai.js'},
+          {src: ['bower_components/chai-jquery/chai-jquery.js'], dest: 'gh-pages/assets/js/lib/chai-jquery.js'},
+          {src: ['bower_components/modernizr/modernizr.js'], dest: 'gh-pages/assets/js/lib/modernizr.js'},
+          {src: ['bower_components/bootstrap/dist/js/bootstrap.min.js'], dest: 'gh-pages/assets/js/lib/bootstrap.min.js'},
           {src: ['bower_components/bootstrap/dist/css/bootstrap.min.css'], dest: 'gh-pages/assets/css/bootstrap.min.css'},
           {expand: true, flatten: true, src: ['bower_components/bootstrap/dist/fonts/*'], dest: 'gh-pages/assets/fonts/', filter: 'isFile'},
           {src: ['bower_components/font-awesome/css/font-awesome.min.css'], dest: 'gh-pages/assets/css/font-awesome.min.css'},
           {expand: true, flatten: true, src: ['bower_components/font-awesome/fonts/*'], dest: 'gh-pages/assets/fonts/', filter: 'isFile'},
           {src: ['bower_components/codemirror/lib/codemirror.css'], dest: 'gh-pages/assets/css/codemirror.css'},
-          {src: ['bower_components/codemirror/lib/codemirror.js'], dest: 'gh-pages/lib/codemirror.js'},
-          {src: ['bower_components/codemirror/mode/javascript/javascript.js'], dest: 'gh-pages/lib/codemirror/javascript.js'},
+          {src: ['bower_components/codemirror/lib/codemirror.js'], dest: 'gh-pages/assets/js/lib/codemirror.js'},
+          {src: ['bower_components/codemirror/mode/javascript/javascript.js'], dest: 'gh-pages/assets/js/lib/codemirror/javascript.js'},
+          {src: ['bower_components/jshint/dist/jshint.js'], dest: 'gh-pages/assets/js/lib/jshint.js'},
+          {src: ['node_modules/grunt-jscs-checker/node_modules/jscs/jscs-browser.js'], dest: 'gh-pages/assets/js/lib/jscs.js'},
           
           {expand: true, flatten: false, cwd: 'bower_components/t1st3-assets/dist/assets/img/', src: ['**/*'], dest: 'gh-pages/assets/img/'},
           {src: ['bower_components/t1st3-assets/dist/assets/css/t1st3.css'], dest: 'gh-pages/assets/css/t1st3.min.css'},
           {src: ['bower_components/t1st3-assets/dist/assets/css/404.css'], dest: 'gh-pages/assets/css/404.min.css'},
           {src: ['bower_components/t1st3-assets/dist/umd_sitemap.xml'], dest: 'gh-pages/sitemap.xml'},
           {expand: true, flatten: false, cwd: 'bower_components/t1st3-assets/dist/_layouts/', src: ['**/umd_*'], dest: 'gh-pages/_layouts/'},
-          {src: ['bower_components/t1st3-assets/dist/_includes/umd_test_section.html'], dest: 'gh-pages/_includes/umd_test_section.html'},
           {src: ['bower_components/t1st3-assets/dist/_includes/umd_bottom-menu.html'], dest: 'gh-pages/_includes/umd_bottom-menu.html'},
           {src: ['bower_components/t1st3-assets/dist/_includes/umd_head.html'], dest: 'gh-pages/_includes/umd_head.html'},
           {src: ['bower_components/t1st3-assets/dist/_includes/umd_header.html'], dest: 'gh-pages/_includes/umd_header.html'},
           {src: ['bower_components/t1st3-assets/dist/_includes/umd_footer.html'], dest: 'gh-pages/_includes/umd_footer.html'},
           
           {src: ['test/unittests.js'], dest: 'gh-pages/unittests.js'},
-          {src: ['test/functests.js'], dest: 'gh-pages/functests.js'}
-        ]
-      },
-      readme: {
-        options: {
-          process: function (content) {
-            return content.replace(/\{\{ site.name \}\}/g, grunt.file.readJSON('package.json').name);
-          }
-        },
-        files: [
-          {src: ['gh-pages/readme.md'], dest: 'README.md'}
+          {src: ['test/functests.js'], dest: 'gh-pages/functests.js'},
+          
+          {src: ['README.md'], dest: 'gh-pages/index.md'}
         ]
       }
     },
@@ -114,15 +108,16 @@ module.exports = function (grunt) {
           }
         },
         files: {
-          'gh-pages/index.html': ['bower_components/t1st3-assets/dist/umd_index.html'],
           'gh-pages/404.html': ['bower_components/t1st3-assets/dist/umd_404.html'],
+          'gh-pages/tests.html': ['bower_components/t1st3-assets/dist/umd_tests.html'],
           'gh-pages/unittests_amd.html': ['bower_components/t1st3-assets/dist/umd_unittests_amd.html'],
           'gh-pages/unittests_global.html': ['bower_components/t1st3-assets/dist/umd_unittests_global.html'],
           'gh-pages/functests_amd.html': ['bower_components/t1st3-assets/dist/umd_functests_amd.html'],
           'gh-pages/functests_global.html': ['bower_components/t1st3-assets/dist/umd_functests_global.html'],
           'gh-pages/coverage.html': ['bower_components/t1st3-assets/dist/umd_coverage.html'],
+          'gh-pages/build_docs.html': ['bower_components/t1st3-assets/dist/umd_build_docs.html'],
+          'gh-pages/credits.html': ['bower_components/t1st3-assets/dist/umd_credits.html'],
           'gh-pages/jsdoc.html': ['bower_components/t1st3-assets/dist/umd_jsdoc.html'],
-          'gh-pages/readme.md': ['bower_components/t1st3-assets/dist/umd_readme.md'],
           'gh-pages/license.md': ['bower_components/t1st3-assets/dist/umd_license.md'],
           'gh-pages/_config.yml': ['bower_components/t1st3-assets/dist/_umd_config.yml']
         }
@@ -139,16 +134,20 @@ module.exports = function (grunt) {
     },
     clean: {
       ghpages: [
-        'gh-pages/_layouts', 'gh-pages/assets/', 'gh-pages/_config.yml', 'gh-pages/*.html', 'gh-pages/*.md', 'gh-pages/lib', 'gh-pages/_includes/umd_*', '!gh-pages/.git'
+        'gh-pages/_layouts', 'gh-pages/assets/', 'gh-pages/_config.yml', 'gh-pages/*.md', 'gh-pages/lib', 'gh-pages/_includes/umd_*', '!gh-pages/.git'
       ],
       docs: ['docs']
     },
-    matter: {
-      options: {
-        strip: true
-      },
-      files: {
-        src: 'README.md', dest: 'README.md'
+    usebanner: {
+      readme: {
+        options: {
+          position: 'top',
+          banner: '---\nlayout: umd_readme\ntitle: <%= pkg.name %>\nsitemap:\n  priority: 1\n  changefreq: monthly\n---',
+          linebreak: true
+        },
+        files: {
+          src: ['gh-pages/index.md' ]
+        }
       }
     },
     jsdoc : {
@@ -312,17 +311,17 @@ module.exports = function (grunt) {
     'jsdoc:dist',
     'mochaTest:spec',
     'mochaTest:html-cov',
+    'usebanner:readme',
     'jekyll:docsamd',
-    'copy:readme',
     'compress:sitemap',
-    'compress:sitemapgh',
-    'matter'
+    'compress:sitemapgh'
   ]);
   
   grunt.registerTask('test', [
     'jshint',
     'jscs',
-    'mochaTest:spec'
+    'mochaTest:spec',
+    'mochaTest:travis-cov'
   ]);
   
   grunt.registerTask('ci', [

@@ -3,19 +3,19 @@
 
 'use strict';
 
-(function (window, factory) {
+(function (root, factory) {
   // Test for AMD modules
   if (typeof define === 'function' && define.amd) {
     // AMD
     require.config({
       baseUrl: '',
       paths: {
-        jquery: 'lib/jquery',
-        mocha: 'lib/mocha',
-        chai: 'lib/chai',
-        chaijquery: 'lib/chai-jquery',
-        bootstrap: 'lib/bootstrap.min',
-        atob: 'lib/atob-umd'
+        jquery: 'assets/js/lib/jquery.min',
+        mocha: 'assets/js/lib/mocha',
+        chai: 'assets/js/lib/chai',
+        chaijquery: 'assets/js/lib/chai-jquery',
+        bootstrap: 'assets/js/lib/bootstrap.min',
+        atob: 'assets/js/lib/atob-umd'
       },
       shim: {
         jquery: {
@@ -43,8 +43,7 @@
   // Browser globals
   } else {
     // Browser globals
-    /* global Atob */
-    window.Atob = factory(chai, Atob);
+    root.AtobTests = factory(root.chai, root.Atob);
   }
 }(this, function (chai, Atob) {
 

@@ -11,7 +11,7 @@
 
     <link rel="stylesheet" href="assets/css/mocha.css">
     <link rel="stylesheet" href="assets/css/t1st3.min.css">
-    <script type="text/javascript" src="lib/modernizr.js"></script>
+    <script type="text/javascript" src="assets/js/lib/modernizr.js"></script>
   </head>
   <body>
     <a href="https://github.com/T1st3/atob-umd/">
@@ -44,7 +44,9 @@
                   </a>
                 </li>
                 <li>
-                  <a href="https://github.com/T1st3/atob-umd/blob/master/LICENSE" title="atob-umd license"><i class="fa fa-legal"></i> License</a>
+                  <a href="https://github.com/T1st3/atob-umd/tags.atom" title="RSS/Atom for version tags for atob-umd">
+                    <i style="color: #EE7600;" class="fa fa-rss"></i> RSS/Atom for version tags
+                  </a>
                 </li>
               </ul>
             </li>
@@ -55,13 +57,22 @@
                   <a href="index.html" title="atob-umd project pages"><i class="fa fa-home"></i> Home</a>
                 </li>
                 <li>
-                  <a href="readme.html" title="atob-umd README"><i class="fa fa-info-circle"></i> README</a>
+                  <a href="demo.html" title="atob-umd demo"><i class="fa fa-rocket"></i> Demo</a>
                 </li>
                 <li>
-                  <a href="coverage.html" title="atob-umd tests"><i class="fa fa-cogs"></i> Tests</a>
+                  <a href="tests.html" title="atob-umd tests"><i class="fa fa-cogs"></i> Tests</a>
                 </li>
                 <li>
-                  <a href="jsdoc.html" title="atob-umd JSDoc" href="jsdoc.html"><i class="fa fa-code"></i> JS Doc</a>
+                  <a href="jsdoc.html" title="atob-umd JSDoc"><i class="fa fa-code"></i> JS Doc</a>
+                </li>
+                <li>
+                  <a href="https://github.com/T1st3/atob-umd/issues/" title="atob-umd issues"><i class="fa fa-question-circle"></i> Issues</a>
+                </li>
+                <li>
+                  <a href="https://github.com/T1st3/atob-umd/blob/master/LICENSE" title="atob-umd license"><i class="fa fa-legal"></i> License</a>
+                </li>
+                <li>
+                  <a href="credits.html" title="atob-umd credits"><i class="fa fa-share-square-o"></i> Credits</a>
                 </li>
               </ul>
             </li>
@@ -88,6 +99,11 @@
                     <img alt="Travis logo" src="assets/img/vendor/travis-ci-16x16.png"> Travis
                   </a>
                 </li>
+                <li>
+                  <a title="atob-umd on Coveralls" href="https://coveralls.io/r/T1st3/atob-umd?branch=master">
+                    <img alt="Coveralls logo" src="assets/img/vendor/coveralls-16x16.png"> Coveralls
+                  </a>
+                </li>
                 <li class="divider"></li>
                 <li>
                   <a title="Author (T1st3) profile on Github" href="http://t1st3.github.io">
@@ -101,64 +117,29 @@
       </div>
     </nav>
 
-    <div class="container" id="main">
-  <div class="row">
-    <div class="col-12 col-xs-12 col-sm-12 col-lg-12">
-      <h1>atob-umd - Functional tests (using AMD modules)</h1>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-4 col-xs-12 col-sm-4 col-lg-4">
-      <h4><i class="fa fa-cog"></i> Unit tests</h4>
-      <ul>
-        <li>
-          <a href="unittests_amd.html">Unit tests (using AMD modules)</a>
-        </li>
-        <li>
-          <a href="unittests_global.html">Unit tests (using globals)</a>
-        </li>
-      </ul>
-    </div>
-    <div class="col-4 col-xs-12 col-sm-4 col-lg-4">
-      <h4><i class="fa fa-cogs"></i> Functional tests</h4>
-      <ul>
-        <li>
-          <a href="functests_amd.html">Functional tests (using AMD modules)</a>
-        </li>
-        <li>
-          <a href="functests_global.html">Functional tests (using globals)</a>
-        </li>
-      </ul>
-    </div>
-    <div class="col-4 col-xs-12 col-sm-4 col-lg-4">
-      <h4><i class="fa fa-flag-checkered"></i> Coverage</h4>
-      <ul>
-        <li>
-          <a href="coverage.html">Code coverage</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-  <hr>
-  <div class="row">
-    <div class="col-12 col-xs-12 col-sm-12 col-lg-12">
-      <p>
-        Status of tests for Node.js: 
-        <a href="https://travis-ci.org/T1st3/atob-umd" title="Build status on Travis CI">
-          <img src="https://travis-ci.org/T1st3/atob-umd.svg?branch=master" alt="Build Status">
-        </a>
-      </p>
-    </div>
-  </div>
-</div>
-<hr>
-
     <div class="container" id="tests">
       <div class="row">
         <div class="col-12 col-xs-12 col-sm-12 col-lg-12">
-           <h2>atob-umd - Functional tests (using AMD modules)</h2>
+          <h2>atob-umd - Functional tests (using AMD modules)</h2>
+          <a href="tests.html" title="Tests section"><i class="fa fa-arrow-circle-left"></i> Back to all tests</a><br><br>
+          <hr>
+          <br>
           <!-- Required for browser reporter -->
           <div id="mocha"></div>
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col-12 col-xs-12 col-sm-12 col-lg-12">
+          <h2>Notes</h2>
+          <p>All tests are run with <a href="http://visionmedia.github.io/mocha/">Mocha</a>, and use 
+          <a href="http://chaijs.com/" title="Chai website">Chai</a> as the assertion library.<br><br>
+          If you want to run the tests in Node.js, you will need 
+          <a href="http://gruntjs.com/" title="Grunt website">Grunt</a>, and then just run:
+          </p>
+          <pre><code>grunt test</code></pre>
+          <br><br><br>
+          <a href="tests.html" title="Tests section"><i class="fa fa-arrow-circle-left"></i> Back to all tests</a><br><br>
         </div>
       </div>
     </div>
@@ -174,18 +155,13 @@
                 </a>
               </li>
               <li>
-                <a class="btn btn-default" title="atob-umd README" href="readme.html">
-                  <i class="fa fa-info-circle"></i> README
-                </a>
-              </li>
-              <li>
-                <a class="btn btn-default" title="atob-umd tests" href="coverage.html">
+                <a class="btn btn-default" title="atob-umd tests" href="tests.html">
                   <i class="fa fa-cogs"></i> Tests
                 </a>
               </li>
               <li>
-                <a class="btn btn-default" title="atob-umd JSDoc" href="jsdoc.html">
-                  <i class="fa fa-code"></i> JS Doc
+                <a class="btn btn-default" title="atob-umd demo" href="demo.html">
+                  <i class="fa fa-rocket"></i> Demo
                 </a>
               </li>
             </ul>
@@ -222,11 +198,6 @@
                 </a>
               </li>
               <li>
-                <a class="btn btn-default" title="atob-umd dependencies on David-dm" href="https://david-dm.org/t1st3/atob-umd">
-                  <img alt="David logo" src="assets/img/vendor/david-dm-16x16.png"> David
-                </a>
-              </li>
-              <li>
                 <a class="btn btn-default" title="atob-umd on Travis-CI" href="https://travis-ci.org/T1st3/atob-umd">
                   <img alt="Travis logo" src="assets/img/vendor/travis-ci-16x16.png"> Travis
                 </a>
@@ -254,8 +225,6 @@
     </nav>
 
 <script type="text/javascript" data-main="functests" src="require.js"></script>
-  </body>
-</html> 
 <!--
 .-') _         .-')   .-') _            
 (  OO) )       ( OO ).(  OO) )           
@@ -267,3 +236,6 @@
   |  |   |   \       /  |  |  \ `-'   / 
   `--'   `---'`-----'   `--'   `----''  
 -->
+  </body>
+</html> 
+

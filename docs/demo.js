@@ -3,11 +3,11 @@
 require.config({
   baseUrl: '',
   paths: {
-    jquery: 'lib/jquery',
-    atob: 'lib/atob-umd',
-    httpbackend: 'lib/backends/backend-jquery',
-    httpresponse: 'lib/http-response',
-    bootstrap: 'lib/bootstrap.min'
+    jquery: 'assets/js/lib/jquery.min',
+    atob: 'assets/js/lib/atob-umd',
+    httpbackend: 'assets/js/lib/backends/backend-jquery',
+    httpresponse: 'assets/js/lib/http-response',
+    bootstrap: 'assets/js/lib/bootstrap.min'
   },
   shim: {
     jquery: {
@@ -28,8 +28,8 @@ require.config({
 require([
   'jquery',
   'atob',
-  'lib/codemirror',
-  'lib/codemirror/javascript',
+  'assets/js/lib/codemirror',
+  'assets/js/lib/codemirror/javascript',
   'bootstrap'
 ], function ($, Atob, CodeMirror) {
   $(document).ready(function () {

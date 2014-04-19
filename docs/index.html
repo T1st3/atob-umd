@@ -9,9 +9,8 @@
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/font-awesome.min.css"> 
 
-    <link rel="stylesheet" href="assets/css/codemirror.css">
     <link rel="stylesheet" href="assets/css/t1st3.min.css">
-    <script type="text/javascript" src="lib/modernizr.js"></script>
+    <script type="text/javascript" src="assets/js/lib/modernizr.js"></script>
   </head>
   <body>
     <a href="https://github.com/T1st3/atob-umd/">
@@ -44,7 +43,9 @@
                   </a>
                 </li>
                 <li>
-                  <a href="https://github.com/T1st3/atob-umd/blob/master/LICENSE" title="atob-umd license"><i class="fa fa-legal"></i> License</a>
+                  <a href="https://github.com/T1st3/atob-umd/tags.atom" title="RSS/Atom for version tags for atob-umd">
+                    <i style="color: #EE7600;" class="fa fa-rss"></i> RSS/Atom for version tags
+                  </a>
                 </li>
               </ul>
             </li>
@@ -55,13 +56,22 @@
                   <a href="index.html" title="atob-umd project pages"><i class="fa fa-home"></i> Home</a>
                 </li>
                 <li>
-                  <a href="readme.html" title="atob-umd README"><i class="fa fa-info-circle"></i> README</a>
+                  <a href="demo.html" title="atob-umd demo"><i class="fa fa-rocket"></i> Demo</a>
                 </li>
                 <li>
-                  <a href="coverage.html" title="atob-umd tests"><i class="fa fa-cogs"></i> Tests</a>
+                  <a href="tests.html" title="atob-umd tests"><i class="fa fa-cogs"></i> Tests</a>
                 </li>
                 <li>
-                  <a href="jsdoc.html" title="atob-umd JSDoc" href="jsdoc.html"><i class="fa fa-code"></i> JS Doc</a>
+                  <a href="jsdoc.html" title="atob-umd JSDoc"><i class="fa fa-code"></i> JS Doc</a>
+                </li>
+                <li>
+                  <a href="https://github.com/T1st3/atob-umd/issues/" title="atob-umd issues"><i class="fa fa-question-circle"></i> Issues</a>
+                </li>
+                <li>
+                  <a href="https://github.com/T1st3/atob-umd/blob/master/LICENSE" title="atob-umd license"><i class="fa fa-legal"></i> License</a>
+                </li>
+                <li>
+                  <a href="credits.html" title="atob-umd credits"><i class="fa fa-share-square-o"></i> Credits</a>
                 </li>
               </ul>
             </li>
@@ -88,6 +98,11 @@
                     <img alt="Travis logo" src="assets/img/vendor/travis-ci-16x16.png"> Travis
                   </a>
                 </li>
+                <li>
+                  <a title="atob-umd on Coveralls" href="https://coveralls.io/r/T1st3/atob-umd?branch=master">
+                    <img alt="Coveralls logo" src="assets/img/vendor/coveralls-16x16.png"> Coveralls
+                  </a>
+                </li>
                 <li class="divider"></li>
                 <li>
                   <a title="Author (T1st3) profile on Github" href="http://t1st3.github.io">
@@ -104,59 +119,156 @@
 <div class="container" id="main">
   <div class="row">
     <div class="col-12 col-xs-12 col-sm-12 col-lg-12">
-      <h1>
-        atob-umd
-      </h1>
-      <p><code>atob-umd</code> is a Javascript UMD module for atob().</p>
+      <h1 id="atob-umd">atob-umd</h1>
 
-<p>This module is written using the <a title="UMD definition" href="https://github.com/umdjs/umd">UMD definition</a> of modules.
-It enforces the <code>returnExports.js</code> pattern, which “defines a module that works in Node, AMD and browser globals”.</p>
+<p><a href="http://badge.fury.io/js/atob-umd"><img src="https://badge.fury.io/js/atob-umd.svg" alt="NPM version" /></a>
+<a href="https://david-dm.org/t1st3/atob-umd"><img src="https://david-dm.org/t1st3/atob-umd.svg?theme=shields.io" alt="Dependency Status" /></a>
+<a href="https://travis-ci.org/T1st3/atob-umd"><img src="https://travis-ci.org/T1st3/atob-umd.svg?branch=master" alt="Build Status" /></a>
+<a href="https://coveralls.io/r/T1st3/atob-umd"><img src="https://coveralls.io/repos/T1st3/atob-umd/badge.png" alt="Coverage Status" /></a></p>
 
-<p>So you can use this module in the following contexts:</p>
+<h2 id="about">About</h2>
+
+<p><code>atob-umd</code> is a Javascript UMD module for atob().<br /><br /></p>
+
+<p>You’ll find all about this project on its <strong><a href="http://t1st3.github.io/atob-umd/">project pages</a></strong></p>
+
+<h2 id="installation-for-production">Installation for production</h2>
+
+<p><strong>with Node.js</strong></p>
+
+<p><code>atob-umd</code> is available on <a href="https://www.npmjs.org/package/atob-umd">NPM</a>
+<a href="https://www.npmjs.org/package/atob-umd"><img src="http://t1st3.github.io/atob-umd/assets/img/vendor/npm-16x16.png" alt="NPM" /></a>.</p>
+
+<p><a href="http://badge.fury.io/js/atob-umd"><img src="https://badge.fury.io/js/atob-umd.svg" alt="NPM version" /></a></p>
+
+<p>You can install it with the following command:</p>
+
+<pre><code>npm install atob-umd
+</code></pre>
+
+<p><strong>Browser globals and AMD</strong></p>
+
+<p><code>atob-umd</code> is available on <a href="http://bower.io/search/?q=atob-umd">Bower</a>
+<a href="http://bower.io/search/?q=atob-umd"><img src="http://t1st3.github.io/atob-umd/assets/img/vendor/bower-16x16.png" alt="Bower" /></a>.</p>
+
+<p><a href="http://badge.fury.io/js/atob-umd"><img src="https://badge.fury.io/bo/atob-umd.svg" alt="Bower version" /></a></p>
+
+<p>To install it from Bower, just run </p>
+
+<pre><code>bower install atob-umd
+</code></pre>
+
+<p>Note that published versions on both NPM and Bower should stay in sync.</p>
+
+<h2 id="installation-for-development">Installation for development</h2>
+
+<p>You also can download the whole project (and build it from its source; see below).</p>
+
+<p>Either use <code>git clone</code> command to get it:</p>
+
+<pre><code>git clone https://github.com/T1st3/atob-umd.git
+</code></pre>
+
+<p>Or download the latest version of <a href="https://github.com/T1st3/atob-umd/archive/master.zip">the whole project</a>.</p>
+
+<p>Then, get the dependencies of the project from both Bower and NPM:</p>
+
+<pre><code>npm install
+bower install
+</code></pre>
+
+<h2 id="documentation">Documentation</h2>
+
+<p>You can find fully functional examples, tests and a documentation in the <a href="http://usejsdoc.org/">JSDoc</a> format in the <code>docs</code> folder.</p>
+
+<p>You can also browse these documents and tests online:</p>
 
 <ul>
-  <li>Node.js</li>
-  <li>Browser globals</li>
-  <li>AMD (with Require.js or any other AMD loader)</li>
+  <li><a href="http://t1st3.github.io/atob-umd/demo.html">Demo</a></li>
+  <li><a href="http://t1st3.github.io/atob-umd">this README and more info</a></li>
+  <li><a href="http://t1st3.github.io/atob-umd/jsdoc.html">JSDoc</a></li>
+  <li><a href="http://t1st3.github.io/atob-umd/credits.html">Credits</a></li>
+  <li><a href="http://t1st3.github.io/atob-umd/tests.html">Tests</a></li>
 </ul>
 
-      <h2>Demo (using AMD modules)</h2>
-<p>
-  What we'll do here is just a simple wrapper function around the AMD module, and a simple use case.<br><br>
-  The demo will use the wrapper to decode the string <i>SGVsbG8gV29ybGQ=</i>, 
-  which is the encoded version of <i>Hello World</i>.
-</p>
-<pre class="js">
-  <code class="js">
-$(document).ready(function () {
-  $('#in').on('click', function () {
-    var atob = function (a) {
-      var umd = new Atob();
-      return umd.handle(a).b;
-    };
-    var res = atob('SGVsbG8gV29ybGQ=');
-    $('#out').html(res);
-  });
-});
-  </code>
-</pre>
-<br><br>
-<p>
-  And here will be the result:
-</p>
-<pre id="out">
-  <code>
-No result yet!
-  </code>
-</pre>
-<p>
-  <a class="btn btn-primary" id="in">AJAX call</a> | 
-  <a class="btn btn-warning" id="reset">Reset</a><br><br>
-</p>
+<h2 id="build-from-source">Build from source</h2>
+
+<p>First, see “Installation for development” above. 
+Do not forget to get the dependencies!</p>
+
+<p>Then, you also need to install <a href="http://gruntjs.com/">Grunt</a> globally to build the project.</p>
+
+<pre><code>npm install -g grunt-cli
+</code></pre>
+
+<p>See more at the <a href="http://gruntjs.com/getting-started">“Getting started with Grunt” page</a>.</p>
+
+<hr />
+
+<p>You are now ready to build!</p>
+
+<p>The source is located in the “src” folder; the built target is located in the “dist” folder.</p>
+
+<p>To build, just run:</p>
+
+<pre><code>grunt build
+</code></pre>
+
+<p>To test, you can use Grunt:</p>
+
+<pre><code>grunt test
+</code></pre>
+
+<p><strong>Serve and livereload</strong></p>
+
+<p>You can also use the <code>serve</code> task to load the <code>docs</code> pages in your browser.</p>
+
+<pre><code>grunt serve
+</code></pre>
+
+<p>Once it has loaded the page in the browser, this task watches for any modification in the source.
+If changes happen in the source, the task automatically reloads the page in the browser (livereload).</p>
+
+<p>This project is <a href="http://gruntjs.com/"><img src="https://cdn.gruntjs.com/builtwith.png" alt="Built with Grunt" /></a>.</p>
+
+<h2 id="dependencies">Dependencies</h2>
+
+<p>Status of dependencies:</p>
+
+<p><a href="https://david-dm.org/t1st3/atob-umd"><img src="https://david-dm.org/t1st3/atob-umd.svg?theme=shields.io" alt="Dependency Status" /></a>
+<a href="https://david-dm.org/t1st3/atob-umd#info=devDependencies"><img src="https://david-dm.org/t1st3/atob-umd/dev-status.svg?theme=shields.io" alt="devDependency Status" /></a></p>
+
+<h2 id="build-the-docs-and-github-pages">Build the docs and Github pages</h2>
+
+<p>Please note that this task has a few more dependencies:</p>
+
+<ul>
+  <li><a href="https://www.ruby-lang.org/">Ruby</a> and <a href="https://rubygems.org/">RubyGems</a></li>
+  <li><a href="http://jekyllrb.com/">Jekyll</a></li>
+  <li><a href="http://kramdown.gettalong.org/">Kramdown</a></li>
+</ul>
+
+<p>Check <a href="http://t1st3.github.io/atob-umd/build_docs.html">the build-docs page</a> for more info.</p>
+
+<h2 id="credits">Credits</h2>
+
+<p>See <a href="http://t1st3.github.io/atob-umd/build_docs.html">the credits page</a> to see more.</p>
+
+<h2 id="license">License</h2>
+
+<p>This piece of code is triple-licensed: <a href="https://github.com/T1st3/atob-umd/blob/master/LICENSE.md">MIT / BSD / GPL licenses</a></p>
+
+<p>You can also view it in a re-formatted fashion: <a href="http://t1st3.github.io/atob-umd/license.html">MIT / BSD / GPL licenses</a>.</p>
+
+<h2 id="initial-author">Initial author</h2>
+
+<p><a href="https://github.com/T1st3/">T1st3</a> 
+<a href="https://github.com/T1st3/"><img src="http://t1st3.github.io/atob-umd/assets/img/gravatar-16x16.png" alt="T1st3" /></a></p>
+
+
     </div>
   </div>
 </div>
-
     <div id="footer-wrap">
       <footer class="container" id="footer">
         <div class="row">
@@ -168,18 +280,13 @@ No result yet!
                 </a>
               </li>
               <li>
-                <a class="btn btn-default" title="atob-umd README" href="readme.html">
-                  <i class="fa fa-info-circle"></i> README
-                </a>
-              </li>
-              <li>
-                <a class="btn btn-default" title="atob-umd tests" href="coverage.html">
+                <a class="btn btn-default" title="atob-umd tests" href="tests.html">
                   <i class="fa fa-cogs"></i> Tests
                 </a>
               </li>
               <li>
-                <a class="btn btn-default" title="atob-umd JSDoc" href="jsdoc.html">
-                  <i class="fa fa-code"></i> JS Doc
+                <a class="btn btn-default" title="atob-umd demo" href="demo.html">
+                  <i class="fa fa-rocket"></i> Demo
                 </a>
               </li>
             </ul>
@@ -216,11 +323,6 @@ No result yet!
                 </a>
               </li>
               <li>
-                <a class="btn btn-default" title="atob-umd dependencies on David-dm" href="https://david-dm.org/t1st3/atob-umd">
-                  <img alt="David logo" src="assets/img/vendor/david-dm-16x16.png"> David
-                </a>
-              </li>
-              <li>
                 <a class="btn btn-default" title="atob-umd on Travis-CI" href="https://travis-ci.org/T1st3/atob-umd">
                   <img alt="Travis logo" src="assets/img/vendor/travis-ci-16x16.png"> Travis
                 </a>
@@ -247,9 +349,26 @@ No result yet!
       </div>
     </nav>
 
-<script type="text/javascript" data-main="index" src="require.js"></script>
-  </body>
-</html> 
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="assets/js/lib/jquery.min.js"><\/script>')</script>
+<script src="assets/js/lib/bootstrap.min.js"></script>
+<script type="text/javascript">
+/*
+  $(document).ready(function() {
+    $('#main h1, #main h2, #main h3, #main h4, #main h5, #main h6').each(function(i, el) {
+      var $el, icon, id, html;
+      $el = $(el);
+      html = $el.html();
+      id = html.toLowerCase().replace(/\s/g, '_').replace(/\W/g, '');
+      icon = '<i class="fa fa-link"></i>';
+      if (id) {
+        $el.prepend($('<a />').addClass('anchor-link').attr('href', '#' + id).attr('name', id).attr('id', id).html(icon));
+        return $el;
+      }
+    });
+  });
+*/
+</script>
 <!--
 .-') _         .-')   .-') _            
 (  OO) )       ( OO ).(  OO) )           
@@ -261,3 +380,6 @@ No result yet!
   |  |   |   \       /  |  |  \ `-'   / 
   `--'   `---'`-----'   `--'   `----''  
 -->
+  </body>
+</html> 
+

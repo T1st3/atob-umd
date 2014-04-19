@@ -39,13 +39,13 @@ module.exports = function (grunt) {
     uglify: {
       options: {
         mangle: false,
-        banner: '/** <%= pkg.name %> <%= pkg.version %> \n * <%= grunt.template.today(\'yyyy-mm-dd\') %>\n */\n',
+        banner: '/*! <%= pkg.name %> <%= pkg.version %> \n * <%= grunt.template.today(\'yyyy-mm-dd\') %>\n */\n',
         sourceMap: true,
         sourceMapName: 'dist/atob-umd.min.map'
       },
-      myTarget: {
+      dist: {
         files: {
-          'dist/atob.min.js': ['src/atob-umd.js']
+          'dist/atob-umd.min.js': ['src/atob-umd.js']
         }
       }
     },
@@ -295,7 +295,8 @@ module.exports = function (grunt) {
     'version:json',
     'jshint',
     'jscs',
-    'copy:build'
+    'copy:build',
+    'uglify:dist'
   ]);
 
   grunt.registerTask('serve', [

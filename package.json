@@ -1,6 +1,6 @@
 {
   "name": "atob-umd",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "homepage": "http://t1st3.github.io/atob-umd",
   "description": "A UMD module for atob()",
   "keywords": [
@@ -15,7 +15,7 @@
   "license": "MIT",
   "main": "dist/atob-umd.js",
   "files": [
-    "dist"
+    "dist/atob-umd.js"
   ],
   "repository": {
     "type": "git",

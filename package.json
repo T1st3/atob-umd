@@ -1,6 +1,6 @@
 {
   "name": "atob-umd",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "homepage": "http://t1st3.github.io/atob-umd",
   "description": "A UMD module for atob()",
   "keywords": [
@@ -33,6 +33,9 @@
     "travis-cov": {
       "threshold": 70
     }
+  },
+  "engines": {
+    "node": ">= 0.10.0"
   },
   "dependencies": {},
   "devDependencies": {

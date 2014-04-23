@@ -12,7 +12,7 @@ atob-umd
 About
 ---
 
-`atob-umd` is a Javascript UMD module for atob().<br><br>
+`atob-umd` is a Javascript UMD module for atob().
 
 You'll find all about this project on its **[project pages](http://t1st3.github.io/atob-umd/)**
 
@@ -160,7 +160,7 @@ Credits
 ---
 
 
-See [the credits page](http://t1st3.github.io/atob-umd/build_docs.html) to see more.
+See [the credits page](http://t1st3.github.io/atob-umd/credits.html) to see more.
 
 
 License

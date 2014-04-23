@@ -280,6 +280,11 @@ module.exports = function (grunt) {
         src: ['**/*sitemap.xml'],
         dest: 'gh-pages/'
       }
+    },
+    env: {
+      ci: {
+        COVERALLS_REPO_TOKEN: 'dTSWuxv3mHOyYcAiVSLmZoKf9n5KkyGZr'
+      }
     }
   });
 
@@ -327,6 +332,7 @@ module.exports = function (grunt) {
   
   grunt.registerTask('ci', [
     'mochaTest',
+    'env:ci',
     'coveralls'
   ]);
 };

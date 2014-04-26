@@ -38,10 +38,10 @@ require([
         var umd = new Atob();
         return umd.handle(a).b;
       };
-      $('#out').html(atob('SGVsbG8gV29ybGQ='));
+      $('#out > code').html(atob('SGVsbG8gV29ybGQ='));
     });
     $('#reset').on('click', function () {
-      $('#out').html('No result yet!');
+      $('#out > code').html('No result yet!');
     });
     
     $('pre.js > code.js').each(function () {

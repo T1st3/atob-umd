@@ -43,7 +43,7 @@
   // Browser globals
   } else {
     // Browser globals
-    root.Atob = factory(root.chai, root.Atob);
+    root.AtobTests = factory(root.chai, root.Atob);
   }
 }(this, function (chai, Atob) {
 

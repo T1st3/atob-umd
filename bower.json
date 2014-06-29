@@ -1,6 +1,6 @@
 {
   "name": "atob-umd",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "homepage": "http://t1st3.github.io/atob-umd",
   "description": "A UMD module for atob()",
   "keywords": [
@@ -24,7 +24,6 @@
     "docs",
     "src",
     "test",
-    "node_test.js",
     ".git",
     ".travis.yml",
     ".bowerrc",

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>atob-umd - Tests</title>
+    <title>atob-umd - CommonJS dependencies</title>
     <meta name="description" content="Another JavaScript UMD module (works in Require.js/AMD loaders, Node.js, and browser globals)">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -145,99 +145,27 @@
         </div>
       </div>
     </div>
-<div class="container">
-  <div class="row">
-    <div class="col-12 col-xs-12 col-sm-12 col-lg-12">
-      <h1><i class="fa fa-cogs"></i> atob-umd - Tests</h1>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-12 col-xs-12 col-sm-12 col-lg-12">
-      <h3>Browser tests</h3>
-      <h4><i class="fa fa-cog"></i> Unit tests</h4>
-      <ul>
-        <li>
-          <a href="unittests_amd.html" title="Unit tests for atob-umd, using AMD modules">
-            Unit tests (using AMD modules)
-          </a>
-        </li>
-        <li>
-          <a href="unittests_global.html" title="Unit tests for atob-umd, using globals">
-            Unit tests (using globals)
-          </a>
-        </li>
-      </ul>
-    </div>
-    <div class="col-12 col-xs-12 col-sm-12 col-lg-12">
-      <h4><i class="fa fa-cogs"></i> Functional tests</h4>
-      <ul>
-        <li>
-          <a href="functests_amd.html" title="Functional tests for atob-umd, using AMD modules">
-            Functional tests (using AMD modules)
-          </a>
-        </li>
-        <li>
-          <a href="functests_global.html" title="Functional tests for atob-umd, using globals">
-            Functional tests (using globals)
-          </a>
-        </li>
-      </ul>
-    </div>
-  </div>
-  <hr>
-  <div class="row">
-    <div class="col-12 col-xs-12 col-sm-12 col-lg-12">
-      <h3>Node.js tests</h3>
-      <h4><i class="fa fa-refresh"></i> Continuous testing</h4>
-      <p>
-        Unit tests and functional tests in Node.js for atob-umd are performed on 
-        <a href="https://travis-ci.org/T1st3/atob-umd" title="atob-umd on Travis CI">
-          Travis-CI 
-        </a>
-        <a href="https://travis-ci.org/T1st3/atob-umd" title="atob-umd on Travis CI">
-          <img alt="Travis logo" src="http://t1st3.github.io/atob-umd/assets/img/vendor/travis-ci-16x16.png">
-        </a><br>
-        Status on Travis-CI:
-        <a href="https://travis-ci.org/T1st3/atob-umd" title="Build status of atob-umd on Travis CI">
-          <img src="https://travis-ci.org/T1st3/atob-umd.svg?branch=master" alt="Build Status">
-        </a>
-      </p>
-    </div>
-    <div class="col-12 col-xs-12 col-sm-12 col-lg-12">
-      <h4><i class="fa fa-shield"></i> Coverage</h4>
-      <p>
-        <a href="coverage.html" title="Code coverage of atob-umd, generated with Istanbul">
-          Code coverage of atob-umd in Node tests
-        </a> (Generated during the tests)
-        <br><br>
-        This code coverage can also be viewed on 
-        <a href="https://coveralls.io/r/T1st3/atob-umd?branch=master" title="atob-umd on Coveralls.io">
-          Coveralls.io 
-        </a>
-        <a href="https://coveralls.io/r/T1st3/atob-umd?branch=master" title="atob-umd on Coveralls.io">
-          <img alt="Coveralls logo" src="http://t1st3.github.io/atob-umd/assets/img/vendor/coveralls-16x16.png">
-        </a><br>
-        Status on Coveralls:
-        <a href="https://coveralls.io/r/T1st3/atob-umd?branch=master" title="Coverage status of atob-umd on Coveralls.io">
-          <img src="https://coveralls.io/repos/T1st3/atob-umd/badge.png?branch=master" alt="Coverage Status" />
-        </a>
-      </p>
-    </div>
-  </div>
-  <hr>
-  <div class="row">
-    <div class="col-12 col-xs-12 col-sm-12 col-lg-12">
-      <h3><i class="fa fa-file-text-o"></i> Notes</h3>
-      <p>
-        All tests are run with <a href="http://visionmedia.github.io/mocha/">Mocha</a>.<br><br>
-        <a href="http://chaijs.com/" title="Chai website">Chai</a> is used in the tests as the assertion library.<br><br>
-        <a href="coverage.html" title="Code coverage of atob-umd, generated with Istanbul">The coverage page</a> 
-        is generated using <a href="http://gotwarlost.github.io/istanbul/" title="Istanbul website">Istanbul</a><br><br>
-      </p>
-      <br><br>
-    </div>
-  </div>
-</div>
+    <div class="container" id="deps">
+      <div class="row">
+        <div class="col-12 col-xs-12 col-sm-12 col-lg-12">
+          <h2><i class="fa fa-puzzle-piece"></i> atob-umd - CommonJS dependencies</h2>
+          You can view the status of CommonJS dependencies on 
+          <a title="atob-umd dependencies on David-dm" href="https://david-dm.org/t1st3/atob-umd">
+            <img alt="David logo" src="assets/img/vendor/david-dm-16x16.png"> David
+          </a><br><br>
+          <a href="index.html" title="Home page"><i class="fa fa-arrow-circle-left"></i> Back to home</a><br><br>
+          <iframe src="dependo/cjs_deps.html" id="cjsiframe" style="min-height: 80%; width: 100%;"></iframe>
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col-12 col-xs-12 col-sm-12 col-lg-12">
+          <h2><i class="fa fa-file-text-o"></i> Notes</h2>
+          <p>Dependency tree is created with <a href="https://github.com/auchenberg/dependo">Dependo</a>.<br><br>
+          <a href="index.html" title="Home page"><i class="fa fa-arrow-circle-left"></i> Back to home</a><br><br>
+        </div>
+      </div>
+    </div> 
 
     <div id="footer-wrap">
       <footer class="container" id="footer">

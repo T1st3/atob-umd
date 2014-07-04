@@ -14,7 +14,7 @@
   ],
   "license": "MIT",
   "authors": [
-    "T1st3"
+    "T1st3 <contact@tiste.org> (http://www.tiste.org/)"
   ],
   "main": "dist/atob-umd.js",
   "ignore": [

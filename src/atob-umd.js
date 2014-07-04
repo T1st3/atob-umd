@@ -3,7 +3,7 @@
 * 
 * @link https://github.com/T1st3/atob-umd
 * @author T1st3
-* @version 0.4.1
+* @version 0.4.2
 * @license https://github.com/T1st3/atob-umd/blob/master/LICENSE
 * 
 */
@@ -97,9 +97,9 @@
     if (!a || arguments.length === 0) {
       return '';
     }
-    var _byte = [], 
-    _char = [], 
-    _result = [], 
+    var _byte = [],
+    _char = [],
+    _result = [],
     j = 0, i = 0;
     var CHAR_MAP = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=';
     /*jshint bitwise: false*/

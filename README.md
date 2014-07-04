@@ -118,8 +118,12 @@ or
 
     gulp test
 
+To get info about the package from the command line, just run:
+
+    gulp info
 
 
+---
 
 **Serve and livereload**
 
@@ -131,15 +135,6 @@ Once it has loaded the page in the browser, this task watches for any modificati
 If changes happen in the source, the task automatically reloads the page in the browser (livereload).
 
 
-
-
-Dependencies
----
-
-Status of dependencies:
-
-[![Dependency Status](https://david-dm.org/t1st3/atob-umd.svg?theme=shields.io)](https://david-dm.org/t1st3/atob-umd)
-[![devDependency Status](https://david-dm.org/t1st3/atob-umd/dev-status.svg?theme=shields.io)](https://david-dm.org/t1st3/atob-umd#info=devDependencies)
 
 
 

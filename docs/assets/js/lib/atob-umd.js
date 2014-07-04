@@ -1,11 +1,11 @@
 /*!
 * atob-umd
-* 
+*
 * @link https://github.com/T1st3/atob-umd
 * @author T1st3
-* @version 0.4.4
+* @version 0.4.5
 * @license https://github.com/T1st3/atob-umd/blob/master/LICENSE
-* 
+*
 */
 
 /* global define */
@@ -27,12 +27,12 @@
     root.Atob = factory();
   }
 }(this, function () {
-  /** 
+  /**
   * atob(), UMD style
   * @module Atob
   * @namespace Atob
   */
-  
+
   /**
   * @constructor
   * @param {string} a
@@ -49,7 +49,7 @@
     // keep chainability
     return this;
   };
-  
+
   /**
   * handle A to B
   * @method handle
@@ -64,14 +64,14 @@
       return this;
     }
     this.a = a;
-    
+
     var browser = true;
     if (typeof define === 'function' && define.amd) {
       browser = true;
     } else if (typeof exports === 'object') {
       browser = false;
     }
-    
+
     if (browser === true) {
       /* global window */
       if (typeof window.btoa === 'function') {
@@ -85,7 +85,7 @@
     // keep chainability
     return this;
   };
-  
+
   /**
   * decode fix for browser which don't support atob
   * @method decode
@@ -100,8 +100,9 @@
     var _byte = [],
     _char = [],
     _result = [],
-    j = 0, i = 0;
-    var CHAR_MAP = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=';
+    j = 0,
+    i = 0,
+    CHAR_MAP = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=';
     /*jshint bitwise: false*/
     while ((a.length % 4) !== 0) {
       a += '=';
@@ -124,6 +125,6 @@
     }
     return _result.join('');
   };
-  
+
   return Atob;
 }));

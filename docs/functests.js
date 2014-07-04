@@ -50,9 +50,10 @@
   if (typeof exports !== 'object') {
     mocha.setup('bdd');
   }
-  var should = chai.should();
-  
-  var browser = false;
+
+  var should = chai.should(),
+  browser = false;
+
   if (typeof define === 'function' && define.amd) {
     browser = true;
   } else if (typeof exports === 'object') {
@@ -60,7 +61,7 @@
   } else {
     browser = true;
   }
-  
+
   describe('atob-umd functional tests', function () {
     describe('test general behaviour (browser test)', function () {
       it('Should behave like native function', function (done) {
@@ -86,7 +87,7 @@
       });
     }
   });
-  
+
   if (typeof exports !== 'object') {
     mocha.run();
   }

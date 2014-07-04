@@ -51,7 +51,7 @@
     mocha.setup('bdd');
   }
   var should = chai.should();
-  
+
   describe('atob-umd unit tests', function () {
     describe('tests against constructor', function () {
       it('No param for a', function (done) {
@@ -68,15 +68,15 @@
     });
     describe('tests against handle', function () {
       it('No param for a', function (done) {
-        var umd = new Atob();
-        var res = umd.handle();
+        var umd = new Atob(),
+        res = umd.handle();
         res.should.be.a('object');
         res.b.should.equal('');
         done();
       });
       it('Correct param "SGVsbG8gV29ybGQ=" for a', function (done) {
-        var umd = new Atob();
-        var res = umd.handle('SGVsbG8gV29ybGQ=');
+        var umd = new Atob(),
+        res = umd.handle('SGVsbG8gV29ybGQ=');
         res.b.should.equal('Hello World');
         done();
       });
@@ -99,7 +99,7 @@
       });
     });
   });
-  
+
   if (typeof exports !== 'object') {
     mocha.run();
   }

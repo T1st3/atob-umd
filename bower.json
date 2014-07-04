@@ -1,6 +1,6 @@
 {
   "name": "atob-umd",
-  "version": "0.4.3",
+  "version": "0.4.4",
   "homepage": "http://t1st3.github.io/atob-umd",
   "description": "A UMD module for atob()",
   "keywords": [
@@ -46,6 +46,7 @@
     "chai": "*",
     "chai-jquery": "*",
     "t1st3-assets": "*",
-    "codemirror": "*"
+    "codemirror": "*",
+    "lodash": "*"
   }
 }

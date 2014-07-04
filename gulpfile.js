@@ -261,11 +261,12 @@ gulp.task('doc_copy', ['bower', 'doc_clean', 'qr'], function () {
     'bower_components/bootstrap/dist/js/bootstrap.min.js',
     'bower_components/codemirror/lib/codemirror.js',
     'bower_components/jshint/dist/jshint.js',
+    'bower_components/lodash/dist/lodash.min.js',
     'src/' + pkg.name + '.js'
   ])
     .pipe(gulp.dest('gh-pages/assets/js/lib'));
   
-   _([deps]).forEach(function (num) {
+   _(deps).forEach(function (num) {
      gulp.src(['bower_components/' + num + '/dist/' + num + '.js'])
       .pipe(gulp.dest('gh-pages/assets/js/lib'));
    });

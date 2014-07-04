@@ -4,10 +4,8 @@
   "homepage": "http://t1st3.github.io/atob-umd",
   "description": "A UMD module for atob()",
   "keywords": [
-    "amd",
     "umd",
     "atob",
-    "module",
     "base64",
     "ascii",
     "binary"

@@ -92,6 +92,11 @@
         res.should.equal('');
         done();
       });
+      it('Correct param "abcd" for a with 5 chars', function (done) {
+        var res = Atob.decode('abcde');
+        res.should.equal('i·\u001d|');
+        done();
+      });
       it('Correct param "SGVsbG8gd29ybGQ=" for a', function (done) {
         var res = Atob.decode('SGVsbG8gd29ybGQ=');
         res.should.equal('Hello world');

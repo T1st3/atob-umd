@@ -27,6 +27,17 @@ cowsay = require('cowsay'),
 ip = require('ip'),
 changelog = require('changelog');
 
+function getDateTime() {
+  var date = new Date(),
+  hour = date.getHours(),
+  min  = date.getMinutes(),
+  sec  = date.getSeconds();
+  hour = (hour < 10 ? '0' : '') + hour;
+  min = (min < 10 ? '0' : '') + min;
+  sec = (sec < 10 ? '0' : '') + sec;
+  return hour + ':' + min + ':' + sec;
+}
+
 /*
  * TEST TASKS
  */
@@ -377,21 +388,6 @@ gulp.task('jsdoc', ['doc_copy'], function () {
 });
 
 gulp.task('dependo', ['doc_copy'], function () {
-  function getDateTime() {
-    var date = new Date(),
-    hour = date.getHours(),
-    min  = date.getMinutes(),
-    sec  = date.getSeconds(),
-    year = date.getFullYear(),
-    month = date.getMonth() + 1,
-    day  = date.getDate();
-    hour = (hour < 10 ? '0' : '') + hour;
-    min = (min < 10 ? '0' : '') + min;
-    sec = (sec < 10 ? '0' : '') + sec;
-    month = (month < 10 ? '0' : '') + month;
-    day = (day < 10 ? '0' : '') + day;
-    return year + ':' + month + ':' + day + ':' + hour + ':' + min + ':' + sec;
-  }
   var fs = require('fs'),
   path = require('path'),
   dep = null,
@@ -480,7 +476,7 @@ gulp.task('changelog', ['doc_template'], function (cb) {
       if (err) {
         console.log(err);
       } else {
-        console.log('[Changelog] : ./gh-pages/changelog.md was saved!');
+        console.log('[' + getDateTime() + '] Changelog: ./gh-pages/changelog.md was saved!');
       }
     });
     cb();

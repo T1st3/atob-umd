@@ -701,7 +701,7 @@ Public License instead of this License.</p>
       var $el, icon, id, html;
       $el = $(el);
       html = $el.html();
-      id = html.toLowerCase().replace(/\s/g, '_').replace(/\W/g, '');
+      id = html.toLowerCase().replace(/<i class="fa fa[a-z-]+"><\/i> /g, '').replace(/\s/g, '_').replace(/\W/g, '');
       icon = '<i class="fa fa-link"></i>';
       if (id) {
         $el.prepend($('<a />').addClass('anchor-link').attr('href', '#' + id).attr('name', id).attr('id', id).html(icon));

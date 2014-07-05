@@ -24,7 +24,8 @@ imagemin = require('gulp-imagemin'),
 dependo = require('dependo'),
 figlet = require('figlet'),
 cowsay = require('cowsay'),
-ip = require('ip');
+ip = require('ip'),
+changelog = require('changelog');
 
 /*
  * TEST TASKS
@@ -430,7 +431,7 @@ gulp.task('dependo', ['doc_copy'], function () {
     }
   });
   html = dep.generateHtml();
-  fs.writeFile('./gh-pages/dependo/amd_deps.html', html, function(err) {
+  fs.writeFile('./gh-pages/dependo/amd_deps.html', html, function (err) {
     if (err) {
       console.log(err);
     } else {
@@ -456,9 +457,41 @@ gulp.task('gzip', ['doc_template'], function () {
     .pipe(gulp.dest('./gh-pages'));
 });
 
+gulp.task('changelog', ['doc_template'], function (cb) {
+  var fs = require('fs'),
+  md = '';
+  function showChanges(data) {
+    md += '---\nlayout: umd_changelog\ntitle: ' + pkg.name + ' - Changelog\n';
+    md += 'sitemap:\n priority: 1\n changefreq: monthly\n---\n\n';
+    md += 'Github: ' + data.project.github + '\n\n';
+    md += 'URL: [' + data.project.repository + ']';
+    md += '(' + data.project.repository + ')\n\n';
+    data.versions.forEach(function(version) {
+      md += '[' + version.version + ']';
+      md += '(https://github.com/T1st3/' + pkg.name + '/releases/tag/' + version.version + ')';
+      md += '\n---------\n\n';
+      md += '`published: ' + version.date + '`\n\n';
+      version.changes.forEach(function(change) {
+        md += '- **' + change.message + '**\n';
+      });
+      md += '\n\n';
+    });
+    fs.writeFile('./gh-pages/changelog.md', md, function (err) {
+      if (err) {
+        console.log(err);
+      } else {
+        console.log('[Changelog] : ./gh-pages/changelog.md was saved!');
+      }
+    });
+    cb();
+  }
+  changelog.generate(pkg.name)
+    .then(showChanges);
+});
+
 gulp.task('jekyll', [
   'doc_clean', 'qr', 'doc_copy', 'doc_template',
-  'banner', 'jsdoc', 'coverage', 'gzip', 'dependo'
+  'banner', 'jsdoc', 'coverage', 'gzip', 'dependo', 'changelog'
 ], function (cb) {
   var cmd = 'jekyll build --config ./gh-pages/_config.yml';
   cmd += ' --source ./gh-pages --destination ./docs';
@@ -471,7 +504,7 @@ gulp.task('jekyll', [
 
 gulp.task('doc', [
   'doc_figlet', 'doc_clean', 'qr', 'doc_copy', 'doc_template',
-  'banner', 'jsdoc', 'coverage', 'gzip', 'dependo', 'jekyll'
+  'banner', 'jsdoc', 'coverage', 'gzip', 'dependo', 'changelog', 'jekyll'
 ], function () {
   console.log('\n\n');
   console.log(cowsay.say({

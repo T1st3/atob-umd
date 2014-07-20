@@ -5,8 +5,6 @@ require.config({
   paths: {
     jquery: 'assets/js/lib/jquery.min',
     atob: 'assets/js/lib/atob-umd',
-    httpbackend: 'assets/js/lib/backends/backend-jquery',
-    httpresponse: 'assets/js/lib/http-response',
     bootstrap: 'assets/js/lib/bootstrap.min'
   },
   shim: {

@@ -5,101 +5,24 @@
   
     
     <url>
-      <loc>http://www.tiste.org/atob-umd/demo.html</loc>
+      <loc>http://www.tiste.org/atob-umd/404.html</loc>
       
-        <lastmod>2014-07-07T23:53:28+02:00</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.6</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>http://www.tiste.org/atob-umd/license.html</loc>
-      
-        <lastmod>2014-07-07T23:53:28+02:00</lastmod>
+        <lastmod>2014-07-20T22:47:18+02:00</lastmod>
       
       
         <changefreq>yearly</changefreq>
       
       
-        <priority>0.3</priority>
+        <priority>0.1</priority>
       
     </url>
     
   
     
     <url>
-      <loc>http://www.tiste.org/atob-umd/</loc>
+      <loc>http://www.tiste.org/atob-umd/amd_dependencies.html</loc>
       
-        <lastmod>2014-07-07T23:53:28+02:00</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>1</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>http://www.tiste.org/atob-umd/functests_amd.html</loc>
-      
-        <lastmod>2014-07-07T23:53:28+02:00</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>http://www.tiste.org/atob-umd/tests.html</loc>
-      
-        <lastmod>2014-07-07T23:53:28+02:00</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-  
-    
-    <url>
-      <loc>http://www.tiste.org/atob-umd/coverage.html</loc>
-      
-        <lastmod>2014-07-07T23:53:28+02:00</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>http://www.tiste.org/atob-umd/cjs_dependencies.html</loc>
-      
-        <lastmod>2014-07-07T23:53:28+02:00</lastmod>
+        <lastmod>2014-07-20T22:47:18+02:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -114,7 +37,7 @@
     <url>
       <loc>http://www.tiste.org/atob-umd/build_docs.html</loc>
       
-        <lastmod>2014-07-07T23:53:28+02:00</lastmod>
+        <lastmod>2014-07-20T22:47:18+02:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -129,7 +52,7 @@
     <url>
       <loc>http://www.tiste.org/atob-umd/changelog.html</loc>
       
-        <lastmod>2014-07-07T23:53:28+02:00</lastmod>
+        <lastmod>2014-07-20T22:47:18+02:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -142,24 +65,9 @@
   
     
     <url>
-      <loc>http://www.tiste.org/atob-umd/404.html</loc>
+      <loc>http://www.tiste.org/atob-umd/cjs_dependencies.html</loc>
       
-        <lastmod>2014-07-07T23:53:28+02:00</lastmod>
-      
-      
-        <changefreq>yearly</changefreq>
-      
-      
-        <priority>0.1</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>http://www.tiste.org/atob-umd/functests_global.html</loc>
-      
-        <lastmod>2014-07-07T23:53:28+02:00</lastmod>
+        <lastmod>2014-07-20T22:47:18+02:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -172,69 +80,9 @@
   
     
     <url>
-      <loc>http://www.tiste.org/atob-umd/jsdoc.html</loc>
+      <loc>http://www.tiste.org/atob-umd/coverage.html</loc>
       
-        <lastmod>2014-07-07T23:53:28+02:00</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>http://www.tiste.org/atob-umd/dependencies.html</loc>
-      
-        <lastmod>2014-07-07T23:53:28+02:00</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>http://www.tiste.org/atob-umd/sitemap.html</loc>
-      
-        <lastmod>2014-07-07T23:53:28+02:00</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.4</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>http://www.tiste.org/atob-umd/amd_dependencies.html</loc>
-      
-        <lastmod>2014-07-07T23:53:28+02:00</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>http://www.tiste.org/atob-umd/unittests_global.html</loc>
-      
-        <lastmod>2014-07-07T23:53:28+02:00</lastmod>
+        <lastmod>2014-07-20T22:47:18+02:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -249,7 +97,7 @@
     <url>
       <loc>http://www.tiste.org/atob-umd/credits.html</loc>
       
-        <lastmod>2014-07-07T23:53:28+02:00</lastmod>
+        <lastmod>2014-07-20T22:47:18+02:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -262,9 +110,131 @@
   
     
     <url>
-      <loc>http://www.tiste.org/atob-umd/unittests_amd.html</loc>
+      <loc>http://www.tiste.org/atob-umd/demo.html</loc>
       
-        <lastmod>2014-07-07T23:53:28+02:00</lastmod>
+        <lastmod>2014-07-20T22:47:18+02:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+      
+        <priority>0.6</priority>
+      
+    </url>
+    
+  
+    
+    <url>
+      <loc>http://www.tiste.org/atob-umd/dependencies.html</loc>
+      
+        <lastmod>2014-07-20T22:47:18+02:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+      
+        <priority>0.5</priority>
+      
+    </url>
+    
+  
+    
+    <url>
+      <loc>http://www.tiste.org/atob-umd/</loc>
+      
+        <lastmod>2014-07-20T22:47:18+02:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+      
+        <priority>1</priority>
+      
+    </url>
+    
+  
+    
+    <url>
+      <loc>http://www.tiste.org/atob-umd/jsdoc.html</loc>
+      
+        <lastmod>2014-07-20T22:47:18+02:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+      
+        <priority>0.5</priority>
+      
+    </url>
+    
+  
+    
+    <url>
+      <loc>http://www.tiste.org/atob-umd/license.html</loc>
+      
+        <lastmod>2014-07-20T22:47:18+02:00</lastmod>
+      
+      
+        <changefreq>yearly</changefreq>
+      
+      
+        <priority>0.3</priority>
+      
+    </url>
+    
+  
+    
+    <url>
+      <loc>http://www.tiste.org/atob-umd/sitemap.html</loc>
+      
+        <lastmod>2014-07-20T22:47:18+02:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+      
+        <priority>0.4</priority>
+      
+    </url>
+    
+  
+    
+  
+    
+    <url>
+      <loc>http://www.tiste.org/atob-umd/tests.html</loc>
+      
+        <lastmod>2014-07-20T22:47:18+02:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+      
+        <priority>0.5</priority>
+      
+    </url>
+    
+  
+    
+    <url>
+      <loc>http://www.tiste.org/atob-umd/tests_amd.html</loc>
+      
+        <lastmod>2014-07-20T22:47:18+02:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+      
+        <priority>0.5</priority>
+      
+    </url>
+    
+  
+    
+    <url>
+      <loc>http://www.tiste.org/atob-umd/tests_global.html</loc>
+      
+        <lastmod>2014-07-20T22:47:18+02:00</lastmod>
       
       
         <changefreq>monthly</changefreq>

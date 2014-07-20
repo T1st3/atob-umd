@@ -82,7 +82,8 @@ You can also browse these documents and tests online:
 - [JSDoc](http://t1st3.github.io/atob-umd/jsdoc.html)
 - [Credits](http://t1st3.github.io/atob-umd/credits.html)
 - [Tests](http://t1st3.github.io/atob-umd/tests.html)
-
+- [Coverage](http://t1st3.github.io/atob-umd/coverage.html)
+- [Dependencies](http://t1st3.github.io/atob-umd/dependencies.html)
 
 
 

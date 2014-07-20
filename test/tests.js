@@ -47,10 +47,21 @@
   }
 }(this, function (chai, Atob) {
 
-  if (typeof exports !== 'object') {
-    mocha.setup('bdd');
+  var should = chai.should(),
+  browser = false;
+
+  if (typeof define === 'function' && define.amd) {
+    browser = true;
+  } else if (typeof exports === 'object') {
+    browser = false;
+  } else {
+    browser = true;
   }
-  var should = chai.should();
+
+  if (browser === true) {
+    mocha.setup('bdd');
+    mocha.reporter('html');
+  }
 
   describe('atob-umd unit tests', function () {
     describe('tests against constructor', function () {
@@ -103,9 +114,59 @@
         done();
       });
     });
+    if (browser === true) {
+      describe('test browser value', function () {
+        it('Should be true', function (done) {
+          var res = new Atob();
+          res.browser.should.equal(true);
+          done();
+        });
+      });
+    } else {
+      describe('test browser value', function () {
+        it('Should be false', function (done) {
+          var res = new Atob();
+          res.browser.should.equal(false);
+          done();
+        });
+      });
+    }
+  });
+
+  describe('atob-umd functional tests', function () {
+    describe('test general behaviour', function () {
+      it('Should behave like native function', function (done) {
+        var atob = function (a) {
+          var umd = new Atob();
+          return umd.handle(a).b;
+        };
+        atob('SGVsbG8gV29ybGQ=').should.equal('Hello World');
+        done();
+      });
+    });
+    if (browser === true) {
+      describe('test general behaviour (browser test)', function () {
+        it('Should behave like native function', function (done) {
+          var atob = function (a) {
+            var umd = new Atob();
+            return umd.handle(a).b;
+          };
+          /* global window */
+          atob('SGVsbG8gV29ybGQ=').should.equal(window.atob('SGVsbG8gV29ybGQ='));
+
+          /* last test callback */
+          console.log(window.__coverage__);
+          done();
+        });
+      });
+    }
   });
 
   if (typeof exports !== 'object') {
-    mocha.run();
+    if (window.mochaPhantomJS) {
+      window.mochaPhantomJS.run();
+    } else {
+      mocha.run();
+    }
   }
 }));

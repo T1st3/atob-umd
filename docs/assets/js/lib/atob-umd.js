@@ -3,7 +3,7 @@
 *
 * @link https://github.com/T1st3/atob-umd
 * @author T1st3
-* @version 0.4.6
+* @version 0.5.0
 * @license https://github.com/T1st3/atob-umd/blob/master/LICENSE
 *
 */
@@ -13,15 +13,12 @@
 'use strict';
 
 (function (root, factory) {
-  // Test for AMD modules
   if (typeof define === 'function' && define.amd) {
     // AMD
     define([], factory);
-  // Test for Node.js
   } else if (typeof exports === 'object') {
     // Node
     module.exports = factory();
-  // Browser globals
   } else {
     // Browser globals
     root.Atob = factory();
@@ -41,6 +38,13 @@
   var Atob = function (a) {
     this.a = '';
     this.b = '';
+    if (typeof define === 'function' && define.amd) {
+      this.browser = true;
+    } else if (typeof exports === 'object') {
+      this.browser = false;
+    } else {
+      this.browser = true;
+    }
     // set method if supplied
     if (a) {
       this.handle(a);
@@ -65,14 +69,7 @@
     }
     this.a = a;
 
-    var browser = true;
-    if (typeof define === 'function' && define.amd) {
-      browser = true;
-    } else if (typeof exports === 'object') {
-      browser = false;
-    }
-
-    if (browser === true) {
+    if (this.browser === true) {
       /* global window */
       if (typeof window.btoa === 'function') {
         this.b = window.atob(a);

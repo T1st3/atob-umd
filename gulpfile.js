@@ -489,7 +489,7 @@ gulp.task('dependo', ['doc_copy'], function () {
   });
 });
 
-gulp.task('coverage_instrument', function (cb) {
+gulp.task('coverage_instrument', ['build'], function (cb) {
   var cmd = 'istanbul instrument ./src/' + pkg.name + '.js';
   cmd += ' > ./test/assets/js/lib/' + pkg.name + '.js';
   exec(cmd, function (err, stdout, stderr) {

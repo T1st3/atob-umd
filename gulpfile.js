@@ -26,7 +26,19 @@ figlet = require('figlet'),
 cowsay = require('cowsay'),
 ip = require('ip'),
 changelog = require('changelog'),
-chalk = require('chalk');
+chalk = require('chalk'),
+fs = require('fs'),
+ path = require('path');
+
+fs.mkdirParent = function (dirPath, mode, callback) {
+  fs.mkdir(dirPath, mode, function (error) {
+    if (error && error.errno === 34) {
+      fs.mkdirParent(path.dirname(dirPath), mode, callback);
+      fs.mkdirParent(dirPath, mode, callback);
+    }
+    //callback && callback(error);
+  });
+};
 
 function getDateTime() {
   var date = new Date(),
@@ -292,7 +304,7 @@ gulp.task('doc_clean', ['doc_figlet'], function (cb) {
 gulp.task('qr', ['bower', 'doc_clean'], function () {
   var qrPng = qr.image(pkg.homepage, { type: 'png' }),
   stream = 'bower_components/t1st3-assets/dist/assets/img/qr.png';
-  qrPng.pipe(require('fs').createWriteStream(stream));
+  qrPng.pipe(fs.createWriteStream(stream));
 });
 
 gulp.task('doc_copy', ['bower', 'doc_clean', 'qr'], function () {
@@ -433,20 +445,10 @@ gulp.task('jsdoc', ['doc_copy'], function () {
 });
 
 gulp.task('dependo', ['doc_copy'], function () {
-  var fs = require('fs'),
-  path = require('path'),
-  dep = null,
+  var dep = null,
   msg = '',
   html = '';
-  fs.mkdirParent = function (dirPath, mode, callback) {
-    fs.mkdir(dirPath, mode, function (error) {
-      if (error && error.errno === 34) {
-        fs.mkdirParent(path.dirname(dirPath), mode, callback);
-        fs.mkdirParent(dirPath, mode, callback);
-      }
-      //callback && callback(error);
-    });
-  };
+
   fs.mkdirParent('./gh-pages/dependo/');
 
   dep = new dependo('./src/', {
@@ -487,7 +489,7 @@ gulp.task('dependo', ['doc_copy'], function () {
   });
 });
 
-gulp.task('coverage_instrument', ['doc_figlet'], function (cb) {
+gulp.task('coverage_instrument', function (cb) {
   var cmd = 'istanbul instrument ./src/' + pkg.name + '.js';
   cmd += ' > ./test/assets/js/lib/' + pkg.name + '.js';
   exec(cmd, function (err, stdout, stderr) {
@@ -498,12 +500,12 @@ gulp.task('coverage_instrument', ['doc_figlet'], function (cb) {
 });
 
 gulp.task('coverage_browser_global', ['coverage_instrument'], function (cb) {
-  var fs = require('fs'),
-  cmd = './node_modules/mocha-phantomjs/bin/mocha-phantomjs ./test/tests_global.html';
+  var cmd = './node_modules/mocha-phantomjs/bin/mocha-phantomjs ./test/tests_global.html';
   cmd += ' -R json-cov -f ./tmp2/tmp.json';
   exec(cmd, function (err, stdout, stderr) {
     //console.log(stdout);
     console.log(stderr);
+    fs.mkdirParent('./tmp/');
     fs.writeFile('./tmp/coverage_global.json', stdout, function(err) {
       if (err) {
         console.log(err);
@@ -514,12 +516,12 @@ gulp.task('coverage_browser_global', ['coverage_instrument'], function (cb) {
 });
 
 gulp.task('coverage_browser_amd', ['coverage_instrument'], function (cb) {
-  var fs = require('fs'),
-  cmd = './node_modules/mocha-phantomjs/bin/mocha-phantomjs ./test/tests_amd.html';
+  var cmd = './node_modules/mocha-phantomjs/bin/mocha-phantomjs ./test/tests_amd.html';
   cmd += ' -R json-cov -f ./tmp2/tmp.json';
   exec(cmd, function (err, stdout, stderr) {
     //console.log(stdout);
     console.log(stderr);
+    fs.mkdirParent('./tmp/');
     fs.writeFile('./tmp/coverage_amd.json', stdout, function(err) {
       if (err) {
         console.log(err);
@@ -562,8 +564,7 @@ gulp.task('gzip', ['doc_template'], function () {
 });
 
 gulp.task('changelog', ['doc_template'], function (cb) {
-  var fs = require('fs'),
-  md = '';
+  var md = '';
   function showChanges(data) {
     md += '---\nlayout: umd_changelog\ntitle: ' + pkg.name + ' - Changelog\n';
     md += 'sitemap:\n priority: 1\n changefreq: monthly\n---\n\n';

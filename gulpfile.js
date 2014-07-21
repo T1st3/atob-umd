@@ -28,7 +28,7 @@ ip = require('ip'),
 changelog = require('changelog'),
 chalk = require('chalk'),
 fs = require('fs'),
- path = require('path');
+path = require('path');
 
 fs.mkdirParent = function (dirPath, mode, callback) {
   fs.mkdir(dirPath, mode, function (error) {
@@ -495,7 +495,9 @@ gulp.task('coverage_instrument', function (cb) {
   exec(cmd, function (err, stdout, stderr) {
     console.log(stdout);
     console.log(stderr);
-    cb(err);
+    del([
+      'tmp', 'tmp2'
+    ], cb);
   });
 });
 

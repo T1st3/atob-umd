@@ -3,7 +3,7 @@
 *
 * @link https://github.com/T1st3/atob-umd
 * @author T1st3
-* @version 0.5.2
+* @version 0.5.3
 * @license https://github.com/T1st3/atob-umd/blob/master/LICENSE
 *
 */
@@ -71,7 +71,7 @@
 
     if (this.browser === true) {
       /* global window */
-      if (typeof window.btoa === 'function') {
+      if (typeof window.atob === 'function') {
         this.b = window.atob(a);
       } else {
         this.b = Atob.decode(a);

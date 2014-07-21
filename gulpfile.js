@@ -487,7 +487,7 @@ gulp.task('dependo', ['doc_copy'], function () {
   });
 });
 
-gulp.task('coverage_instrument', ['doc_copy'], function (cb) {
+gulp.task('coverage_instrument', ['doc_figlet'], function (cb) {
   var cmd = 'istanbul instrument ./src/' + pkg.name + '.js';
   cmd += ' > ./test/assets/js/lib/' + pkg.name + '.js';
   exec(cmd, function (err, stdout, stderr) {
@@ -529,7 +529,7 @@ gulp.task('coverage_browser_amd', ['coverage_instrument'], function (cb) {
   });
 });
 
-gulp.task('coverage_node', ['doc_copy'], function (cb) {
+gulp.task('coverage_node', ['doc_figlet'], function (cb) {
   var cmd = 'istanbul cover ./node_modules/mocha/bin/_mocha test/tests.js';
   cmd += ' --dir ./tmp -- -R json-cov';
   //cmd += ' && cat ./tmp/coverage_node.json';

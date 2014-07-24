@@ -107,6 +107,10 @@ You are now ready to build!
 
 The source is located in the "src" folder; the built target is located in the "dist" folder.
 
+Note that you need a few more dependencies to test the project.
+
+See [the tests page for more info](http://t1st3.github.io/atob-umd/tests.html)
+
 To build, just run:
 
     gulp build

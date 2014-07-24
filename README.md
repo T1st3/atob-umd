@@ -100,6 +100,9 @@ Then, you also need to install [Gulp](http://gulpjs.com/) globally to build the 
 
 See more at the ["Getting started with Gulp" page](https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md#getting-started).
 
+Once you got the dependencies and installed Gulp globally, to get info about the package from the command line, just run:
+
+    gulp info
 
 ---
 
@@ -122,10 +125,6 @@ To test, you can use either the `npm test` command or the `gulp test` command:
 or
 
     gulp test
-
-To get info about the package from the command line, just run:
-
-    gulp info
 
 
 ---

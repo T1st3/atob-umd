@@ -133,7 +133,7 @@ gulp.task('test', ['test_node', 'test_browser_amd', 'test_browser_global'], func
  * BUILD TASKS
  */
 
-gulp.task('build_figlet', ['test'], function (cb) {
+gulp.task('build_figlet', function (cb) {
   figlet.text('gulp build', {
     font: 'Ogre',
     horizontalLayout: 'default',
@@ -270,7 +270,7 @@ gulp.task('serve', ['serve_figlet', 'watch', 'browser-sync'], function () {
  * DOC TASKS
  */
 
-gulp.task('doc_figlet', ['build'], function (cb) {
+gulp.task('doc_figlet', ['build', 'test'], function (cb) {
   figlet.text('gulp doc', {
     font: 'Ogre',
     horizontalLayout: 'default',

@@ -347,14 +347,11 @@ gulp.task('doc_copy', ['bower', 'doc_clean', 'qr'], function () {
     'bower_components/mocha/mocha.css',
     'bower_components/codemirror/lib/codemirror.css',
     'bower_components/font-awesome/css/font-awesome.min.css',
-    'bower_components/t1st3-assets/dist/assets/css/404.css'
+    'bower_components/t1st3-assets/dist/assets/css/t1st3.min.css',
+    'bower_components/t1st3-assets/dist/assets/css/print.min.css',
+    'bower_components/t1st3-assets/dist/assets/css/404.min.css',
+    'bower_components/t1st3-assets/dist/assets/css/ie-noscript.min.css'
   ])
-    .pipe(gulp.dest('gh-pages/assets/css'));
-
-  gulp.src([
-    'bower_components/t1st3-assets/dist/assets/css/t1st3.css'
-  ])
-    .pipe(rename('t1st3.min.css'))
     .pipe(gulp.dest('gh-pages/assets/css'));
 
   /* FONTS */

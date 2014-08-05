@@ -6,6 +6,7 @@ atob-umd
 [![Dependency Status](https://david-dm.org/t1st3/atob-umd.svg?theme=shields.io)](https://david-dm.org/t1st3/atob-umd)
 [![Build Status](https://travis-ci.org/T1st3/atob-umd.svg?branch=master)](https://travis-ci.org/T1st3/atob-umd)
 [![Coverage Status](https://coveralls.io/repos/T1st3/atob-umd/badge.png)](https://coveralls.io/r/T1st3/atob-umd)
+[![Code Climate](https://codeclimate.com/github/T1st3/atob-umd/badges/gpa.svg)](https://codeclimate.com/github/T1st3/atob-umd)
 
 
 

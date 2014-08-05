@@ -631,9 +631,17 @@ gulp.task('ci', ['coverage'], function (cb) {
   exec(cmd, function (err, stdout, stderr) {
     console.log(stdout);
     console.log(stderr);
-    del([
-      'tmp', 'tmp2'
-    ], cb);
+    cmd = 'CODECLIMATE_REPO_TOKEN=';
+    cmd += '\'9504f0af789f521d8efeeec6f86ee94aacc29640c92986412bce2d1d04b65b62\'';
+    cmd += ' ./node_modules/codeclimate-test-reporter/bin/codeclimate.js < ';
+    cmd += './gh-pages/coverage/lcov.info';
+    exec(cmd, function (err, stdout, stderr) {
+      console.log(stdout);
+      console.log(stderr);
+      del([
+        'tmp', 'tmp2'
+      ], cb);
+    });
   });
 });
 

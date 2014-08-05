@@ -1,6 +1,6 @@
 {
   "name": "atob-umd",
-  "version": "0.5.5",
+  "version": "0.6.0",
   "homepage": "http://t1st3.github.io/atob-umd",
   "description": "A UMD module for atob()",
   "keywords": [
@@ -35,6 +35,7 @@
     "chai": "~1.9.1",
     "chalk": "~0.5.1",
     "changelog": "~1.0.5",
+    "codeclimate-test-reporter": "0.0.3",
     "coveralls": "~2.11.1",
     "cowsay": "~1.0.3",
     "del": "~0.1.1",

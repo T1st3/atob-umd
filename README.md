@@ -15,7 +15,7 @@ About
 
 `atob-umd` is a Javascript UMD module for atob().
 
-You'll find all about this project on its **[project pages](http://t1st3.github.io/atob-umd/)**
+You'll find all about this project on its **[project pages](http://www.tiste.org/atob-umd/)**
 
 
 
@@ -78,13 +78,13 @@ You can find fully functional examples, tests and a documentation in the [JSDoc]
 
 You can also browse these documents and tests online:
 
-- [Demo](http://t1st3.github.io/atob-umd/demo.html)
-- [this README and more info](http://t1st3.github.io/atob-umd)
-- [JSDoc](http://t1st3.github.io/atob-umd/jsdoc.html)
-- [Credits](http://t1st3.github.io/atob-umd/credits.html)
-- [Tests](http://t1st3.github.io/atob-umd/tests.html)
-- [Coverage](http://t1st3.github.io/atob-umd/coverage.html)
-- [Dependencies](http://t1st3.github.io/atob-umd/dependencies.html)
+- [Demo](http://www.tiste.org/atob-umd/demo.html)
+- [this README and more info](http://www.tiste.org/atob-umd)
+- [JSDoc](http://www.tiste.org/atob-umd/jsdoc.html)
+- [Credits](http://www.tiste.org/atob-umd/credits.html)
+- [Tests](http://www.tiste.org/atob-umd/tests.html)
+- [Coverage](http://www.tiste.org/atob-umd/coverage.html)
+- [Dependencies](http://www.tiste.org/atob-umd/dependencies.html)
 
 
 
@@ -122,7 +122,7 @@ To build, just run:
 
 Note that you need a few more dependencies to test the project.
 
-See [the tests page for more info](http://t1st3.github.io/atob-umd/tests.html)
+See [the tests page for more info](http://www.tiste.org/atob-umd/tests.html)
 
 To test, you can use either the `npm test` command or the `gulp test` command:
 
@@ -159,7 +159,7 @@ Please note that this task has a few more dependencies:
 * [Kramdown](http://kramdown.gettalong.org/)
 
 
-Check [the build-docs page](http://t1st3.github.io/atob-umd/build_docs.html) for more info.
+Check [the build-docs page](http://www.tiste.org/atob-umd/build_docs.html) for more info.
 
 
 
@@ -168,7 +168,7 @@ Credits
 ---
 
 
-See [the credits page](http://t1st3.github.io/atob-umd/credits.html) to see more.
+See [the credits page](http://www.tiste.org/atob-umd/credits.html) to see more.
 
 
 License
@@ -177,7 +177,7 @@ License
 
 This piece of code is triple-licensed: [MIT / BSD / GPL licenses](https://github.com/T1st3/atob-umd/blob/master/LICENSE.md)
 
-You can also view it in a re-formatted fashion: [MIT / BSD / GPL licenses](http://t1st3.github.io/atob-umd/license.html).
+You can also view it in a re-formatted fashion: [MIT / BSD / GPL licenses](http://www.tiste.org/atob-umd/license.html).
 
 
 
@@ -185,5 +185,5 @@ Initial author
 ---
 
 [T1st3](https://github.com/T1st3/) 
-[![T1st3](http://t1st3.github.io/atob-umd/assets/img/gravatar-16x16.png)](https://github.com/T1st3/)
+[![T1st3](http://www.tiste.org/atob-umd/assets/img/gravatar-16x16.png)](https://github.com/T1st3/)
 

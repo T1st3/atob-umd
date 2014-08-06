@@ -7,7 +7,8 @@ after_success:
 - gulp ci
 addons:
   code_climate:
-    repo_token: YRTGIUgV3dcm1kLmOC2HOGhjpTXbHSpS3k/km+koEDYvSzy25N3zmPT/NeuvfLUtGo9T7Kh9VZLCdROsZoM447lEVnx+qQ/GJP3+sPgmLwFeD1ezkHNBU82zbLI83LBpc5jQq9ywDcjjgdiiWQNh0DF/jA9AEmo+ULHl/ZlIugw=
+    repo_token: 
+      secure: YRTGIUgV3dcm1kLmOC2HOGhjpTXbHSpS3k/km+koEDYvSzy25N3zmPT/NeuvfLUtGo9T7Kh9VZLCdROsZoM447lEVnx+qQ/GJP3+sPgmLwFeD1ezkHNBU82zbLI83LBpc5jQq9ywDcjjgdiiWQNh0DF/jA9AEmo+ULHl/ZlIugw=
 deploy:
   provider: npm
   email: contact@tiste.org

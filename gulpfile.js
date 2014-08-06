@@ -266,6 +266,7 @@ gulp.task('doc_copy', ['bower', 'doc_clean', 'qr'], function () {
     'bower_components/codemirror/lib/codemirror.js',
     'bower_components/jshint/dist/jshint.js',
     'bower_components/lodash/dist/lodash.min.js',
+    'bower_components/respond/dest/respond.min.js',
     'src/' + pkg.name + '.js'
   ])
     .pipe(gulp.dest('gh-pages/assets/js/lib'));

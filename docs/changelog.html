@@ -23,6 +23,12 @@
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://www.tiste.org/atob-umd/assets/img/favicon/apple-touch-icon-72.png">                                                                                                                                                                       
     <link rel="apple-touch-icon-precomposed" href="http://www.tiste.org/atob-umd/assets/img/favicon/apple-touch-icon-57.png">
 
+    <link rel="dns-prefetch" href="//ajax.googleapis.com/">
+    <link rel="dns-prefetch" href="//www.gravatar.com/">
+    <!--[if lt IE 9]>
+      <link rel="dns-prefetch" href="//oss.maxcdn.com/">
+    <![endif]-->
+
     <meta name="keywords" content="javascript, module, UMD, AMD, Node.js, CommonJS, Require.js">
     <meta name="author" content="T1st3">
     <meta name="generator" content="Gulp / Jekyll / Github pages">
@@ -45,11 +51,6 @@
     <meta property="og:locale" content="en_US">
     <meta property="og:site_name" content="Tiste">
 
-    <link rel="dns-prefetch" href="//ajax.googleapis.com/">
-    <!--[if lt IE 9]>
-      <link rel="dns-prefetch" href="//oss.maxcdn.com/">
-    <![endif]-->
-
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" media="all">
     <link rel="stylesheet" href="assets/css/font-awesome.min.css" media="all">
 
@@ -57,11 +58,11 @@
       <noscript><link rel="stylesheet" href="assets/css/ie-noscript.css"></noscript>
     <![endif]-->
 
-<link rel="stylesheet" href="assets/css/t1st3.min.css" media="screen">
-<link rel="stylesheet" href="assets/css/print.min.css" media="print">
+<link rel="stylesheet" href="assets/css/t1st3.min.css" media="all">
 <script type="text/javascript" src="assets/js/lib/modernizr.js"></script>
 <!--[if lt IE 9]>
 <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<script>window.respond || document.write('<script src="assets/js/lib/respond.min.js"><\/script>')</script>
 <![endif]-->
   </head>
   <body role="document">
@@ -88,7 +89,7 @@
         <div class="collapse navbar-collapse" id="t1st3-navbar-collapse">
           <ul class="nav navbar-nav navbar-right" role="menubar">
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-code-fork"></i> v0.6.3 <b class="caret"></b></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-code-fork"></i> v0.6.4 <b class="caret"></b></a>
               <ul class="dropdown-menu" role="menu">
                 <li>
                   <a href="https://github.com/T1st3/atob-umd/archive/master.zip" title="Download latest version of atob-umd">
@@ -187,14 +188,24 @@
                 </li>
                 <li class="divider"></li>
                 <li>
-                  <a title="QR code for atob-umd" href="#" data-toggle="modal" data-target="#mainModal">
-                    <i class="fa fa-qrcode"></i> QR code
+                  <a href="https://api.travis-ci.org/repositories/T1st3/atob-umd/builds.atom" title="RSS/ATOM for atob-umd builds on Travis CI">
+                    <i style="color: #EE7600;" class="fa fa-rss"></i> RSS/ATOM for builds on Travis CI
+                  </a>
+                </li>
+                <li>
+                  <a href="https://codeclimate.com/github/T1st3/atob-umd/feed.atom" title="RSS/ATOM for atob-umd changes on Code Climate">
+                    <i style="color: #EE7600;" class="fa fa-rss"></i> RSS/ATOM for changes on Code Climate
                   </a>
                 </li>
                 <li class="divider"></li>
                 <li>
+                  <a title="QR code for atob-umd" href="#" data-toggle="modal" data-target="#mainModal">
+                    <i class="fa fa-qrcode"></i> QR code
+                  </a>
+                </li>
+                <li>
                   <a title="Author (T1st3) profile on Github" href="http://tiste.org">
-                    <img alt="T1st3 avatar" src="assets/img/gravatar-16x16.png" width="16" height="16"> Author
+                    <img alt="T1st3 avatar" src="https://www.gravatar.com/avatar/16d4be686da36a34b427924e844ff5f7?s=16" width="16" height="16"> Author
                   </a>
                 </li>
               </ul>
@@ -212,7 +223,7 @@
             <h4 class="modal-title" id="mainModalLabel">atob-umd</h4>
           </div>
           <div class="modal-body">
-            <img src="assets/img/qr.png" alt="QR code">
+            <img src="assets/img/qr.png" alt="QR code" width="185" height="185">
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -236,6 +247,14 @@
       <p>Github: T1st3/atob-umd</p>
 
 <p>URL: <a href="https://github.com/T1st3/atob-umd">https://github.com/T1st3/atob-umd</a></p>
+
+<h2 id="httpsgithubcomt1st3atob-umdreleasestag063"><a href="https://github.com/T1st3/atob-umd/releases/tag/0.6.3">0.6.3</a></h2>
+
+<p><code>published: Wed Aug 06 2014 18:33:55 GMT+0200 (CEST)</code></p>
+
+<ul>
+  <li><strong>0.6.3</strong></li>
+</ul>
 
 <h2 id="httpsgithubcomt1st3atob-umdreleasestag062"><a href="https://github.com/T1st3/atob-umd/releases/tag/0.6.2">0.6.2</a></h2>
 
@@ -537,7 +556,7 @@ change livereload sys: now use BrowserSync</strong></li>
             <ul>
               <li>
                 <a class="btn btn-default" title="Author (T1st3) profile on Github" href="http://t1st3.github.io">
-                  <img alt="T1st3 avatar" src="assets/img/gravatar-16x16.png" width="16" height="16"> Author
+                  <img alt="T1st3 avatar" src="https://www.gravatar.com/avatar/16d4be686da36a34b427924e844ff5f7?s=16" width="16" height="16"> Author
                 </a>
               </li>
             </ul>
@@ -567,6 +586,8 @@ change livereload sys: now use BrowserSync</strong></li>
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
   ga('create', 'UA-53514029-1', 'auto');
+  ga('require', 'displayfeatures');
+  ga('require', 'linkid', 'linkid.js');
   ga('send', 'pageview');
 </script>
 <!--

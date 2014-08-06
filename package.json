@@ -1,6 +1,6 @@
 {
   "name": "atob-umd",
-  "version": "0.6.3",
+  "version": "0.6.4",
   "homepage": "http://www.tiste.org/atob-umd",
   "description": "A UMD module for atob()",
   "keywords": [
@@ -59,7 +59,7 @@
     "istanbul": "~0.3.0",
     "jshint-stylish": "~0.4.0",
     "lodash": "~2.4.1",
-    "mocha": "~1.21.3",
+    "mocha": "~1.21.4",
     "mocha-phantomjs": "~3.5.0",
     "qr-image": "~1.2.1",
     "qrcode-terminal": "~0.9.4"

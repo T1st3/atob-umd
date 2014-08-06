@@ -26,7 +26,7 @@ Installation for production
 **with Node.js**
 
 `atob-umd` is available on [NPM](https://www.npmjs.org/package/atob-umd)
-[![NPM](http://t1st3.github.io/atob-umd/assets/img/vendor/npm-16x16.png)](https://www.npmjs.org/package/atob-umd).
+[![NPM](http://www.tiste.org/atob-umd/assets/img/vendor/npm-16x16.png)](https://www.npmjs.org/package/atob-umd).
 
 [![NPM version](https://badge.fury.io/js/atob-umd.svg)](http://badge.fury.io/js/atob-umd)
 
@@ -39,7 +39,7 @@ You can install it with the following command:
 
 
 `atob-umd` is available on [Bower](http://bower.io/search/?q=atob-umd)
-[![Bower](http://t1st3.github.io/atob-umd/assets/img/vendor/bower-16x16.png)](http://bower.io/search/?q=atob-umd).
+[![Bower](http://www.tiste.org/atob-umd/assets/img/vendor/bower-16x16.png)](http://bower.io/search/?q=atob-umd).
 
 [![Bower version](https://badge.fury.io/bo/atob-umd.svg)](http://badge.fury.io/js/atob-umd)
 
@@ -137,7 +137,7 @@ or
 
 **Serve and livereload**
 
-You can also use the `serve` task to load the `docs` pages in your browser.
+You can also use the `serve` task to load the `tests/` html pages in your browser.
 
     gulp serve
 

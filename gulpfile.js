@@ -152,7 +152,7 @@ gulp.task('build_clean', ['figlet', 'test'], function (cb) {
   del(['dist'], cb);
 });
 
-gulp.task('lint', [], function () {
+gulp.task('lint', ['figlet'], function () {
   gulp.src(['src/**/*.js', 'test/tests.js', 'gulpfile.js'])
     .pipe(jshint('./.jshintrc'))
     .pipe(jshint.reporter('jshint-stylish'))
@@ -164,7 +164,7 @@ gulp.task('jscs', ['lint'], function () {
     .pipe(jscs('./.jscs.json'));
 });
 
-gulp.task('version', [], function () {
+gulp.task('version', ['figlet', 'jscs'], function () {
   gulp.src(['src/**/*.js'])
     .pipe(replace(/(version [0-9]+.[0-9]+.[0-9]+)/g, 'version ' + pkg.version))
     .pipe(gulp.dest('./src'));

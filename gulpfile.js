@@ -26,7 +26,7 @@ dependo = require('dependo'),
 figlet = require('figlet'),
 cowsay = require('cowsay'),
 ip = require('ip'),
-changelog = require('changelog'),
+//changelog = require('changelog'),
 chalk = require('chalk'),
 fs = require('fs'),
 path = require('path');
@@ -238,7 +238,7 @@ gulp.task('bower', ['figlet', 'build'], function () {
     .pipe(gulp.dest('./bower_components'));
 });
 
-gulp.task('doc_clean', [], function (cb) {
+gulp.task('doc_clean', ['figlet', 'build'], function (cb) {
   del([
     'gh-pages/_layouts', 'gh-pages/assets/', 'gh-pages/coverage/',
     'gh-pages/jsdoc/', 'gh-pages/dependo/', 'gh-pages/_config.yml',
@@ -322,11 +322,27 @@ gulp.task('doc_copy', ['bower', 'doc_clean', 'qr'], function () {
   ])
     .pipe(gulp.dest('gh-pages/assets/img'));
 
+  gulp.src([
+    'bower_components/t1st3-assets/dist/assets/img/favicon/apple*.png'
+  ])
+    .pipe(imagemin())
+    .pipe(gulp.dest('./gh-pages'));
+
+  gulp.src([
+    'bower_components/t1st3-assets/dist/assets/img/favicon/*.ico'
+  ])
+    .pipe(gulp.dest('./gh-pages/'));
+
   /* XML */
   gulp.src([
     'bower_components/t1st3-assets/dist/umd_sitemap.xml'
   ])
     .pipe(rename('sitemap.xml'))
+    .pipe(gulp.dest('gh-pages'));
+  gulp.src([
+    'bower_components/t1st3-assets/dist/umd_opensearch.xml'
+  ])
+    .pipe(rename('opensearch.xml'))
     .pipe(gulp.dest('gh-pages'));
 
   /* HTML */
@@ -507,34 +523,20 @@ gulp.task('gzip', ['doc_template'], function () {
 });
 
 gulp.task('changelog', ['doc_template'], function (cb) {
-  var md = '';
-  function showChanges(data) {
-    md += '---\nlayout: umd_changelog\ntitle: ' + pkg.name + ' - Changelog\n';
-    md += 'sitemap:\n priority: 1\n changefreq: monthly\n---\n\n';
-    md += 'Github: ' + data.project.github + '\n\n';
-    md += 'URL: [' + data.project.repository + ']';
-    md += '(' + data.project.repository + ')\n\n';
-    data.versions.forEach(function(version) {
-      md += '[' + version.version + ']';
-      md += '(https://github.com/T1st3/' + pkg.name + '/releases/tag/' + version.version + ')';
-      md += '\n---------\n\n';
-      md += '`published: ' + version.date + '`\n\n';
-      version.changes.forEach(function(change) {
-        md += '- **' + change.message + '**\n';
-      });
-      md += '\n\n';
-    });
-    fs.writeFile('./gh-pages/changelog.md', md, function (err) {
-      if (err) {
-        console.log(err);
-      } else {
-        console.log('[' + getDateTime() + '] Changelog: ./gh-pages/changelog.md was saved!');
-      }
-    });
-    cb();
-  }
-  changelog.generate(pkg.name)
-    .then(showChanges);
+  console.log(pkg.repository.url);
+  var cmd = 'node ./node_modules/github-changes/bin/index.js';
+  cmd += ' -o t1st3 -r atob-umd -b master -a --repo ' + pkg.repository.url;
+  exec(cmd, function (err, stdout, stderr) {
+    console.log(stdout);
+    console.log(stderr);
+    var h = '---\nlayout: umd_readme\ntitle: ' + pkg.name;
+    h += '\nsitemap:\n  priority: 0.7\n  changefreq: weekly\n---\n\n';
+    gulp.src('./CHANGELOG.md')
+      .pipe(header(h))
+      .pipe(rename('changelog.md'))
+      .pipe(gulp.dest('gh-pages'));
+    cb(err);
+  });
 });
 
 gulp.task('jekyll', [

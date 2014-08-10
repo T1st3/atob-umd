@@ -531,6 +531,8 @@ gulp.task('changelog', ['doc_template'], function (cb) {
     console.log(stderr);
     var h = '---\nlayout: umd_readme\ntitle: ' + pkg.name;
     h += '\nsitemap:\n  priority: 0.7\n  changefreq: weekly\n---\n\n';
+    h += '<h1>' + pkg.name + ' | Changelog</h1>\n\n';
+    h += '<a href="index.html" title="Home page"><i class="fa fa-home"></i> Back to home</a>\n\n';
     gulp.src('./CHANGELOG.md')
       .pipe(header(h))
       .pipe(rename('changelog.md'))

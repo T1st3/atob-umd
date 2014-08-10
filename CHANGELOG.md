@@ -1,5 +1,9 @@
 ## Change Log
 
+### 0.6.6 (2014/08/10 00:19 +00:00)
+- [f9f4fc2](https://github.com/T1st3/atob-umd/commit/f9f4fc2c80b6693be8bd38ffdd97761e71089d8a) update doc & build processes (@T1st3)
+- [e7f18c0](https://github.com/T1st3/atob-umd/commit/e7f18c01c75742d7084e2b035f2ae23765b38e68) 0.6.6 (@T1st3)
+
 ### 0.6.5 (2014/08/09 23:55 +00:00)
 - [f73ba2b](https://github.com/T1st3/atob-umd/commit/f73ba2b366fca19037b53ec8a9ddff2d7d08748b) Update changelopg task, add opensearch, add favicons in web root (@T1st3)
 - [545e2ec](https://github.com/T1st3/atob-umd/commit/545e2ec69f177eafde5794c2a7073c5f33cbec88) Update gulpfile, v0.6.5 (@T1st3)

@@ -234,7 +234,7 @@ gulp.task('build', ['build_copy', 'uglify'], function (cb) {
  * SERVE TASKS
  */
 
-gulp.task('serve_lib', ['test_init', 'figlet'], function () {
+gulp.task('serve_lib', ['figlet'], function () {
   gulp.src([
     'src/' + pkg.name + '.js'
   ])

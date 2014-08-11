@@ -115,6 +115,11 @@ gulp.task('test_init', ['bower'], function (cb) {
   ])
     .pipe(gulp.dest('test/assets/js/lib'));
 
+  gulp.src([
+    'bower_components/requirejs/require.js'
+  ])
+    .pipe(gulp.dest('./test'));
+
    _(deps).forEach(function (num) {
      gulp.src(['bower_components/' + num + '/dist/' + num + '.js'])
       .pipe(gulp.dest('test/assets/js/lib'));

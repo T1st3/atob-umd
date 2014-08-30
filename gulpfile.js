@@ -559,7 +559,7 @@ gulp.task('gzip', ['doc_template'], function () {
 gulp.task('changelog', ['doc_template'], function (cb) {
   console.log(pkg.repository.url);
   var cmd = 'node ./node_modules/github-changes/bin/index.js';
-  cmd += ' -o t1st3 -r atob-umd -b master -a --repo ' + pkg.repository.url;
+  cmd += ' -o t1st3 -r ' + pkg.name +' -b master -a --repo ' + pkg.repository.url;
   exec(cmd, function (err, stdout, stderr) {
     console.log(stdout);
     console.log(stderr);

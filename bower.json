@@ -34,7 +34,8 @@
     ".npmignore",
     "gulpfile.js",
     "package.json",
-    "README.md"
+    "README.md",
+    ".directory"
   ],
   "dependencies": {
     "requirejs": "*"

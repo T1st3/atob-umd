@@ -1,5 +1,13 @@
 ## Change Log
 
+### upcoming (2014/08/31 23:37 +00:00)
+- [9479faa](https://github.com/T1st3/atob-umd/commit/9479faa05dd571f88cf111727db8e577ec61ec5b) Update gulpfile (@T1st3)
+- [a7a35fd](https://github.com/T1st3/atob-umd/commit/a7a35fdaa43098811e0f85927d2d8dff501a2001) Update gulpfile (@T1st3)
+- [a64b4b0](https://github.com/T1st3/atob-umd/commit/a64b4b0e83f47afa60f1c9a88416d76a0b0697a5) Update Node deps (@T1st3)
+
+### 0.6.8 (2014/08/11 10:31 +00:00)
+- [c7cef96](https://github.com/T1st3/atob-umd/commit/c7cef964e377b9df033e28038d560e69d522893e) 0.6.8 (@T1st3)
+
 ### 0.6.7 (2014/08/10 19:25 +00:00)
 - [aec8d0c](https://github.com/T1st3/atob-umd/commit/aec8d0c75d8e7f0ea6224a81d2b38d640767a9b4) Update gulpfile (@T1st3)
 - [b209ea2](https://github.com/T1st3/atob-umd/commit/b209ea27a2c87ca48ff009b0649c34568e7c93da) Update gulpfile for t1st3-assets 0.20.0 (@T1st3)

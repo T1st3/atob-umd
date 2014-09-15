@@ -1,9 +1,17 @@
 ## Change Log
 
-### upcoming (2014/08/31 23:37 +00:00)
+### 0.6.9 (2014/08/31 23:38 +00:00)
 - [9479faa](https://github.com/T1st3/atob-umd/commit/9479faa05dd571f88cf111727db8e577ec61ec5b) Update gulpfile (@T1st3)
 - [a7a35fd](https://github.com/T1st3/atob-umd/commit/a7a35fdaa43098811e0f85927d2d8dff501a2001) Update gulpfile (@T1st3)
 - [a64b4b0](https://github.com/T1st3/atob-umd/commit/a64b4b0e83f47afa60f1c9a88416d76a0b0697a5) Update Node deps (@T1st3)
+- [2ae0f6d](https://github.com/T1st3/atob-umd/commit/2ae0f6d4982ccce371b3336588a39a4c1098c04a) Update Node deps (@T1st3)
+- [ac142b8](https://github.com/T1st3/atob-umd/commit/ac142b89d9922361528f0d48c0e2a04fc7a1712a) Update deps (@T1st3)
+- [38ef05b](https://github.com/T1st3/atob-umd/commit/38ef05bf7e13aa7622361938e798a6bf0881edf7) Update gulpfile (@T1st3)
+- [d14e0f4](https://github.com/T1st3/atob-umd/commit/d14e0f49151a9c38b0bcb91d9783aa932e649542) Update gulpfile (@T1st3)
+- [467da86](https://github.com/T1st3/atob-umd/commit/467da86828291a6cccd6d87ba13c1f9dde57b47e) Set .directory as a forbidden file (useful when working with GNU/Linux & KDE) (@T1st3)
+- [a18b02a](https://github.com/T1st3/atob-umd/commit/a18b02abac20c3f5babb23b4652620fb7caf23b3) Update gulpfile (@T1st3)
+- [24c7863](https://github.com/T1st3/atob-umd/commit/24c786363eaf5ba51dda35a7cc413829bc78e2aa) Update test libs (@T1st3)
+- [e2245a9](https://github.com/T1st3/atob-umd/commit/e2245a9c8fb098e9b3baf3e7a403295c1f8f1cfe) 0.6.9 (@T1st3)
 
 ### 0.6.8 (2014/08/11 10:31 +00:00)
 - [c7cef96](https://github.com/T1st3/atob-umd/commit/c7cef964e377b9df033e28038d560e69d522893e) 0.6.8 (@T1st3)
@@ -137,9 +145,7 @@
 - [b4564c1](https://github.com/T1st3/atob-umd/commit/b4564c10052e0846f917032a119b66fd3522192f) 0.1.3 (@T1st3)
 
 ### 0.1.2 (2014/04/16 18:12 +00:00)
-- [3ba708b](https://github.com/T1st3/atob-umd/commit/3ba708bc2bb1ed36eee14440da9e66b0a835506e) 0.1.2 (@T1st3)
-
-### 0.1.1 (2014/04/16 17:43 +00:00)
 - [8bebb4b](https://github.com/T1st3/atob-umd/commit/8bebb4b10cd480acbc3d156f0814964f208b3316) Initial commit (@T1st3)
 - [2313781](https://github.com/T1st3/atob-umd/commit/2313781f59d22b79e1ffae584ebba84b14a5aad3) Init first files (@T1st3)
 - [61e7914](https://github.com/T1st3/atob-umd/commit/61e79143bec3fb79c5af857e167dd79919a79bf3) 0.1.1 (@T1st3)
+- [3ba708b](https://github.com/T1st3/atob-umd/commit/3ba708bc2bb1ed36eee14440da9e66b0a835506e) 0.1.2 (@T1st3)

@@ -32,9 +32,6 @@
 ### 0.6.4 (2014/08/06 20:05 +00:00)
 - [96462b0](https://github.com/T1st3/atob-umd/commit/96462b0c3bdcae8fe935e96846da78f909915f13) 0.6.4 (@T1st3)
 
-### 0.6.3 (2014/08/06 16:26 +00:00)
-- [ec24966](https://github.com/T1st3/atob-umd/commit/ec24966671b1384578d16da835592f7a1892ea47) 0.6.3 (@T1st3)
-
 ### 0.6.2 (2014/08/06 15:41 +00:00)
 - [4d276ea](https://github.com/T1st3/atob-umd/commit/4d276ea6db8c62e9c388c0e2d65b5bec328f8607) 0.6.2 (@T1st3)
 
@@ -70,6 +67,12 @@
 ### 0.5.1 (2014/07/20 21:03 +00:00)
 - [e57eae9](https://github.com/T1st3/atob-umd/commit/e57eae91e201a6dcf993de29c32d63ad13698ea0) 0.5.0 (@T1st3)
 - [59f8d19](https://github.com/T1st3/atob-umd/commit/59f8d19af35b39c9a60ccb74a3fe558f84dde4bf) 0.5.1 (@T1st3)
+
+### upcoming (2014/09/22 12:33 +00:00)
+- [7319f7e](https://github.com/T1st3/atob-umd/commit/7319f7e7d7bd9eda42ccd73c3273ad5f6f9d7963) Update deps (@T1st3)
+
+### 0.6.3 (2014/08/06 16:26 +00:00)
+- [ec24966](https://github.com/T1st3/atob-umd/commit/ec24966671b1384578d16da835592f7a1892ea47) 0.6.3 (@T1st3)
 
 ### 0.5.0 (2014/07/20 20:48 +00:00)
 - [26c8e2f](https://github.com/T1st3/atob-umd/commit/26c8e2f966c5d982bd97341e3d39dda1aa4e2edf) Update assets to T1st3-assets 0.13.6 (@T1st3)

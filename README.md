@@ -175,7 +175,7 @@ License
 ---
 
 
-This piece of code is triple-licensed: [MIT / BSD / GPL licenses](https://github.com/T1st3/atob-umd/blob/master/LICENSE.md)
+This piece of code is triple-licensed: [MIT / BSD / GPL licenses](https://github.com/T1st3/atob-umd/blob/master/LICENSE)
 
 You can also view it in a re-formatted fashion: [MIT / BSD / GPL licenses](http://www.tiste.org/atob-umd/license.html).
 

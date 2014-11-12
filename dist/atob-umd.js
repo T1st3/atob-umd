@@ -125,3 +125,5 @@
 
   return Atob;
 }));
+
+//# sourceMappingURL=atob-umd.js.map

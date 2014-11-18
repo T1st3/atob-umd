@@ -1,5 +1,15 @@
 ## Change Log
 
+### 0.6.11 (2014/11/12 20:52 +00:00)
+- [2820c42](https://github.com/T1st3/atob-umd/commit/2820c421d751ccee45b1b2895bec3bc0299ec2fd) v0.6.11 (@T1st3)
+- [901ea65](https://github.com/T1st3/atob-umd/commit/901ea65616af91f55c4e24ee3a389eb4be1abc5f) chore: update gulpfile (@T1st3)
+- [879314d](https://github.com/T1st3/atob-umd/commit/879314d8ed7837e538b2c3c93e67a253533e82aa) chore: update bower deps (@T1st3)
+- [b8c4750](https://github.com/T1st3/atob-umd/commit/b8c47504039ab90ef3d222bdeda36b423931f923) chore: update .npmignore (@T1st3)
+- [1bbbb4f](https://github.com/T1st3/atob-umd/commit/1bbbb4f87a0e5974b23e639628b5d6359374d705) fix: update bower ignores (@T1st3)
+- [0ab274c](https://github.com/T1st3/atob-umd/commit/0ab274c7b3c0e034e25e3468526a030a9965aac6) chore: update npm deps (@T1st3)
+- [51efc6b](https://github.com/T1st3/atob-umd/commit/51efc6b178320509421e1057fcc2e99e22535224) chore: update .gitignore (@T1st3)
+- [4785a97](https://github.com/T1st3/atob-umd/commit/4785a97dba6a05a7e4da0f7c71d08edd556dcf24) Add .mailmap file (@T1st3)
+
 ### 0.6.10 (2014/09/22 12:34 +00:00)
 - [0322770](https://github.com/T1st3/atob-umd/commit/03227702bbf35037118424518b44bcb2e31bda5e) 0.6.10 (@T1st3)
 - [7319f7e](https://github.com/T1st3/atob-umd/commit/7319f7e7d7bd9eda42ccd73c3273ad5f6f9d7963) Update deps (@T1st3)

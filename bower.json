@@ -92,7 +92,10 @@
       "main": "dist/lodash.min.js"
     },
     "tist3-assets": {
-      "main": ""
+      "main": [
+        "**/*.js", "**/*.css",
+        "**/*.png", "**/*.jpg", "**/*.gif", "**/*.ico", "**/*.svg"
+      ]
     }
   }
 }

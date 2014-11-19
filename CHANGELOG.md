@@ -1,5 +1,9 @@
 ## Change Log
 
+### 0.6.14 (2014/11/19 01:51 +00:00)
+- [cd7645e](https://github.com/T1st3/atob-umd/commit/cd7645e279f31972f623377f8d99f699b65d8364) chore: v0.6.14 (@T1st3)
+- [bace1ce](https://github.com/T1st3/atob-umd/commit/bace1ce0788b850f6c32cefa7ff781f854c81f1c) chore: update gulpfile (@T1st3)
+
 ### 0.6.13 (2014/11/19 00:34 +00:00)
 - [fee27ae](https://github.com/T1st3/atob-umd/commit/fee27aeee11bdaca061d64c7eda8b10e6bd4b49c) chore: v0.6.13 (@T1st3)
 - [68f3576](https://github.com/T1st3/atob-umd/commit/68f3576cc317e26bc65c6ba62d5ae671b5b928d4) fix: update bower.json (@T1st3)

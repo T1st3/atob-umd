@@ -1,5 +1,12 @@
 ## Change Log
 
+### 0.6.13 (2014/11/19 00:34 +00:00)
+- [fee27ae](https://github.com/T1st3/atob-umd/commit/fee27aeee11bdaca061d64c7eda8b10e6bd4b49c) chore: v0.6.13 (@T1st3)
+- [68f3576](https://github.com/T1st3/atob-umd/commit/68f3576cc317e26bc65c6ba62d5ae671b5b928d4) fix: update bower.json (@T1st3)
+- [8f46fcf](https://github.com/T1st3/atob-umd/commit/8f46fcf100689ddd24abe0febecd014ff3ed60e8) fix: update bower.json (@T1st3)
+- [ef32474](https://github.com/T1st3/atob-umd/commit/ef3247428255cb05a29c281dfd1ca61db23f225b) chore: update gulpfile (@T1st3)
+- [677029c](https://github.com/T1st3/atob-umd/commit/677029cdaa236f6a47a786061de0b0c73e395273) fix: update bower.json (@T1st3)
+
 ### 0.6.12 (2014/11/18 22:51 +00:00)
 - [5a60545](https://github.com/T1st3/atob-umd/commit/5a605450db6bb3a6ca197ca91493701a9897b69a) chore: v0.6.12 (@T1st3)
 - [04e8b2a](https://github.com/T1st3/atob-umd/commit/04e8b2ab507334add5dfff0edf2a89cce9f7bf5b) feat: add overrides in bower.json, for user with main-bower-files (@T1st3)

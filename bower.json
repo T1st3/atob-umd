@@ -91,7 +91,7 @@
     "lodash": {
       "main": "dist/lodash.min.js"
     },
-    "tist3-assets": {
+    "t1st3-assets": {
       "main": [
         "**/*.js", "**/*.css",
         "**/*.png", "**/*.jpg", "**/*.gif", "**/*.ico", "**/*.svg"

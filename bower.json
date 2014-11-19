@@ -1,6 +1,6 @@
 {
   "name": "atob-umd",
-  "version": "0.6.12",
+  "version": "0.6.13",
   "homepage": "http://www.tiste.org/atob-umd",
   "description": "A UMD module for atob()",
   "keywords": [

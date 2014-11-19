@@ -3,21 +3,21 @@
 require.config({
   baseUrl: '',
   paths: {
-    jquery: 'assets/js/lib/jquery.min',
-    atob: 'assets/js/lib/atob-umd',
-    bootstrap: 'assets/js/lib/bootstrap.min'
+    jquery: 'assets/lib/jquery/dist/jquery.min',
+    mocha: 'assets/lib/mocha/mocha',
+    chai: 'assets/lib/chai/chai',
+    chaijquery: 'assets/lib/chai-jquery/chai-jquery',
+    bootstrap: 'assets/lib/bootstrap/dist/js/bootstrap.min',
+    atob: 'assets/lib/atob-umd'
   },
   shim: {
     jquery: {
       exports: '$'
     },
+    chaijquery: ['jquery', 'chai'],
+    bootstrap: ['jquery'],
     atob: {
       exports: 'Atob'
-    },
-    bootstrap: {
-      deps: [
-        'jquery'
-      ]
     }
   },
   scriptType: 'text/javascript'
@@ -26,8 +26,8 @@ require.config({
 require([
   'jquery',
   'atob',
-  'assets/js/lib/codemirror',
-  'assets/js/lib/codemirror/javascript',
+  'assets/lib/codemirror/lib/codemirror',
+  'assets/lib/codemirror/mode/javascript/javascript',
   'bootstrap'
 ], function ($, Atob, CodeMirror) {
   $(document).ready(function () {

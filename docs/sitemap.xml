@@ -7,22 +7,7 @@
     <url>
       <loc>http://www.tiste.org/atob-umd/404.html</loc>
       
-        <lastmod>2014-11-18T23:41:50+01:00</lastmod>
-      
-      
-        <changefreq>yearly</changefreq>
-      
-      
-        <priority>0.1</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>http://www.tiste.org/atob-umd/assets/lib/t1st3-assets/dist/common/404.html</loc>
-      
-        <lastmod>2014-11-18T23:41:50+01:00</lastmod>
+        <lastmod>2014-11-19T01:33:44+01:00</lastmod>
       
       
         <changefreq>yearly</changefreq>
@@ -37,22 +22,7 @@
     <url>
       <loc>http://www.tiste.org/atob-umd/amd_dependencies.html</loc>
       
-        <lastmod>2014-11-18T23:41:50+01:00</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>http://www.tiste.org/atob-umd/assets/lib/t1st3-assets/dist/common/amd_dependencies.html</loc>
-      
-        <lastmod>2014-11-18T23:41:50+01:00</lastmod>
+        <lastmod>2014-11-19T01:33:44+01:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -67,22 +37,7 @@
     <url>
       <loc>http://www.tiste.org/atob-umd/build_docs.html</loc>
       
-        <lastmod>2014-11-18T23:41:50+01:00</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.4</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>http://www.tiste.org/atob-umd/assets/lib/t1st3-assets/dist/common/build_docs.html</loc>
-      
-        <lastmod>2014-11-18T23:41:50+01:00</lastmod>
+        <lastmod>2014-11-19T01:33:44+01:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -97,7 +52,7 @@
     <url>
       <loc>http://www.tiste.org/atob-umd/changelog.html</loc>
       
-        <lastmod>2014-11-18T23:41:50+01:00</lastmod>
+        <lastmod>2014-11-19T01:33:44+01:00</lastmod>
       
       
         <changefreq>weekly</changefreq>
@@ -110,39 +65,9 @@
   
     
     <url>
-      <loc>http://www.tiste.org/atob-umd/assets/lib/t1st3-assets/dist/common/cjs_dependencies.html</loc>
-      
-        <lastmod>2014-11-18T23:41:50+01:00</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
       <loc>http://www.tiste.org/atob-umd/cjs_dependencies.html</loc>
       
-        <lastmod>2014-11-18T23:41:50+01:00</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>http://www.tiste.org/atob-umd/assets/lib/t1st3-assets/dist/common/coverage.html</loc>
-      
-        <lastmod>2014-11-18T23:41:50+01:00</lastmod>
+        <lastmod>2014-11-19T01:33:44+01:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -157,7 +82,7 @@
     <url>
       <loc>http://www.tiste.org/atob-umd/coverage.html</loc>
       
-        <lastmod>2014-11-18T23:41:50+01:00</lastmod>
+        <lastmod>2014-11-19T01:33:44+01:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -170,39 +95,9 @@
   
     
     <url>
-      <loc>http://www.tiste.org/atob-umd/assets/lib/t1st3-assets/dist/umd_docs/credits.html</loc>
-      
-        <lastmod>2014-11-18T23:41:50+01:00</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.4</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>http://www.tiste.org/atob-umd/assets/lib/t1st3-assets/dist/spa_docs/credits.html</loc>
-      
-        <lastmod>2014-11-18T23:41:50+01:00</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.4</priority>
-      
-    </url>
-    
-  
-    
-    <url>
       <loc>http://www.tiste.org/atob-umd/credits.html</loc>
       
-        <lastmod>2014-11-18T23:41:50+01:00</lastmod>
+        <lastmod>2014-11-19T01:33:44+01:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -217,58 +112,13 @@
     <url>
       <loc>http://www.tiste.org/atob-umd/demo.html</loc>
       
-        <lastmod>2014-11-18T23:41:50+01:00</lastmod>
+        <lastmod>2014-11-19T01:33:44+01:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
       
       
         <priority>0.6</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>http://www.tiste.org/atob-umd/assets/lib/t1st3-assets/dist/spa_docs/demo.html</loc>
-      
-        <lastmod>2014-11-18T23:41:50+01:00</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.6</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>http://www.tiste.org/atob-umd/assets/lib/t1st3-assets/dist/umd_docs/demo.html</loc>
-      
-        <lastmod>2014-11-18T23:41:50+01:00</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.6</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>http://www.tiste.org/atob-umd/assets/lib/t1st3-assets/dist/common/dependencies.html</loc>
-      
-        <lastmod>2014-11-18T23:41:50+01:00</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
       
     </url>
     
@@ -277,7 +127,7 @@
     <url>
       <loc>http://www.tiste.org/atob-umd/dependencies.html</loc>
       
-        <lastmod>2014-11-18T23:41:50+01:00</lastmod>
+        <lastmod>2014-11-19T01:33:44+01:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -290,39 +140,9 @@
   
     
     <url>
-      <loc>http://www.tiste.org/atob-umd/assets/lib/t1st3-assets/dist/umd_docs/gulp_tasks.html</loc>
-      
-        <lastmod>2014-11-18T23:41:50+01:00</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.4</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>http://www.tiste.org/atob-umd/assets/lib/t1st3-assets/dist/spa_docs/gulp_tasks.html</loc>
-      
-        <lastmod>2014-11-18T23:41:50+01:00</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.4</priority>
-      
-    </url>
-    
-  
-    
-    <url>
       <loc>http://www.tiste.org/atob-umd/gulp_tasks.html</loc>
       
-        <lastmod>2014-11-18T23:41:50+01:00</lastmod>
+        <lastmod>2014-11-19T01:33:44+01:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -337,7 +157,7 @@
     <url>
       <loc>http://www.tiste.org/atob-umd/</loc>
       
-        <lastmod>2014-11-18T23:41:50+01:00</lastmod>
+        <lastmod>2014-11-19T01:33:44+01:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -350,45 +170,15 @@
   
     
     <url>
-      <loc>http://www.tiste.org/atob-umd/assets/lib/t1st3-assets/dist/common/jsdoc.html</loc>
-      
-        <lastmod>2014-11-18T23:41:50+01:00</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
       <loc>http://www.tiste.org/atob-umd/jsdoc.html</loc>
       
-        <lastmod>2014-11-18T23:41:50+01:00</lastmod>
+        <lastmod>2014-11-19T01:33:44+01:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
       
       
         <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>http://www.tiste.org/atob-umd/assets/lib/t1st3-assets/dist/common/license.html</loc>
-      
-        <lastmod>2014-11-18T23:41:50+01:00</lastmod>
-      
-      
-        <changefreq>yearly</changefreq>
-      
-      
-        <priority>0.3</priority>
       
     </url>
     
@@ -397,7 +187,7 @@
     <url>
       <loc>http://www.tiste.org/atob-umd/license.html</loc>
       
-        <lastmod>2014-11-18T23:41:50+01:00</lastmod>
+        <lastmod>2014-11-19T01:33:44+01:00</lastmod>
       
       
         <changefreq>yearly</changefreq>
@@ -411,27 +201,10 @@
     
   
     
-  
-    
-    <url>
-      <loc>http://www.tiste.org/atob-umd/assets/lib/t1st3-assets/dist/common/sitemap.html</loc>
-      
-        <lastmod>2014-11-18T23:41:50+01:00</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.4</priority>
-      
-    </url>
-    
-  
-    
     <url>
       <loc>http://www.tiste.org/atob-umd/sitemap.html</loc>
       
-        <lastmod>2014-11-18T23:41:50+01:00</lastmod>
+        <lastmod>2014-11-19T01:33:44+01:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -440,8 +213,6 @@
         <priority>0.4</priority>
       
     </url>
-    
-  
     
   
     
@@ -450,37 +221,7 @@
     <url>
       <loc>http://www.tiste.org/atob-umd/tests.html</loc>
       
-        <lastmod>2014-11-18T23:41:50+01:00</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>http://www.tiste.org/atob-umd/assets/lib/t1st3-assets/dist/spa_docs/tests.html</loc>
-      
-        <lastmod>2014-11-18T23:41:50+01:00</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>http://www.tiste.org/atob-umd/assets/lib/t1st3-assets/dist/umd_docs/tests.html</loc>
-      
-        <lastmod>2014-11-18T23:41:50+01:00</lastmod>
+        <lastmod>2014-11-19T01:33:44+01:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -495,22 +236,7 @@
     <url>
       <loc>http://www.tiste.org/atob-umd/tests_amd.html</loc>
       
-        <lastmod>2014-11-18T23:41:50+01:00</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>http://www.tiste.org/atob-umd/assets/lib/t1st3-assets/dist/common/tests_amd.html</loc>
-      
-        <lastmod>2014-11-18T23:41:50+01:00</lastmod>
+        <lastmod>2014-11-19T01:33:44+01:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -525,37 +251,7 @@
     <url>
       <loc>http://www.tiste.org/atob-umd/tests_global.html</loc>
       
-        <lastmod>2014-11-18T23:41:50+01:00</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>http://www.tiste.org/atob-umd/assets/lib/t1st3-assets/dist/spa_docs/tests_global.html</loc>
-      
-        <lastmod>2014-11-18T23:41:50+01:00</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>http://www.tiste.org/atob-umd/assets/lib/t1st3-assets/dist/umd_docs/tests_global.html</loc>
-      
-        <lastmod>2014-11-18T23:41:50+01:00</lastmod>
+        <lastmod>2014-11-19T01:33:44+01:00</lastmod>
       
       
         <changefreq>monthly</changefreq>

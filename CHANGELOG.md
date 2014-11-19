@@ -1,5 +1,12 @@
 ## Change Log
 
+### 0.6.12 (2014/11/18 22:51 +00:00)
+- [5a60545](https://github.com/T1st3/atob-umd/commit/5a605450db6bb3a6ca197ca91493701a9897b69a) chore: v0.6.12 (@T1st3)
+- [04e8b2a](https://github.com/T1st3/atob-umd/commit/04e8b2ab507334add5dfff0edf2a89cce9f7bf5b) feat: add overrides in bower.json, for user with main-bower-files (@T1st3)
+- [a956342](https://github.com/T1st3/atob-umd/commit/a9563423929409514e69a5e69355508f767b7741) chore: add main-bower-files as a npm dep (@T1st3)
+- [82df5f9](https://github.com/T1st3/atob-umd/commit/82df5f9a61ece7117b54a5730fd0615dc03b04ed) chore: update npm deps (@T1st3)
+- [7b550c0](https://github.com/T1st3/atob-umd/commit/7b550c0e5eb1b90ef408433ebd14a29cfd8c6ea0) docs: fix link to licenses in README (@T1st3)
+
 ### 0.6.11 (2014/11/12 20:52 +00:00)
 - [2820c42](https://github.com/T1st3/atob-umd/commit/2820c421d751ccee45b1b2895bec3bc0299ec2fd) v0.6.11 (@T1st3)
 - [901ea65](https://github.com/T1st3/atob-umd/commit/901ea65616af91f55c4e24ee3a389eb4be1abc5f) chore: update gulpfile (@T1st3)

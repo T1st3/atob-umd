@@ -4,9 +4,7 @@
 'use strict';
 
 (function (root, factory) {
-  // Test for AMD modules
   if (typeof define === 'function' && define.amd) {
-    // AMD
     require.config({
       baseUrl: '',
       paths: {
@@ -36,13 +34,9 @@
       'mocha',
       'bootstrap'
     ], factory);
-  // Test for Node.js
   } else if (typeof exports === 'object') {
-    // Node
     module.exports = factory(require('chai'), require('../src/atob-umd'));
-  // Browser globals
   } else {
-    // Browser globals
     root.AtobTests = factory(root.chai, root.Atob);
   }
 }(this, function (chai, Atob) {

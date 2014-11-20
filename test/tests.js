@@ -15,7 +15,7 @@
         chaijquery: 'assets/lib/chai-jquery/chai-jquery',
         bootstrap: 'assets/lib/bootstrap/dist/js/bootstrap.min',
         /* this project */
-        atob: 'assets/lib/atob-umd'
+        atob: 'assets/lib/atob-umd/dist/atob-umd'
       },
       shim: {
         jquery: {

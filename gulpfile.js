@@ -507,7 +507,7 @@ gulp.task('dependo_amd', ['dependo_cjs'], function (cb) {
 
 gulp.task('coverage_instrument', ['build'], function (cb) {
   var cmd = 'istanbul instrument ./src/' + pkg.name + '.js';
-  cmd += ' > ./test/assets/lib/' + pkg.name + '.js';
+  cmd += ' > ./test/assets/lib/' + pkg.name + '/dist/' + pkg.name + '.js';
   exec(cmd, function (err, stdout, stderr) {
     console.log(stdout);
     console.log(stderr);
@@ -574,10 +574,10 @@ gulp.task('coverage', [
 
 gulp.task('uninstrument', ['coverage'], function (cb) {
   del([
-    './test/assets/lib/' + pkg.name + '.js'
+    './test/assets/lib/' + pkg.name + '/dist/' + pkg.name + '.js'
   ], function() {
     gulp.src('./src/*.js')
-      .pipe(gulp.dest('./test/assets/lib'));
+      .pipe(gulp.dest('./test/assets/lib/' + pkg.name + '/dist'));
     cb();
   });
 });

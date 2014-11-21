@@ -3,12 +3,14 @@
 require.config({
   baseUrl: '',
   paths: {
+    /* dependencies */
     jquery: 'assets/lib/jquery/dist/jquery.min',
     mocha: 'assets/lib/mocha/mocha',
     chai: 'assets/lib/chai/chai',
     chaijquery: 'assets/lib/chai-jquery/chai-jquery',
     bootstrap: 'assets/lib/bootstrap/dist/js/bootstrap.min',
-    atob: 'assets/lib/atob-umd'
+    /* this project */
+    atob: 'assets/lib/atob-umd/dist/atob-umd'
   },
   shim: {
     jquery: {

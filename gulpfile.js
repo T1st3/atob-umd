@@ -382,11 +382,10 @@ gulp.task('serve', ['watch', 'browser-sync'], function (cb) {
  */
 
 gulp.task('doc_copy', ['figlet', 'build'], function (cb) {
-  /* JS */
   gulp.src([
     './src/*.js'
   ])
-    .pipe(gulp.dest('./gh-pages/assets/lib'));
+    .pipe(gulp.dest('./gh-pages/assets/lib/' + pkg.name + '/dist'));
 
   gulp.src([
     './test/tests.js'

@@ -1,5 +1,9 @@
 ## Change Log
 
+### 0.6.17 (2014/11/21 00:32 +00:00)
+- [3ea1105](https://github.com/T1st3/atob-umd/commit/3ea1105d5c98abfd94f89aeeef2369bfd9ae79c4) chore: v0.6.17 (@T1st3)
+- [98315cc](https://github.com/T1st3/atob-umd/commit/98315ccd8ffc487f4b868195e788af8960bcb316) chore: update path of source in AMD tests and demo (@T1st3)
+
 ### 0.6.16 (2014/11/21 00:16 +00:00)
 - [41f256e](https://github.com/T1st3/atob-umd/commit/41f256ec8ef0109835c40a541cbd1dd7b079f15f) chore: v06.16 (@T1st3)
 - [7b03965](https://github.com/T1st3/atob-umd/commit/7b03965e2401d8ff30a04cbd1b022c72c785718b) chore: update path of source in AMD tests and demo (@T1st3)

@@ -169,7 +169,6 @@ gulp.task('init', ['qr'], function (cb) {
   ])
     .pipe(gulp.dest('./gh-pages/assets/css'));
 
-  /* IMG */
   gulp.src([
     './bower_components/t1st3-assets/dist/common/assets/img/**/*.png',
     './bower_components/t1st3-assets/dist/common/assets/img/**/*.gif',
@@ -196,14 +195,12 @@ gulp.task('init', ['qr'], function (cb) {
   ])
     .pipe(gulp.dest('./gh-pages/'));
 
-  /* XML */
   gulp.src([
     './bower_components/t1st3-assets/dist/common/sitemap.xml',
     './bower_components/t1st3-assets/dist/common/opensearch.xml'
   ])
     .pipe(gulp.dest('./gh-pages'));
 
-  /* HTML */
   gulp.src([
     './bower_components/t1st3-assets/dist/umd_docs/_includes/bottom-menu.html',
     './bower_components/t1st3-assets/dist/umd_docs/_includes/head.html',
@@ -218,7 +215,7 @@ gulp.task('init', ['qr'], function (cb) {
   ])
     .pipe(gulp.dest('./gh-pages/_layouts'));
 
-   triggerNotification ('Init', 'Successfully initiated the project.', function () {
+  triggerNotification ('Init', 'Successfully initiated the project.', function () {
     displayCowsay('gulp init - DONE', cb);
   });
 });
@@ -237,7 +234,6 @@ gulp.task('test_copy', ['figlet'], function (cb) {
   });
 });
 
-/* CORE */
 gulp.task('test_node', ['figlet'], function (cb) {
   var cmd = './node_modules/mocha/bin/_mocha test/tests.js --reporter spec';
   exec(cmd, function (err, stdout, stderr) {

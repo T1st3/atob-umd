@@ -47,7 +47,7 @@
     "requirejs": "~2.1"
   },
   "devDependencies": {
-    "t1st3-assets": "~1.4"
+    "t1st3-assets": "~1.5"
   },
   "overrides": {
     "requirejs": {

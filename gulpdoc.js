@@ -327,7 +327,7 @@ gulp.task('doc_template_umd', ['doc_template'], function (cb) {
       ProjectVersion: pkg.version,
       ProjectGlobalDeps: require('./.yo-rc.json')['generator-t1st3-umd'].ProjectGlobalDeps
     }))
-    .pipe(gulp.dest('./gh-pages'));
+    .pipe(gulp.dest('./gh-pages/_layouts'));
   cb();
 });
 

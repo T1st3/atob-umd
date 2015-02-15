@@ -140,6 +140,18 @@ gulp.task('qr', ['doc_clean'], function (cb) {
 });
 
 gulp.task('doc_copy', ['qr'], function (cb) {
+  gulp.src(mainBowerFiles({
+    paths: {
+        bowerDirectory: './bower_components',
+        bowerrc: './.bowerrc',
+        bowerJson: './bower.json'
+    },
+    includeDev: true
+  }), {
+    base: './bower_components'
+  })
+    .pipe(gulp.dest('./gh-pages/app/lib'));
+
   gulp.src([
     './src/*.js'
   ])
@@ -169,18 +181,6 @@ gulp.task('doc_copy', ['qr'], function (cb) {
     './bower_components/t1st3-assets/dist/umd_docs/_layouts/demo.html'
   ])
     .pipe(gulp.dest('./gh-pages/_layouts'));
-
-  gulp.src(mainBowerFiles({
-    paths: {
-        bowerDirectory: './bower_components',
-        bowerrc: './.bowerrc',
-        bowerJson: './bower.json'
-    },
-    includeDev: true
-  }), {
-    base: './bower_components'
-  })
-    .pipe(gulp.dest('./gh-pages/assets/lib'));
 
   gulp.src([
     './bower_components/t1st3-assets/dist/common/assets/css/t1st3.min.css',
@@ -328,9 +328,9 @@ gulp.task('dependo_amd', ['dependo_cjs'], function (cb) {
   });
 });
 
-gulp.task('coverage_instrument', [], function (cb) {
+gulp.task('coverage_instrument', ['doc_copy'], function (cb) {
   var cmd = 'istanbul instrument ./src/' + pkg.name + '.js';
-  cmd += ' > ./test/assets/lib/' + pkg.name + '/dist/' + pkg.name + '.js';
+  cmd += ' > ./test/app/lib/' + pkg.name + '/dist/' + pkg.name + '.js';
   exec(cmd, function (err, stdout, stderr) {
     console.log(stdout);
     console.log(stderr);

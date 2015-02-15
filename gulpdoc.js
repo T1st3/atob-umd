@@ -172,9 +172,7 @@ gulp.task('bumpdate', ['bumpdate_src'], function (cb) {
 
 gulp.task('doc_clean', ['bower'], function (cb) {
   del([
-    './gh-pages/_layouts/changelog.html', './gh-pages/_layouts/demo.html',
-    './gh-pages/_layouts/notfound.html', './gh-pages/_layouts/readme.html',
-    './gh-pages/_layouts/t1st3.html', './gh-pages/_layouts/tests_amd.html',
+    './gh-pages/_layouts/*',
     './gh-pages/_config.yml', './gh-pages/_includes/umd_*',
     './gh-pages/jsdoc/', './gh-pages/dependo/', './gh-pages/coverage/',
     './gh-pages/tests.js',
@@ -323,6 +321,13 @@ gulp.task('doc_template_umd', ['doc_template'], function (cb) {
     }))
     .pipe(gulp.dest('./gh-pages'));
   });
+  gulp.src('./bower_components/t1st3-assets/dist/umd_docs/_layouts/tests_global.html')
+    .pipe(template({
+      ProjectName: pkg.name,
+      ProjectVersion: pkg.version,
+      ProjectGlobalDeps: require('./.yo-rc.json')['generator-t1st3-umd'].ProjectGlobalDeps
+    }))
+    .pipe(gulp.dest('./gh-pages'));
   cb();
 });
 

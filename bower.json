@@ -1,6 +1,6 @@
 {
   "name": "atob-umd",
-  "version": "0.7.1",
+  "version": "0.7.3",
   "homepage": "http://www.tiste.org/atob-umd",
   "description": "A UMD module for atob()",
   "keywords": [
@@ -47,26 +47,40 @@
     "requirejs": "~2.1"
   },
   "devDependencies": {
-    "t1st3-assets": "~1.5"
+    "t1st3-assets": "~1.6"
   },
   "overrides": {
     "requirejs": {
       "main": "require.js"
     },
     "jquery": {
-      "main": ["dist/jquery.min.js", "dist/jquery.min.map"]
+      "main": [
+        "dist/jquery.min.js",
+        "dist/jquery.min.map"
+      ]
     },
     "bootstrap": {
-      "main": ["dist/js/bootstrap.min.js", "dist/css/bootstrap.min.css", "dist/fonts/*"]
+      "main": [
+        "dist/js/bootstrap.min.js",
+        "dist/css/bootstrap.min.css",
+        "dist/fonts/*"
+      ]
     },
     "font-awesome": {
-      "main": ["css/font-awesome.min.css", "fonts/*"]
+      "main": [
+        "css/font-awesome.min.css",
+        "fonts/*"
+      ]
     },
     "modernizr": {
       "main": "modernizr.js"
     },
     "codemirror": {
-      "main": ["lib/codemirror.js", "mode/javascript/javascript.js", "lib/codemirror.css"]
+      "main": [
+        "lib/codemirror.js",
+        "mode/javascript/javascript.js",
+        "lib/codemirror.css"
+      ]
     },
     "respond": {
       "main": "dest/respond.min.js"
@@ -75,7 +89,10 @@
       "main": "lib/json3.min.js"
     },
     "mocha": {
-      "main": ["mocha.js", "mocha.css"]
+      "main": [
+        "mocha.js",
+        "mocha.css"
+      ]
     },
     "chai": {
       "main": "chai.js"
@@ -91,8 +108,13 @@
     },
     "t1st3-assets": {
       "main": [
-        "**/*.js", "**/*.css",
-        "**/*.png", "**/*.jpg", "**/*.gif", "**/*.ico", "**/*.svg"
+        "**/*.js",
+        "**/*.css",
+        "**/*.png",
+        "**/*.jpg",
+        "**/*.gif",
+        "**/*.ico",
+        "**/*.svg"
       ]
     }
   }

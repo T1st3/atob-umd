@@ -18,8 +18,10 @@ cowsay = require('cowsay'),
 qr = require('qr-image'),
 
 gulp = require('gulp'),
+bump = require('gulp-bump'),
 header = require('gulp-header'),
 rename = require('gulp-rename'),
+replace = require('gulp-replace'),
 template = require('gulp-template'),
 gzip = require('gulp-gzip'),
 imagemin = require('gulp-imagemin'),
@@ -100,6 +102,65 @@ gulp.task('bower', ['figlet'], function () {
 });
 
 /*
+ * BUMP TASKS
+ */
+
+gulp.task('patch', ['figlet'], function (cb) {
+  gulp.src(['./package.json', './bower.json'])
+    .pipe(bump({
+      type: 'patch',
+      key: 'version'
+    }))
+    .pipe(gulp.dest('./'));
+  triggerNotification ('Builder', 'Successfully bumped application', function () {
+    displayCowsay('gulp build - DONE', cb);
+  });
+});
+
+gulp.task('minor', ['figlet'], function (cb) {
+  gulp.src(['./package.json', './bower.json'])
+    .pipe(bump({
+      type: 'minor',
+      key: 'version'
+    }))
+    .pipe(gulp.dest('./'));
+  triggerNotification ('Builder', 'Successfully bumped application', function () {
+    displayCowsay('gulp build - DONE', cb);
+  });
+});
+
+gulp.task('major', ['figlet'], function (cb) {
+  gulp.src(['./package.json', './bower.json'])
+    .pipe(bump({
+      type: 'major',
+      key: 'version'
+    }))
+    .pipe(gulp.dest('./'));
+  triggerNotification ('Builder', 'Successfully bumped application', function () {
+    displayCowsay('gulp build - DONE', cb);
+  });
+});
+
+gulp.task('bumpdate_src', ['figlet'], function (cb) {
+  gulp.src(['./src/**/*.js'])
+    .pipe(replace(/(version [0-9]+.[0-9]+.[0-9]+)/g, 'version ' + require('./package.json').version))
+    .pipe(gulp.dest('./src'));
+  gulp.src(['./dist/**/*.js'])
+    .pipe(replace(/(version [0-9]+.[0-9]+.[0-9]+)/g, 'version ' + require('./package.json').version))
+    .pipe(gulp.dest('./dist'));
+  gulp.src(['./test/tests.js'])
+    .pipe(replace(/(version [0-9]+.[0-9]+.[0-9]+)/g, 'version ' + require('./package.json').version))
+    .pipe(gulp.dest('./test'));
+  cb();
+});
+
+gulp.task('bumpdate', ['bumpdate_src'], function (cb) {
+  triggerNotification ('Builder', 'Successfully bumped application', function () {
+    displayCowsay('gulp build - DONE', cb);
+  });
+});
+
+/*
  * DOC TASKS
  */
 
@@ -155,7 +216,7 @@ gulp.task('doc_copy', ['qr'], function (cb) {
   gulp.src([
     './src/*.js'
   ])
-    .pipe(gulp.dest('./gh-pages/assets/lib/' + pkg.name + '/dist'));
+    .pipe(gulp.dest('./gh-pages/app/lib/' + pkg.name + '/dist'));
 
   gulp.src([
     './test/tests.js'

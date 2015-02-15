@@ -1,3 +1,13 @@
+/*!
+* atob-umd
+*
+* @link https://github.com/T1st3/atob-umd
+* @author T1st3
+* @version 0.7.3
+* @license https://github.com/T1st3/atob-umd/blob/master/LICENSE
+*
+*/
+
 /* global define,describe,it,mocha,chai */
 /* jshint unused:false */
 

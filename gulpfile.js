@@ -19,7 +19,6 @@ qrcode = require('qrcode-terminal'),
 
 gulp = require('gulp'),
 rename = require('gulp-rename'),
-replace = require('gulp-replace'),
 uglify = require('gulp-uglify'),
 sourcemaps = require('gulp-sourcemaps'),
 jshint = require('gulp-jshint'),
@@ -135,7 +134,7 @@ gulp.task('test_node', ['figlet'], function (cb) {
   var cmd = './node_modules/mocha/bin/_mocha test/tests.js --reporter spec';
   exec(cmd, function (err, stdout, stderr) {
     console.log('\n\n');
-    console.log(chalk.green('CORE | Node.js tests'));
+    console.log(chalk.green('Node.js tests'));
     console.log(stdout);
     console.log(stderr);
     cb(err);
@@ -147,7 +146,7 @@ gulp.task('test_browser_amd', ['test_copy'], function (cb) {
   cmd += ' ./test/tests_amd.html --reporter spec';
   exec(cmd, function (err, stdout, stderr) {
     console.log('\n\n');
-    console.log(chalk.green('CORE | Browser tests, using AMD modules'));
+    console.log(chalk.green('Browser tests, using AMD modules'));
     console.log(chalk.cyan('(executed in PhantomJS)'));
     console.log(stdout);
     console.log(stderr);
@@ -160,7 +159,7 @@ gulp.task('test_browser_global', ['test_copy'], function (cb) {
   cmd += ' test/tests_global.html --reporter spec';
   exec(cmd, function (err, stdout, stderr) {
     console.log('\n\n');
-    console.log(chalk.green('CORE | Browser tests, using global variables'));
+    console.log(chalk.green('Browser tests, using global variables'));
     console.log(chalk.cyan('(executed in PhantomJS)'));
     console.log(stdout);
     console.log(stderr);
@@ -181,7 +180,7 @@ gulp.task('test', [
  */
 
 gulp.task('build_clean', ['figlet', 'test'], function (cb) {
-  del(['./dist'], cb);
+  del(['./dist/*'], cb);
 });
 
 gulp.task('lint', ['build_clean'], function (cb) {
@@ -198,17 +197,7 @@ gulp.task('jscs', ['lint'], function (cb) {
   cb();
 });
 
-gulp.task('version', ['jscs'], function (cb) {
-  gulp.src(['src/**/*.js'])
-    .pipe(replace(/(version [0-9]+.[0-9]+.[0-9]+)/g, 'version ' + pkg.version))
-    .pipe(gulp.dest('./src'));
-  gulp.src(['./bower.json'])
-    .pipe(replace(/(.version.: .[0-9]+.[0-9]+.[0-9]+.)/g, '"version": "' + pkg.version + '"'))
-    .pipe(gulp.dest('./'));
-  cb();
-});
-
-gulp.task('build_copy', ['version'], function (cb) {
+gulp.task('build_copy', ['jscs'], function (cb) {
   gulp.src('./src/**/*')
     .pipe(gulp.dest('./dist'));
   cb();
@@ -272,7 +261,7 @@ gulp.task('serve', ['watch', 'browser-sync'], function (cb) {
 
 gulp.task('coverage_instrument', ['build'], function (cb) {
   var cmd = 'istanbul instrument ./src/' + pkg.name + '.js';
-  cmd += ' > ./test/assets/lib/' + pkg.name + '/dist/' + pkg.name + '.js';
+  cmd += ' > ./test/app/lib/' + pkg.name + '/dist/' + pkg.name + '.js';
   exec(cmd, function (err, stdout, stderr) {
     console.log(stdout);
     console.log(stderr);
@@ -339,10 +328,10 @@ gulp.task('coverage', [
 
 gulp.task('uninstrument', ['coverage'], function (cb) {
   del([
-    './test/assets/lib/' + pkg.name + '/dist/' + pkg.name + '.js'
+    './test/app/lib/' + pkg.name + '/dist/' + pkg.name + '.js'
   ], function() {
     gulp.src('./src/*.js')
-      .pipe(gulp.dest('./test/assets/lib/' + pkg.name + '/dist'));
+      .pipe(gulp.dest('./test/app/lib/' + pkg.name + '/dist'));
     cb();
   });
 });
@@ -359,7 +348,7 @@ gulp.task('ci', ['uninstrument'], function (cb) {
       console.log(stdout);
       console.log(stderr);
       del([
-        'tmp'
+        './tmp', './tmp2'
       ], cb);
     });
   });

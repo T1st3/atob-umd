@@ -3,8 +3,8 @@
 require.config({
   baseUrl: '',
   paths: {
-    jquery: 'assets/lib/jquery/dist/jquery.min',
-    bootstrap: 'assets/lib/bootstrap/dist/js/bootstrap.min'
+    jquery: 'app/lib/jquery/dist/jquery.min',
+    bootstrap: 'app/lib/bootstrap/dist/js/bootstrap.min'
   },
   shim: {
     jquery: {
@@ -21,8 +21,8 @@ require.config({
 
 require([
   'jquery',
-  'assets/lib/codemirror/lib/codemirror',
-  'assets/lib/codemirror/mode/javascript/javascript',
+  'app/lib/codemirror/lib/codemirror',
+  'app/lib/codemirror/mode/javascript/javascript',
   'bootstrap'
 ], function ($, CodeMirror) {
   $(document).ready(function () {

@@ -1,5 +1,11 @@
 ## Change Log
 
+### 0.7.0 (2015/02/15 05:05 +00:00)
+- [b3c35e4](https://github.com/T1st3/atob-umd/commit/b3c35e475c578a0b95b3e8d1e858c6749d0e1723) refactor: set lib in app rather than assets (@T1st3)
+- [269ec63](https://github.com/T1st3/atob-umd/commit/269ec631c8da8f3bc9a047d1597cc36924460424) chore: remove the doc workflow (@T1st3)
+- [2fd67ce](https://github.com/T1st3/atob-umd/commit/2fd67ceb5ef1987c01c4dc959d3f89dedc525ca6) chore: update bower.json main section (@T1st3)
+- [013cfe4](https://github.com/T1st3/atob-umd/commit/013cfe4280531c85860ccabc649c6e80a89c43ce) chore: update bower.json main section (@T1st3)
+
 ### 0.6.18 (2014/11/25 04:48 +00:00)
 - [b9c372e](https://github.com/T1st3/atob-umd/commit/b9c372e2c4d1cb12e712e0dd0ae05519e2009fd9) chore: v0.6.18 (@T1st3)
 

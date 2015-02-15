@@ -128,11 +128,11 @@ gulp.task('doc_clean', ['bower'], function (cb) {
     './gh-pages/tests_global.html',
     '!gh-pages/.git',
     './docs',
-    './tmp'
+    './tmp', './tmp2'
   ], cb);
 });
 
-gulp.task('qr', ['init_clean'], function (cb) {
+gulp.task('qr', ['doc_clean'], function (cb) {
   var qrPng = qr.image(pkg.homepage, { type: 'png' }),
   stream = './bower_components/t1st3-assets/dist/common/assets/img/qr.png';
   qrPng.pipe(fs.createWriteStream(stream));
@@ -219,7 +219,7 @@ gulp.task('doc_copy', ['qr'], function (cb) {
 });
 
 gulp.task('doc_template', ['doc_copy'], function (cb) {
-  _([
+  _.each([
     '404.html',
     'tests_amd.html',
     'coverage.html',
@@ -230,7 +230,7 @@ gulp.task('doc_template', ['doc_copy'], function (cb) {
     'cjs_dependencies.html',
     'amd_dependencies.html',
     'sitemap.html'
-  ]).forEach(function (num) {
+  ], function (num) {
     gulp.src('./bower_components/t1st3-assets/dist/common/' + num)
     .pipe(template({
       ProjectName: pkg.name,
@@ -242,13 +242,13 @@ gulp.task('doc_template', ['doc_copy'], function (cb) {
 });
 
 gulp.task('doc_template_umd', ['doc_template'], function (cb) {
-  _([
+  _.each([
     'tests.html',
     'tests_global.html',
     'credits.html',
     'gulp_tasks.html',
     '_config.yml'
-  ]).forEach(function (num) {
+  ], function (num) {
     gulp.src('./bower_components/t1st3-assets/dist/umd_docs/' + num)
     .pipe(template({
       ProjectName: pkg.name,

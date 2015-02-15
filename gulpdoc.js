@@ -112,12 +112,6 @@ gulp.task('patch', ['figlet'], function (cb) {
       key: 'version'
     }))
     .pipe(gulp.dest('./'));
-  gulp.src(['./yo-rc.json'])
-    .pipe(bump({
-      type: 'patch',
-      key: 'ProjectVersion'
-    }))
-    .pipe(gulp.dest('./'));
   triggerNotification ('Builder', 'Successfully bumped application', function () {
     displayCowsay('gulp build - DONE', cb);
   });
@@ -130,12 +124,6 @@ gulp.task('minor', ['figlet'], function (cb) {
       key: 'version'
     }))
     .pipe(gulp.dest('./'));
-  gulp.src(['./yo-rc.json'])
-    .pipe(bump({
-      type: 'minor',
-      key: 'ProjectVersion'
-    }))
-    .pipe(gulp.dest('./'));
   triggerNotification ('Builder', 'Successfully bumped application', function () {
     displayCowsay('gulp build - DONE', cb);
   });
@@ -146,12 +134,6 @@ gulp.task('major', ['figlet'], function (cb) {
     .pipe(bump({
       type: 'major',
       key: 'version'
-    }))
-    .pipe(gulp.dest('./'));
-  gulp.src(['./yo-rc.json'])
-    .pipe(bump({
-      type: 'major',
-      key: 'ProjectVersion'
     }))
     .pipe(gulp.dest('./'));
   triggerNotification ('Builder', 'Successfully bumped application', function () {
@@ -169,7 +151,13 @@ gulp.task('bumpdate_src', ['figlet'], function (cb) {
   gulp.src(['./test/tests.js'])
     .pipe(replace(/(version [0-9]+.[0-9]+.[0-9]+)/g, 'version ' + require('./package.json').version))
     .pipe(gulp.dest('./test'));
-  cb();
+  del([
+    './test/app/lib/' + pkg.name + '/dist/' + pkg.name + '.js'
+  ], function() {
+    gulp.src('./src/*.js')
+      .pipe(gulp.dest('./test/app/lib/' + pkg.name + '/dist'));
+    cb();
+  });
 });
 
 gulp.task('bumpdate', ['bumpdate_src'], function (cb) {

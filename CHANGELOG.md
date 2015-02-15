@@ -1,5 +1,9 @@
 ## Change Log
 
+### 0.7.3 (2015/02/15 12:43 +00:00)
+- [7d7cb09](https://github.com/T1st3/atob-umd/commit/7d7cb09a0df56acd01d720a661d8cd9152831c49) chore: 0.7.3 (@T1st3)
+- [973bc40](https://github.com/T1st3/atob-umd/commit/973bc400e0d8761400636920a50f12e6c7aac0bd) chore: 0.7.1 (@T1st3)
+
 ### 0.7.1 (2015/02/15 06:22 +00:00)
 - [de986ad](https://github.com/T1st3/atob-umd/commit/de986ad18f6058b5ff32d3e62720880cda0ccb5e) chore: 0.7.1 (@T1st3)
 - [5a4c5db](https://github.com/T1st3/atob-umd/commit/5a4c5dbc83bf2fed0083bd9a550bfc1ecd1360a9) chore: update bower deps (@T1st3)

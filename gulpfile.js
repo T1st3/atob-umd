@@ -200,7 +200,13 @@ gulp.task('jscs', ['lint'], function (cb) {
 gulp.task('build_copy', ['jscs'], function (cb) {
   gulp.src('./src/**/*')
     .pipe(gulp.dest('./dist'));
-  cb();
+  del([
+    './test/app/lib/' + pkg.name + '/dist/' + pkg.name + '.js'
+  ], function() {
+    gulp.src('./src/*.js')
+      .pipe(gulp.dest('./test/app/lib/' + pkg.name + '/dist'));
+    cb();
+  });
 });
 
 gulp.task('uglify', ['build_copy'], function (cb) {

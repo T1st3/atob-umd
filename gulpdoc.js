@@ -112,6 +112,12 @@ gulp.task('patch', ['figlet'], function (cb) {
       key: 'version'
     }))
     .pipe(gulp.dest('./'));
+  gulp.src(['./yo-rc.json'])
+    .pipe(bump({
+      type: 'patch',
+      key: 'ProjectVersion'
+    }))
+    .pipe(gulp.dest('./'));
   triggerNotification ('Builder', 'Successfully bumped application', function () {
     displayCowsay('gulp build - DONE', cb);
   });
@@ -124,6 +130,12 @@ gulp.task('minor', ['figlet'], function (cb) {
       key: 'version'
     }))
     .pipe(gulp.dest('./'));
+  gulp.src(['./yo-rc.json'])
+    .pipe(bump({
+      type: 'minor',
+      key: 'ProjectVersion'
+    }))
+    .pipe(gulp.dest('./'));
   triggerNotification ('Builder', 'Successfully bumped application', function () {
     displayCowsay('gulp build - DONE', cb);
   });
@@ -134,6 +146,12 @@ gulp.task('major', ['figlet'], function (cb) {
     .pipe(bump({
       type: 'major',
       key: 'version'
+    }))
+    .pipe(gulp.dest('./'));
+  gulp.src(['./yo-rc.json'])
+    .pipe(bump({
+      type: 'major',
+      key: 'ProjectVersion'
     }))
     .pipe(gulp.dest('./'));
   triggerNotification ('Builder', 'Successfully bumped application', function () {

@@ -1,0 +1,11 @@
+{
+  "generator-t1st3-umd": {
+    "ProjectName": "atob-umd",
+    "ProjectVersion": "0.7.3",
+    "ProjectDescr": "A UMD module for atob()",
+    "ProjectSamples": false,
+    "ProjectBowerJson": false,
+    "ProjectPackageJson": false,
+    "ProjectGlobalDeps": []
+  }
+}

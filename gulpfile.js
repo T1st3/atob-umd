@@ -95,7 +95,7 @@ gulp.task('bower', ['figlet'], function () {
 gulp.task('init_clean', ['bower'], function (cb) {
   del([
     './tmp',
-    './test/assets/lib'
+    './test/app/lib'
   ], cb);
 });
 
@@ -110,7 +110,7 @@ gulp.task('init', ['init_clean'], function (cb) {
   }), {
     base: './bower_components'
   })
-    .pipe(gulp.dest('./test/assets/lib'));
+    .pipe(gulp.dest('./test/app/lib'));
 
   triggerNotification ('Init', 'Successfully initiated the project.', function () {
     displayCowsay('gulp init - DONE', cb);
@@ -123,10 +123,10 @@ gulp.task('init', ['init_clean'], function (cb) {
 
 gulp.task('test_copy', ['figlet'], function (cb) {
   del([
-    './test/assets/lib/' + pkg.name + '/dist/' + pkg.name + '.js'
+    './test/app/lib/' + pkg.name + '/dist/' + pkg.name + '.js'
   ], function() {
     gulp.src('./src/*.js')
-      .pipe(gulp.dest('./test/assets/lib/' + pkg.name + '/dist'));
+      .pipe(gulp.dest('./test/app/lib/' + pkg.name + '/dist'));
     cb();
   });
 });
@@ -243,7 +243,7 @@ gulp.task('serve_lib', ['figlet'], function () {
   gulp.src([
     './src/' + pkg.name + '.js'
   ])
-    .pipe(gulp.dest('./test/assets/lib/' + pkg.name + '/dist'));
+    .pipe(gulp.dest('./test/app/lib/' + pkg.name + '/dist'));
 });
 
 gulp.task('watch', [], function() {

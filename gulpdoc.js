@@ -128,7 +128,7 @@ gulp.task('doc_clean', ['bower'], function (cb) {
     './gh-pages/tests_global.html',
     '!gh-pages/.git',
     './docs',
-    './tmp',
+    './tmp'
   ], cb);
 });
 

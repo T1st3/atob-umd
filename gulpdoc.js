@@ -143,12 +143,12 @@ gulp.task('major', ['figlet'], function (cb) {
 });
 
 gulp.task('bumpdate_src', ['figlet'], function (cb) {
-  gulp.src("./.yo-rc.json")
+  gulp.src('./.yo-rc.json')
   .pipe(jeditor(function (json) {
     json['generator-t1st3-umd'].ProjectVersion = require('./package.json').version;
     return json;
   }))
-  .pipe(gulp.dest("."));
+  .pipe(gulp.dest('.'));
   gulp.src(['./src/**/*.js'])
     .pipe(replace(/(version [0-9]+.[0-9]+.[0-9]+)/g, 'version ' + require('./package.json').version))
     .pipe(gulp.dest('./src'));

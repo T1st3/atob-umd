@@ -1,5 +1,9 @@
 ## Change Log
 
+### 0.7.6 (2015/02/16 01:43 +00:00)
+- [8733d44](https://github.com/T1st3/atob-umd/commit/8733d44d13bf7a0bf8900be00f28933c94895bec) chore: 0.7.6 (@T1st3)
+- [8813435](https://github.com/T1st3/atob-umd/commit/88134350f208d1021573df700ce65c8140ead02b) chore: update workflow (@T1st3)
+
 ### 0.7.5 (2015/02/15 23:44 +00:00)
 - [e26bc87](https://github.com/T1st3/atob-umd/commit/e26bc872d257bf43c38d01321bcc8d9d33b8b82b) chore: 0.7.5 (@T1st3)
 - [624a243](https://github.com/T1st3/atob-umd/commit/624a2439fdf1b5a5b5381a91a3cd2639f41c5448) chore: update workflow (@T1st3)

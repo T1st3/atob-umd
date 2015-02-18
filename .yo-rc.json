@@ -6,6 +6,10 @@
     "ProjectSamples": false,
     "ProjectBowerJson": false,
     "ProjectPackageJson": false,
-    "ProjectGlobalDeps": []
+    "ProjectGlobalDeps": [],
+    "ProjectMainClass": "Atob",
+    "ProjectKeywords": "atob,base64,ascii,binary",
+    "ProjectSrc": false,
+    "ProjectTests": false
   }
 }

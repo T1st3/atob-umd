@@ -17,11 +17,11 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/T1st3/ProjectName %>.git"
+    "url": "https://github.com/T1st3/atob-umd.git"
   },
   "author": "t1st3 <contact@tiste.org> (http://www.tiste.org/)",
   "bugs": {
-    "url": "https://github.com/T1st3/ProjectName %>/issues"
+    "url": "https://github.com/T1st3/atob-umd/issues"
   },
   "scripts": {
     "test": "gulp test"

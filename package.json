@@ -1,14 +1,14 @@
 {
   "name": "atob-umd",
-  "version": "0.7.8",
+  "version": "0.7.9",
   "homepage": "http://www.tiste.org/atob-umd",
   "description": "A UMD module for atob()",
   "keywords": [
-    "umd",
     "atob",
     "base64",
     "ascii",
-    "binary"
+    "binary",
+    "umd"
   ],
   "license": "MIT",
   "main": "dist/atob-umd.js",

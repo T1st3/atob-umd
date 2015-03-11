@@ -1,5 +1,10 @@
 ## Change Log
 
+### 0.7.8 (2015/02/18 02:48 +00:00)
+- [90ff2de](https://github.com/T1st3/atob-umd/commit/90ff2de5ff6b397ccd2d73830264bd17d538f151) chore: 0.7.8 (@T1st3)
+- [0bea343](https://github.com/T1st3/atob-umd/commit/0bea343d7eefc353e5ea9d422eadc5297c5c7ac9) chore: update workflow (@T1st3)
+- [f03ec5b](https://github.com/T1st3/atob-umd/commit/f03ec5b94fb7a8f12f79c904d014965255157ae2) chore: update dev deps in package.json (@T1st3)
+
 ### 0.7.7 (2015/02/16 12:46 +00:00)
 - [f96a384](https://github.com/T1st3/atob-umd/commit/f96a384d5c0b9553c6c09790e2b2ec826783e25e) chore: 0.7.7 (@T1st3)
 - [27d77cd](https://github.com/T1st3/atob-umd/commit/27d77cd137a91ddda5986787fc53326c204f9ba1) chore: update deps and workflow (@T1st3)

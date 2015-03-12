@@ -54,7 +54,7 @@
     "codemirror": "~5.0",
     "respond": "~1.4",
     "json3": "~3.3",
-    "mocha": "~2.1",
+    "mocha": "~2.2",
     "chai": "~2.0",
     "chai-jquery": "~2.0",
     "jshint": "~2.6",

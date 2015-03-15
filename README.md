@@ -2,11 +2,11 @@ atob-umd
 ==================
 
 
-[![NPM version](https://badge.fury.io/js/atob-umd.svg)](http://badge.fury.io/js/atob-umd)
-[![Dependency Status](https://david-dm.org/t1st3/atob-umd.svg?theme=shields.io)](https://david-dm.org/t1st3/atob-umd)
-[![Build Status](https://travis-ci.org/T1st3/atob-umd.svg?branch=master)](https://travis-ci.org/T1st3/atob-umd)
-[![Coverage Status](https://coveralls.io/repos/T1st3/atob-umd/badge.png)](https://coveralls.io/r/T1st3/atob-umd)
-[![Code Climate](https://codeclimate.com/github/T1st3/atob-umd/badges/gpa.svg)](https://codeclimate.com/github/T1st3/atob-umd)
+[![NPM version](https://img.shields.io/npm/v/atob-umd.svg)](https://www.npmjs.com/package/atob-umd)
+[![Dependency Status](https://img.shields.io/david/T1st3/atob-umd.svg)](https://david-dm.org/t1st3/atob-umd)
+[![Build Status](https://img.shields.io/travis/T1st3/atob-umd.svg)](https://travis-ci.org/T1st3/atob-umd)
+[![Coverage Status](https://img.shields.io/coveralls/T1st3/atob-umd.svg)](https://coveralls.io/r/T1st3/atob-umd)
+[![Code Climate](https://img.shields.io/codeclimate/github/T1st3/atob-umd.svg)](https://codeclimate.com/github/T1st3/atob-umd)
 
 
 
@@ -25,10 +25,10 @@ Installation for production
 
 **with Node.js**
 
-`atob-umd` is available on [NPM](https://www.npmjs.org/package/atob-umd)
-[![NPM](http://www.tiste.org/atob-umd/assets/img/vendor/npm.png)](https://www.npmjs.org/package/atob-umd).
+`atob-umd` is available on [NPM](https://www.npmjs.com/package/atob-umd)
+[![NPM](http://www.tiste.org/atob-umd/assets/img/vendor/npm.png)](https://www.npmjs.com/package/atob-umd).
 
-[![NPM version](https://badge.fury.io/js/atob-umd.svg)](http://badge.fury.io/js/atob-umd)
+[![NPM version](https://img.shields.io/npm/v/atob-umd.svg)](https://www.npmjs.com/package/atob-umd)
 
 You can install it with the following command:
 
@@ -41,7 +41,7 @@ You can install it with the following command:
 `atob-umd` is available on [Bower](http://bower.io/search/?q=atob-umd)
 [![Bower](http://www.tiste.org/atob-umd/assets/img/vendor/bower.png)](http://bower.io/search/?q=atob-umd).
 
-[![Bower version](https://badge.fury.io/bo/atob-umd.svg)](http://badge.fury.io/js/atob-umd)
+[![Bower version](https://img.shields.io/bower/v/atob-umd.svg)](http://bower.io/search/?q=atob-umd)
 
 To install it from Bower, just run 
 

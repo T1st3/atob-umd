@@ -1,5 +1,10 @@
 ## Change Log
 
+### 0.7.11 (2015/03/15 16:36 +00:00)
+- [00e15cb](https://github.com/T1st3/atob-umd/commit/00e15cbe05a0751796f7d0a2d299796f5e87715a) chore: v0.7.11 (@T1st3)
+- [7e9ded2](https://github.com/T1st3/atob-umd/commit/7e9ded285d7dcdbc313ae34dd58db875a513b9ff) docs: replace badge URL with img.shields.io (@T1st3)
+- [2eb8ec2](https://github.com/T1st3/atob-umd/commit/2eb8ec280d7e6777c599186f0bc7452192af6d4e) chore: update Bower & NPM deps (@T1st3)
+
 ### 0.7.10 (2015/03/12 06:15 +00:00)
 - [124dda8](https://github.com/T1st3/atob-umd/commit/124dda87a58955b38375f5265dea6dc1b71ba083) chore: v0.7.10, update deps, workflow & docs (@T1st3)
 - [3c90cfc](https://github.com/T1st3/atob-umd/commit/3c90cfcc2240c28280ac9cd7c3bffac6d31154af) chore: update deps (@T1st3)

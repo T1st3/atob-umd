@@ -1,6 +1,6 @@
 {
   "name": "atob-umd",
-  "version": "0.7.11",
+  "version": "0.7.12",
   "homepage": "http://www.tiste.org/atob-umd",
   "description": "A UMD module for atob()",
   "keywords": [
@@ -55,7 +55,7 @@
     "respond": "~1.4",
     "json3": "~3.3",
     "mocha": "~2.2",
-    "chai": "~2.0",
+    "chai": "~2.1",
     "chai-jquery": "~2.0",
     "jshint": "~2.6",
     "lodash": "~3.5"

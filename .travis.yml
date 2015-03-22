@@ -9,6 +9,10 @@ addons:
   code_climate:
     repo_token: 
       secure: YRTGIUgV3dcm1kLmOC2HOGhjpTXbHSpS3k/km+koEDYvSzy25N3zmPT/NeuvfLUtGo9T7Kh9VZLCdROsZoM447lEVnx+qQ/GJP3+sPgmLwFeD1ezkHNBU82zbLI83LBpc5jQq9ywDcjjgdiiWQNh0DF/jA9AEmo+ULHl/ZlIugw=
+  sauce_connect:
+    username: t1st3
+    access_key:
+      secure: F3KXAekGneIfOBz+OiopqqjBTwZ78fH7c1ng8rqgJo/OgLgQW/7XgK+G42HPSqvh6wYsg4fuB9i+Cg6PB+Kdu661YDTESx3pLUvG95ErLRB/h+ACkTcEJDyS4c4skFLAw4EoWHaz/ykt5MSWWWtg/YIGQVUGdgoSCGqhrKhzRBg=
 deploy:
   provider: npm
   email: contact@tiste.org

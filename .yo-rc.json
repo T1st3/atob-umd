@@ -1,15 +1,16 @@
 {
   "generator-t1st3-umd": {
     "ProjectName": "atob-umd",
-    "ProjectVersion": "0.7.11",
+    "ProjectVersion": "0.7.12",
     "ProjectDescr": "A UMD module for atob()",
-    "ProjectSamples": false,
-    "ProjectBowerJson": true,
-    "ProjectPackageJson": true,
     "ProjectGlobalDeps": [],
     "ProjectMainClass": "Atob",
     "ProjectKeywords": "atob,base64,ascii,binary",
     "ProjectSrc": false,
-    "ProjectTests": false
+    "ProjectTests": false,
+    "ProjectWriteConfig": true,
+    "ProjectDontOverwrites": [
+      ".travis.yml"
+    ]
   }
 }

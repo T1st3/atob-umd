@@ -15,8 +15,6 @@ About
 
 `atob-umd` is a Javascript UMD module for atob().
 
-You'll find all about this project on its **[project pages](http://www.tiste.org/atob-umd/)**
-
 
 
 
@@ -67,24 +65,6 @@ Then, get the dependencies of the project from both Bower and NPM:
 
     npm install
     bower install
-
-
-
-Documentation
----
-
-
-You can find fully functional examples, tests and a documentation in the [JSDoc](http://usejsdoc.org/) format in the `docs` folder.
-
-You can also browse these documents and tests online:
-
-- [Demo](http://www.tiste.org/atob-umd/demo.html)
-- [this README and more info](http://www.tiste.org/atob-umd)
-- [JSDoc](http://www.tiste.org/atob-umd/jsdoc.html)
-- [Credits](http://www.tiste.org/atob-umd/credits.html)
-- [Tests](http://www.tiste.org/atob-umd/tests.html)
-- [Coverage](http://www.tiste.org/atob-umd/coverage.html)
-- [Dependencies](http://www.tiste.org/atob-umd/dependencies.html)
 
 
 

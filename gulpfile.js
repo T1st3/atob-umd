@@ -44,16 +44,6 @@ bump = require('gulp-bump'),
 
 browserSync = require('browser-sync');
 
-fs.mkdirParent = function (dirPath, mode, callback) {
-  fs.mkdir(dirPath, mode, function (error) {
-    if (error && error.errno === 34) {
-      fs.mkdirParent(path.dirname(dirPath), mode, callback);
-      fs.mkdirParent(dirPath, mode, callback);
-    }
-    //callback && callback(error);
-  });
-};
-
 gulp.task('bower', function () {
   return bower()
     .pipe(gulp.dest('./bower_components'));

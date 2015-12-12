@@ -1,7 +1,7 @@
 {
   "name": "atob-umd",
   "version": "0.7.12",
-  "homepage": "http://www.tiste.org/atob-umd",
+  "homepage": "https://github.com/T1st3/atob-umd",
   "description": "A UMD module for atob()",
   "keywords": [
     "atob",

@@ -32,6 +32,7 @@ qrcode = require('qrcode-terminal'),
 
 gulp = require('gulp'),
 rename = require('gulp-rename'),
+replace = require('gulp-replace'),
 uglify = require('gulp-uglify'),
 sourcemaps = require('gulp-sourcemaps'),
 jshint = require('gulp-jshint'),
@@ -246,6 +247,53 @@ gulp.task('ci', ['coverage'], function (cb) {
       ], cb);
     });
   });
+});
+
+/*
+ * VERSION TASKS
+ */
+
+gulp.task('patch', function () {
+  gulp.src(['./package.json', './bower.json'])
+    .pipe(bump({
+      type: 'patch',
+      key: 'version'
+    }))
+    .pipe(gulp.dest('./'));
+});
+
+gulp.task('minor', function () {
+  gulp.src(['./package.json', './bower.json'])
+    .pipe(bump({
+      type: 'minor',
+      key: 'version'
+    }))
+    .pipe(gulp.dest('./'));
+});
+
+gulp.task('major', function () {
+  gulp.src(['./package.json', './bower.json'])
+    .pipe(bump({
+      type: 'major',
+      key: 'version'
+    }))
+    .pipe(gulp.dest('./'));
+});
+
+gulp.task('version-src', function () {
+  return gulp.src(['./src/**/*.js'])
+    .pipe(replace(/(version [0-9]+.[0-9]+.[0-9]+)/g, 'version ' + require('./package.json').version))
+    .pipe(gulp.dest('./src'));
+});
+
+gulp.task('version-test', function () {
+  return gulp.src(['./test/tests.js'])
+    .pipe(replace(/(version [0-9]+.[0-9]+.[0-9]+)/g, 'version ' + require('./package.json').version))
+    .pipe(gulp.dest('./test'));
+});
+
+gulp.task('version', ['version-src', 'version-test'], function (cb) {
+  cb();
 });
 
 /*

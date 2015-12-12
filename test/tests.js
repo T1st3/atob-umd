@@ -117,23 +117,6 @@
         done();
       });
     });
-    if (browser === true) {
-      describe('test browser value', function () {
-        it('Should be true', function (done) {
-          var res = new Atob();
-          res.browser.should.equal(true);
-          done();
-        });
-      });
-    } else {
-      describe('test browser value', function () {
-        it('Should be false', function (done) {
-          var res = new Atob();
-          res.browser.should.equal(false);
-          done();
-        });
-      });
-    }
   });
 
   describe('atob-umd functional tests', function () {

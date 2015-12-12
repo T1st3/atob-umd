@@ -38,13 +38,6 @@
   var Atob = function (a) {
     this.a = '';
     this.b = '';
-    if (typeof define === 'function' && define.amd) {
-      this.browser = true;
-    } else if (typeof exports === 'object') {
-      this.browser = false;
-    } else {
-      this.browser = true;
-    }
     // set method if supplied
     if (a) {
       this.handle(a);
@@ -69,16 +62,7 @@
     }
     this.a = a;
 
-    if (this.browser === true) {
-      /* global window */
-      if (typeof window.atob === 'function') {
-        this.b = window.atob(a);
-      } else {
-        this.b = Atob.decode(a);
-      }
-    } else {
-      this.b = new Buffer(a, 'base64').toString('binary');
-    }
+    this.b = Atob.decode(a);
     // keep chainability
     return this;
   };

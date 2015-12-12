@@ -130,52 +130,45 @@ gulp.task('test', [
  * BUILD TASKS
  */
 
-gulp.task('build_clean', ['test'], function (cb) {
-  del(['./dist/*'], cb);
+gulp.task('build-clean', ['test'], function () {
+  return del(['./dist/*']);
 });
 
-gulp.task('lint', ['build_clean'], function (cb) {
-  gulp.src(['src/**/*.js', 'test/tests.js', 'gulpfile.js', 'gulpdoc.js'])
+gulp.task('lint', ['build-clean'], function () {
+  return gulp.src(['src/**/*.js', 'test/tests.js', 'gulpfile.js'])
     .pipe(jshint('./.jshintrc'))
     .pipe(jshint.reporter('jshint-stylish'))
     .pipe(jshint.reporter('fail'));
-  cb();
 });
 
-gulp.task('jscs', ['lint'], function (cb) {
-  gulp.src(['src/**/*.js', 'test/tests.js', 'gulpfile.js', 'gulpdoc.js'])
+gulp.task('jscs', ['lint'], function () {
+  return gulp.src(['src/**/*.js', 'test/tests.js', 'gulpfile.js'])
     .pipe(jscs('./.jscs.json'));
-  cb();
 });
 
-gulp.task('build_copy', ['jscs'], function (cb) {
-  gulp.src('./src/**/*')
+gulp.task('build-copy', ['jscs'], function () {
+  return gulp.src('./src/*.js')
     .pipe(gulp.dest('./dist'));
-  del([
-    './test/app/lib/' + pkg.name + '/dist/' + pkg.name + '.js'
-  ], function() {
-    gulp.src('./src/*.js')
-      .pipe(gulp.dest('./test/app/lib/' + pkg.name + '/dist'));
-    cb();
-  });
 });
 
-gulp.task('uglify', ['build_copy'], function (cb) {
-  gulp.src('./src/' + pkg.name + '.js')
+gulp.task('build-uglify', ['build-copy'], function () {
+  return gulp.src('./src/' + pkg.name + '.js')
     .pipe(rename(pkg.name + '.min.js'))
     .pipe(uglify({
       mangle: false,
       preserveComments: 'some'
     }))
     .pipe(gulp.dest('./dist'));
-  gulp.src('./src/' + pkg.name + '.js')
+});
+
+gulp.task('build-sourcemaps', ['build-uglify'], function () {
+  return gulp.src('./dist/' + pkg.name + '.min.js')
     .pipe(sourcemaps.init())
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('./dist'));
-  cb();
 });
 
-gulp.task('build', ['uglify'], function (cb) {
+gulp.task('build', ['build-sourcemaps'], function (cb) {
   cb();
 });
 
@@ -183,12 +176,11 @@ gulp.task('build', ['uglify'], function (cb) {
  * SERVE TASKS
  */
 
-gulp.task('serve_lib', [], function (cb) {
-  gulp.src([
+gulp.task('serve_lib', [], function () {
+  return gulp.src([
     './src/' + pkg.name + '.js'
   ])
     .pipe(gulp.dest('./test/app/lib/' + pkg.name + '/dist'));
-  cb();
 });
 
 gulp.task('browser-sync', [], function () {
@@ -212,7 +204,7 @@ gulp.task('browser-sync', [], function () {
   });
 });
 
-gulp.task('serve', ['serve_lib', 'browser-sync'], function (cb) {
+gulp.task('serve', ['serve_lib', 'browser-sync'], function () {
   console.log('\n\n');
   console.log(ip.address() + ':3000');
   console.log('\n');

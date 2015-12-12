@@ -15,8 +15,6 @@
 
 var pkg = require('./package.json'),
 
-fs = require('fs'),
-path = require('path'),
 exec = require('child_process').exec,
 
 ip = require('ip'),

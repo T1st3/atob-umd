@@ -1,5 +1,15 @@
 ## Change Log
 
+### upcoming (2015/12/12 13:36 +00:00)
+- [72eba00](https://github.com/T1st3/atob-umd/commit/72eba00a3d6390b8aec4b18b857bf91bb90a216a) chore: remove links to deprecated pages (@T1st3)
+
+### 0.7.12 (2015/03/22 00:55 +00:00)
+- [0c40631](https://github.com/T1st3/atob-umd/commit/0c40631ff3a2553a80022f671c88acd7889b0f28) chore: update docs and workflow, v0.7.12 (@T1st3)
+- [7a9dca8](https://github.com/T1st3/atob-umd/commit/7a9dca81225f49a0b25ddc66bddcb147a1c58644) docs: update docs (@T1st3)
+- [bf25f4c](https://github.com/T1st3/atob-umd/commit/bf25f4c718344266f10fadc32a77ff03c3e9750b) docs: update docs (@T1st3)
+- [6764c34](https://github.com/T1st3/atob-umd/commit/6764c3496f6322f151bc49a63e1cdc3883cae9a0) docs: update docs (@T1st3)
+- [78820c8](https://github.com/T1st3/atob-umd/commit/78820c8341bf003177132f35726e55ac7e1f6553) docs: update docs (@T1st3)
+
 ### 0.7.11 (2015/03/15 16:36 +00:00)
 - [00e15cb](https://github.com/T1st3/atob-umd/commit/00e15cbe05a0751796f7d0a2d299796f5e87715a) chore: v0.7.11 (@T1st3)
 - [7e9ded2](https://github.com/T1st3/atob-umd/commit/7e9ded285d7dcdbc313ae34dd58db875a513b9ff) docs: replace badge URL with img.shields.io (@T1st3)

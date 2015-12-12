@@ -38,8 +38,7 @@
     ".travis.yml",
     "src",
     "test",
-    "gh-pages",
-    "docs",
+    "coverage",
     "gulpfile.js",
     "README.md"
   ],

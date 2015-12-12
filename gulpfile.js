@@ -38,6 +38,7 @@ jshint = require('gulp-jshint'),
 jscs = require('gulp-jscs'),
 mocha = require('gulp-mocha'),
 mochaPhantomJS = require('gulp-mocha-phantomjs'),
+istanbul = require('gulp-istanbul'),
 
 bower = require('gulp-bower'),
 mainBowerFiles = require('main-bower-files'),
@@ -216,96 +217,32 @@ gulp.task('serve', ['serve-lib', 'browser-sync'], function () {
  * CI TASKS
  */
 
-gulp.task('coverage_instrument', ['build'], function (cb) {
-  var cmd = 'istanbul instrument ./src/' + pkg.name + '.js';
-  cmd += ' > ./test/app/lib/' + pkg.name + '/dist/' + pkg.name + '.js';
-  exec(cmd, function (err, stdout, stderr) {
-    console.log(stdout);
-    console.log(stderr);
-    del([
-      'tmp', 'tmp2'
-    ], function () {
-      fs.mkdirParent('./tmp/');
-      cb();
-    });
-  });
+gulp.task('pre-coverage', function () {
+  return gulp.src(['./src/**/*.js'])
+    .pipe(istanbul())
+    .pipe(istanbul.hookRequire());
 });
 
-gulp.task('coverage_browser_global', ['coverage_instrument'], function (cb) {
-  var cmd = './node_modules/mocha-phantomjs/bin/mocha-phantomjs ./test/tests_global.html';
-  cmd += ' -R json-cov -f ./tmp2/tmp.json';
-  exec(cmd, function (err, stdout, stderr) {
-    console.log(stderr);
-    fs.writeFile('./tmp/coverage_global.json', stdout, function(err) {
-      if (err) {
-        console.log(err);
-      }
-      cb(err);
-    });
-  });
+gulp.task('coverage', ['pre-coverage'], function () {
+  return gulp.src(['test/*.js'])
+    .pipe(mocha())
+    .pipe(istanbul.writeReports())
+    .pipe(istanbul.enforceThresholds({ thresholds: { global: 50 } }));
 });
 
-gulp.task('coverage_browser_amd', ['coverage_browser_global'], function (cb) {
-  var cmd = './node_modules/mocha-phantomjs/bin/mocha-phantomjs ./test/tests_amd.html';
-  cmd += ' -R json-cov -f ./tmp2/tmp.json';
-  exec(cmd, function (err, stdout, stderr) {
-    console.log(stderr);
-    fs.writeFile('./tmp/coverage_amd.json', stdout, function(err) {
-      if (err) {
-        console.log(err);
-      }
-      cb(err);
-    });
-  });
-});
-
-gulp.task('coverage_node', ['coverage_browser_amd'], function (cb) {
-  var cmd = 'istanbul cover ./node_modules/mocha/bin/mocha test/tests.js';
-  cmd += ' --dir ./tmp -- -R json-cov';
-  exec(cmd, function (err, stdout, stderr) {
-    stdout = null;
-    console.log(stderr);
-    cb(err);
-  });
-});
-
-gulp.task('coverage', [
-  'coverage_browser_global', 'coverage_browser_amd', 'coverage_node'
-], function (cb) {
-  var cmd = 'istanbul report --dir ./gh-pages/coverage/';
-  cmd += ' --root ./tmp/ --config ./.istanbul.yml lcov';
-  exec(cmd, function (err, stdout, stderr) {
-    console.log(stdout);
-    console.log(stderr);
-    del([
-      './tmp', './tmp2'
-    ], cb);
-  });
-});
-
-gulp.task('uninstrument', ['coverage'], function (cb) {
-  del([
-    './test/app/lib/' + pkg.name + '/dist/' + pkg.name + '.js'
-  ], function() {
-    gulp.src('./src/*.js')
-      .pipe(gulp.dest('./test/app/lib/' + pkg.name + '/dist'));
-    cb();
-  });
-});
-
-gulp.task('ci', ['uninstrument'], function (cb) {
-  var cmd = 'printf ./gh-pages/coverage/lcov.info';
+gulp.task('ci', ['coverage'], function (cb) {
+  var cmd = 'printf ./coverage/lcov.info';
   cmd += ' | ./node_modules/coveralls/bin/coveralls.js';
   exec(cmd, function (err, stdout, stderr) {
     console.log(stdout);
     console.log(stderr);
     cmd = './node_modules/codeclimate-test-reporter/bin/codeclimate.js < ';
-    cmd += './gh-pages/coverage/lcov.info';
+    cmd += './coverage/lcov.info';
     exec(cmd, function (err, stdout, stderr) {
       console.log(stdout);
       console.log(stderr);
       del([
-        './tmp', './tmp2'
+        './coverage'
       ], cb);
     });
   });

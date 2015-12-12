@@ -176,7 +176,7 @@ gulp.task('build', ['build-sourcemaps'], function (cb) {
  * SERVE TASKS
  */
 
-gulp.task('serve_lib', [], function () {
+gulp.task('serve-lib', [], function () {
   return gulp.src([
     './src/' + pkg.name + '.js'
   ])
@@ -204,12 +204,12 @@ gulp.task('browser-sync', [], function () {
   });
 });
 
-gulp.task('serve', ['serve_lib', 'browser-sync'], function () {
+gulp.task('serve', ['serve-lib', 'browser-sync'], function () {
   console.log('\n\n');
   console.log(ip.address() + ':3000');
   console.log('\n');
   qrcode.generate(ip.address() + ':3000');
-  gulp.watch(['./src/**/*.js', 'test/tests.js'], ['serve_lib', browserSync.reload]);
+  gulp.watch(['./src/**/*.js', 'test/tests.js'], ['serve-lib', browserSync.reload]);
 });
 
 /*

@@ -61,15 +61,15 @@ gulp.task('bower', function () {
  * INIT TASKS
  */
 
-gulp.task('init_clean', ['bower'], function (cb) {
-  del([
+gulp.task('init-clean', ['bower'], function () {
+  return del([
     './tmp',
     './test/app/lib'
-  ], cb);
+  ]);
 });
 
-gulp.task('init', ['init_clean'], function (cb) {
-  gulp.src(mainBowerFiles({
+gulp.task('init-files', ['init-clean'], function () {
+  return gulp.src(mainBowerFiles({
     paths: {
         bowerDirectory: './bower_components',
         bowerrc: './.bowerrc',
@@ -80,7 +80,9 @@ gulp.task('init', ['init_clean'], function (cb) {
     base: './bower_components'
   })
     .pipe(gulp.dest('./test/app/lib'));
+});
 
+gulp.task('init', ['init-files'], function (cb) {
   cb();
 });
 

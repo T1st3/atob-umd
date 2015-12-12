@@ -24,9 +24,6 @@ Installation for production
 **with Node.js**
 
 `atob-umd` is available on [NPM](https://www.npmjs.com/package/atob-umd)
-[![NPM](http://www.tiste.org/atob-umd/assets/img/vendor/npm.png)](https://www.npmjs.com/package/atob-umd).
-
-[![NPM version](https://img.shields.io/npm/v/atob-umd.svg)](https://www.npmjs.com/package/atob-umd)
 
 You can install it with the following command:
 
@@ -37,15 +34,10 @@ You can install it with the following command:
 
 
 `atob-umd` is available on [Bower](http://bower.io/search/?q=atob-umd)
-[![Bower](http://www.tiste.org/atob-umd/assets/img/vendor/bower.png)](http://bower.io/search/?q=atob-umd).
-
-[![Bower version](https://img.shields.io/bower/v/atob-umd.svg)](http://bower.io/search/?q=atob-umd)
 
 To install it from Bower, just run 
 
     bower install atob-umd
-
-Note that published versions on both NPM and Bower should stay in sync.
 
 
 
@@ -100,10 +92,6 @@ To build, just run:
 
 **Tests**
 
-Note that you need a few more dependencies to test the project.
-
-See [the tests page for more info](http://www.tiste.org/atob-umd/tests.html)
-
 To test, you can use either the `npm test` command or the `gulp test` command:
 
     npm test
@@ -128,42 +116,16 @@ If changes happen in the source, the task automatically reloads the page in the 
 
 
 
-Build the docs and Github pages
----
-
-Please note that this task has a few more dependencies:
-
-* [Istanbul](http://gotwarlost.github.io/istanbul/)
-* [Ruby](https://www.ruby-lang.org/) and [RubyGems](https://rubygems.org/)
-* [Jekyll](http://jekyllrb.com/)
-* [Kramdown](http://kramdown.gettalong.org/)
-
-
-Check [the build-docs page](http://www.tiste.org/atob-umd/build_docs.html) for more info.
-
-
-
-
-Credits
----
-
-
-See [the credits page](http://www.tiste.org/atob-umd/credits.html) to see more.
-
-
 License
 ---
 
-
 This piece of code is triple-licensed: [MIT / BSD / GPL licenses](https://github.com/T1st3/atob-umd/blob/master/LICENSE)
 
-You can also view it in a re-formatted fashion: [MIT / BSD / GPL licenses](http://www.tiste.org/atob-umd/license.html).
 
 
 
 Initial author
 ---
 
-[T1st3](https://github.com/T1st3/) 
-[![T1st3](http://www.tiste.org/atob-umd/assets/img/gravatar-16x16.png)](https://github.com/T1st3/)
+[T1st3](https://github.com/T1st3/)
 

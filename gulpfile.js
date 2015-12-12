@@ -43,6 +43,7 @@ istanbul = require('gulp-istanbul'),
 
 bower = require('gulp-bower'),
 mainBowerFiles = require('main-bower-files'),
+bump = require('gulp-bump'),
 
 browserSync = require('browser-sync');
 

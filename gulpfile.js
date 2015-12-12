@@ -9,9 +9,6 @@
  * - gulp serve
  * - gulp ci
  *
- * More info about those tasks:
- * https://www.tiste.org/atob-umd/gulp_tasks.html
- *
  */
 
 'use strict';

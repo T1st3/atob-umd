@@ -23,7 +23,6 @@
         mocha: 'app/lib/mocha/mocha',
         chai: 'app/lib/chai/chai',
         chaijquery: 'app/lib/chai-jquery/chai-jquery',
-        bootstrap: 'app/lib/bootstrap/dist/js/bootstrap.min',
         /* this project */
         atob: 'app/lib/atob-umd/dist/atob-umd'
       },
@@ -32,7 +31,6 @@
           exports: '$'
         },
         chaijquery: ['jquery', 'chai'],
-        bootstrap: ['jquery'],
         atob: {
           exports: 'Atob'
         }
@@ -43,8 +41,7 @@
       'chai',
       'atob',
       'jquery',
-      'mocha',
-      'bootstrap'
+      'mocha'
     ], factory);
   } else if (typeof exports === 'object') {
     module.exports = factory(require('chai'), require('../src/atob-umd'));

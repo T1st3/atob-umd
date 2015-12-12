@@ -36,6 +36,8 @@ uglify = require('gulp-uglify'),
 sourcemaps = require('gulp-sourcemaps'),
 jshint = require('gulp-jshint'),
 jscs = require('gulp-jscs'),
+mocha = require('gulp-mocha'),
+mochaPhantomJS = require('gulp-mocha-phantomjs'),
 
 bower = require('gulp-bower'),
 mainBowerFiles = require('main-bower-files'),
@@ -90,55 +92,36 @@ gulp.task('init', ['init-files'], function (cb) {
  * TEST TASKS
  */
 
-gulp.task('test_copy', function (cb) {
-  del([
+gulp.task('test-clean', function () {
+  return del([
     './test/app/lib/' + pkg.name + '/dist/' + pkg.name + '.js'
-  ], function() {
-    gulp.src('./src/*.js')
-      .pipe(gulp.dest('./test/app/lib/' + pkg.name + '/dist'));
-    cb();
-  });
+  ]);
 });
 
-gulp.task('test_node', function (cb) {
-  var cmd = './node_modules/mocha/bin/mocha test/tests.js --reporter spec';
-  exec(cmd, function (err, stdout, stderr) {
-    console.log('\n\n');
-    console.log(chalk.green('Node.js tests'));
-    console.log(stdout);
-    console.log(stderr);
-    cb(err);
-  });
+gulp.task('test-copy', ['test-clean'], function () {
+  return gulp.src('./src/*.js')
+    .pipe(gulp.dest('./test/app/lib/' + pkg.name + '/dist'));
 });
 
-gulp.task('test_browser_amd', ['test_copy'], function (cb) {
-  var cmd = './node_modules/mocha-phantomjs/bin/mocha-phantomjs';
-  cmd += ' ./test/tests_amd.html --reporter spec';
-  exec(cmd, function (err, stdout, stderr) {
-    console.log('\n\n');
-    console.log(chalk.green('Browser tests, using AMD modules'));
-    console.log(chalk.cyan('(executed in PhantomJS)'));
-    console.log(stdout);
-    console.log(stderr);
-    cb(err);
-  });
+gulp.task('test-browser-amd', ['test-copy'], function () {
+  return gulp
+    .src('./test/tests_amd.html')
+    .pipe(mochaPhantomJS({reporter: 'spec'}));
 });
 
-gulp.task('test_browser_global', ['test_copy'], function (cb) {
-  var cmd = './node_modules/mocha-phantomjs/bin/mocha-phantomjs';
-  cmd += ' test/tests_global.html --reporter spec';
-  exec(cmd, function (err, stdout, stderr) {
-    console.log('\n\n');
-    console.log(chalk.green('Browser tests, using global variables'));
-    console.log(chalk.cyan('(executed in PhantomJS)'));
-    console.log(stdout);
-    console.log(stderr);
-    cb(err);
-  });
+gulp.task('test-browser-global', ['test-browser-amd'], function () {
+  return gulp
+    .src('./test/tests_amd.html')
+    .pipe(mochaPhantomJS({reporter: 'spec'}));
+});
+
+gulp.task('test-node', ['test-browser-global'], function () {
+  return gulp.src('test/tests.js', {read: false})
+    .pipe(mocha({reporter: 'spec'}));
 });
 
 gulp.task('test', [
-  'test_node', 'test_browser_amd', 'test_browser_global'
+  'test-node'
 ], function (cb) {
   cb();
 });

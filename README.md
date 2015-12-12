@@ -39,6 +39,21 @@ To install it from Bower, just run
 
     bower install atob-umd
 
+    
+Usage
+---
+
+Usage is pretty straightforward; in the following example, a function `atob` is created to mimic the native function with the same name:
+
+    var atob = function (a) {
+      var umd = new Atob();
+      return umd.handle(a).b;
+    };
+    var res = atob('SGVsbG8gV29ybGQ=');
+
+
+Then, `res` will return `Hello World`.
+
 
 
 Installation for development

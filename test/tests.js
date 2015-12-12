@@ -139,8 +139,6 @@
           };
           /* global window */
           atob('SGVsbG8gV29ybGQ=').should.equal(window.atob('SGVsbG8gV29ybGQ='));
-          /* last test callback */
-          console.log(window.__coverage__);
           done();
         });
       });

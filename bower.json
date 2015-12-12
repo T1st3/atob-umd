@@ -43,14 +43,13 @@
     "gulpfile.js",
     "README.md"
   ],
-  "dependencies": {
-    "requirejs": "~2.1"
-  },
+  "dependencies": {},
   "devDependencies": {
-    "jquery": "~2.1",
-    "mocha": "~2.2",
-    "chai": "~2.1",
-    "chai-jquery": "~2.0"
+    "requirejs": "~2.1.22",
+    "jquery": "~2.1.4",
+    "mocha": "~2.3.4",
+    "chai": "~3.4.2",
+    "chai-jquery": "~2.0.1"
   },
   "overrides": {
     "requirejs": {

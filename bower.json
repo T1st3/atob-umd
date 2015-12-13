@@ -17,7 +17,7 @@
   "main": [
     "./dist/atob-umd.js",
     "./dist/atob-umd.min.js",
-    "./dist/atob-umd.js.map"
+    "./dist/atob-umd.min.js.map"
   ],
   "ignore": [
     ".directory",

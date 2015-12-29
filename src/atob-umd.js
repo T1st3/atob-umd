@@ -4,7 +4,7 @@
 * @link https://github.com/T1st3/atob-umd
 * @author T1st3
 * @version 1.0.0
-* @license https://github.com/T1st3/atob-umd/blob/master/LICENSE
+* @license https://github.com/T1st3/atob-umd/blob/master/LICENSE.md
 *
 */
 

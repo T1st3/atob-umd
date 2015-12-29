@@ -135,7 +135,7 @@ If changes happen in the source, the task automatically reloads the page in the 
 License
 ---
 
-This piece of code is triple-licensed: [MIT / BSD / GPL licenses](https://github.com/T1st3/atob-umd/blob/master/LICENSE)
+This piece of code is triple-licensed: [MIT / BSD / GPL licenses](https://github.com/T1st3/atob-umd/blob/master/LICENSE.md)
 
 
 

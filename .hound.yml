@@ -1,0 +1,6 @@
+javascript:
+  config_file: .jshintrc
+  enabled: true
+jscs:
+  enabled: true
+  config_file: .jscs.json

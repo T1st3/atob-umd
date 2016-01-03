@@ -121,7 +121,7 @@ or
 
 **Serve and livereload**
 
-You can also use the `serve` task to load the `tests/` html pages in your browser.
+You can also use the `serve` task to load the html pages from `./test/` in your browser.
 
     gulp serve
 

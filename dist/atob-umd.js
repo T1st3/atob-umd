@@ -1,10 +1,10 @@
 /*!
 * atob-umd
 *
-* @link https://github.com/T1st3/atob-umd
-* @author T1st3
+* @link https://github.com/t1st3/atob-umd
+* @author t1st3
 * @version 1.0.0
-* @license https://github.com/T1st3/atob-umd/blob/master/LICENSE.md
+* @license https://github.com/t1st3/atob-umd/blob/master/LICENSE.md
 *
 */
 

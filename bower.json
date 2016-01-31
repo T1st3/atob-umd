@@ -1,7 +1,7 @@
 {
   "name": "atob-umd",
   "version": "1.0.0",
-  "homepage": "https://github.com/T1st3/atob-umd",
+  "homepage": "https://github.com/t1st3/atob-umd",
   "description": "A UMD module for atob()",
   "keywords": [
     "atob",
@@ -12,7 +12,7 @@
   ],
   "license": "MIT",
   "authors": [
-    "T1st3 <contact@tiste.org> (http://www.tiste.org/)"
+    "t1st3 <contact@tiste.org> (http://www.tiste.org/)"
   ],
   "main": [
     "./dist/atob-umd.js",

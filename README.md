@@ -6,8 +6,6 @@ atob-umd
 [![Dependency Status](https://img.shields.io/david/t1st3/atob-umd.svg)](https://david-dm.org/t1st3/atob-umd)
 [![Build Status](https://img.shields.io/travis/t1st3/atob-umd.svg)](https://travis-ci.org/t1st3/atob-umd)
 [![Coverage Status](https://img.shields.io/coveralls/t1st3/atob-umd.svg)](https://coveralls.io/r/t1st3/atob-umd)
-[![Code Climate](https://img.shields.io/codeclimate/github/t1st3/atob-umd.svg)](https://codeclimate.com/github/t1st3/atob-umd)
-[![Percentage of issues still open](http://isitmaintained.com/badge/open/t1st3/atob-umd.svg)](http://isitmaintained.com/project/t1st3/atob-umd "Percentage of issues still open")
 
 
 
